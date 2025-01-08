@@ -7,6 +7,7 @@ include("includes/connect.php");
 
 
 <!-- molla/index-4.html  22 Nov 2019 09:53:08 GMT -->
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -82,7 +83,7 @@ include("includes/connect.php");
                             <span class="sr-only">Toggle mobile menu</span>
                             <i class="icon-bars"></i>
                         </button>
-                        
+
                         <a href="index.php" class="logo">
                             <img src="assets/images/demos/demo-4/logo.png" alt="Molla Logo" width="105" height="25">
                         </a>
@@ -95,14 +96,15 @@ include("includes/connect.php");
                                 <div class="header-search-wrapper search-wrapper-wide">
                                     <label for="q" class="sr-only">Search</label>
                                     <button class="btn btn-primary" type="submit"><i class="icon-search"></i></button>
-                                    <input type="search" class="form-control" name="q" id="q" placeholder="Search product ..." required>
+                                    <input type="search" class="form-control" name="q" id="q"
+                                        placeholder="Search product ..." required>
                                 </div><!-- End .header-search-wrapper -->
                             </form>
                         </div><!-- End .header-search -->
                     </div>
 
                     <div class="header-right">
-                        
+
 
                         <div class="wishlist">
                             <a href="wishlist.html" title="Wishlist">
@@ -114,7 +116,8 @@ include("includes/connect.php");
                         </div><!-- End .compare-dropdown -->
 
                         <div class="dropdown cart-dropdown">
-                            <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
+                            <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false" data-display="static">
                                 <div class="icon">
                                     <i class="icon-shopping-cart"></i><sup class="cart-count">3</sup>
                                 </div>
@@ -140,7 +143,8 @@ include("includes/connect.php");
                                                 <img src="assets/images/products/cart/product-1.jpg" alt="product">
                                             </a>
                                         </figure>
-                                        <a href="#" class="btn-remove" title="Remove Product"><i class="icon-close"></i></a>
+                                        <a href="#" class="btn-remove" title="Remove Product"><i
+                                                class="icon-close"></i></a>
                                     </div><!-- End .product -->
 
                                     <div class="product">
@@ -160,7 +164,8 @@ include("includes/connect.php");
                                                 <img src="assets/images/products/cart/product-2.jpg" alt="product">
                                             </a>
                                         </figure>
-                                        <a href="#" class="btn-remove" title="Remove Product"><i class="icon-close"></i></a>
+                                        <a href="#" class="btn-remove" title="Remove Product"><i
+                                                class="icon-close"></i></a>
                                     </div><!-- End .product -->
                                 </div><!-- End .cart-product -->
 
@@ -172,7 +177,8 @@ include("includes/connect.php");
 
                                 <div class="dropdown-cart-action">
                                     <a href="cart.html" class="btn btn-primary">View Cart</a>
-                                    <a href="checkout.html" class="btn btn-outline-primary-2"><span>Checkout</span><i class="icon-long-arrow-right"></i></a>
+                                    <a href="checkout.html" class="btn btn-outline-primary-2"><span>Checkout</span><i
+                                            class="icon-long-arrow-right"></i></a>
                                 </div><!-- End .dropdown-cart-total -->
                             </div><!-- End .dropdown-menu -->
                         </div><!-- End .cart-dropdown -->
@@ -182,10 +188,12 @@ include("includes/connect.php");
 
             <div class="header-bottom sticky-header">
                 <div class="container">
-                    
-                <div class="header-left">
+
+                    <div class="header-left">
                         <div class="dropdown category-dropdown">
-                            <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static" title="Browse Categories">
+                            <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false" data-display="static"
+                                title="Browse Categories">
                                 Browse Categories <i class="icon-angle-down"></i>
                             </a>
 
@@ -193,10 +201,10 @@ include("includes/connect.php");
                                 <nav class="side-nav">
                                     <ul class="menu-vertical sf-arrows">
                                         <li class="item-lead"><a href="#" class="sf-with-ul">Daily offers</a>
-                                        <ul>
-                                        <!-- database call -->
-                                         <!-- first brand -->
-                                        <?php
+                                            <ul>
+                                                <!-- database call -->
+                                                <!-- first brand -->
+                                                <?php
                                         $select_brands="select* from `brands`";
                                         $result_brands=mysqli_query($con,$select_brands);  
                                         // $raw_data=mysqli_fetch_assoc($result_brands);
@@ -210,12 +218,12 @@ include("includes/connect.php");
                                             </li>";
                                         }
                                         ?>
-                                        </ul>
+                                            </ul>
                                         </li>
 
                                         <!-- second category -->
                                         <li class="item-lead"><a href="#" class="sf-with-ul">Gift Ideas</a>
-                                        <ul><?php
+                                            <ul><?php
                                         $select_categories="select* from `categories`";
                                         $result_categories=mysqli_query($con,$select_categories);  
                                         // $raw_data=mysqli_fetch_assoc($result_brands);
@@ -229,7 +237,7 @@ include("includes/connect.php");
                                             </li>";
                                         }
                                         ?>
-                                        </ul>
+                                            </ul>
                                         </li>
                                     </ul><!-- End .menu-vertical -->
                                 </nav><!-- End .side-nav -->
@@ -246,53 +254,61 @@ include("includes/connect.php");
                                         <div class="menu-col">
                                             <div class="menu-title">Choose your demo</div><!-- End .menu-title -->
 
-                                            <div class="demo-list">  
+                                            <div class="demo-list">
                                                 <div class="demo-item">
                                                     <a href="index-4.php">
-                                                        <span class="demo-bg" style="background-image: url(assets/images/menu/demos/4.jpg);"></span>
+                                                        <span class="demo-bg"
+                                                            style="background-image: url(assets/images/menu/demos/4.jpg);"></span>
                                                         <span class="demo-title">04 - electronic store</span>
                                                     </a>
-                                                </div><!-- End .demo-item -->         
+                                                </div><!-- End .demo-item -->
                                                 <div class="demo-item">
                                                     <a href="index-10.html">
-                                                        <span class="demo-bg" style="background-image: url(assets/images/menu/demos/10.jpg);"></span>
+                                                        <span class="demo-bg"
+                                                            style="background-image: url(assets/images/menu/demos/10.jpg);"></span>
                                                         <span class="demo-title">10 - shoes store</span>
                                                     </a>
                                                 </div><!-- End .demo-item -->
                                                 <div class="demo-item hidden">
                                                     <a href="index-11.html">
-                                                        <span class="demo-bg" style="background-image: url(assets/images/menu/demos/11.jpg);"></span>
+                                                        <span class="demo-bg"
+                                                            style="background-image: url(assets/images/menu/demos/11.jpg);"></span>
                                                         <span class="demo-title">11 - furniture simple store</span>
                                                     </a>
                                                 </div><!-- End .demo-item -->
                                                 <div class="demo-item hidden">
                                                     <a href="index-19.html">
-                                                        <span class="demo-bg" style="background-image: url(assets/images/menu/demos/19.jpg);"></span>
+                                                        <span class="demo-bg"
+                                                            style="background-image: url(assets/images/menu/demos/19.jpg);"></span>
                                                         <span class="demo-title">19 - games store</span>
                                                     </a>
                                                 </div><!-- End .demo-item -->
                                                 <div class="demo-item hidden">
                                                     <a href="index-20.html">
-                                                        <span class="demo-bg" style="background-image: url(assets/images/menu/demos/20.jpg);"></span>
+                                                        <span class="demo-bg"
+                                                            style="background-image: url(assets/images/menu/demos/20.jpg);"></span>
                                                         <span class="demo-title">20 - book store</span>
                                                     </a>
                                                 </div><!-- End .demo-item -->
                                                 <div class="demo-item hidden">
                                                     <a href="index-21.html">
-                                                        <span class="demo-bg" style="background-image: url(assets/images/menu/demos/21.jpg);"></span>
+                                                        <span class="demo-bg"
+                                                            style="background-image: url(assets/images/menu/demos/21.jpg);"></span>
                                                         <span class="demo-title">21 - sport store</span>
                                                     </a>
                                                 </div><!-- End .demo-item -->
                                                 <div class="demo-item hidden">
                                                     <a href="index-24.html">
-                                                        <span class="demo-bg" style="background-image: url(assets/images/menu/demos/24.jpg);"></span>
+                                                        <span class="demo-bg"
+                                                            style="background-image: url(assets/images/menu/demos/24.jpg);"></span>
                                                         <span class="demo-title">24 - extreme sport store</span>
                                                     </a>
                                                 </div><!-- End .demo-item -->
                                             </div><!-- End .demo-list -->
 
                                             <div class="megamenu-action text-center">
-                                                <a href="#" class="btn btn-outline-primary-2 view-all-demos"><span>View All Demos</span><i class="icon-long-arrow-right"></i></a>
+                                                <a href="#" class="btn btn-outline-primary-2 view-all-demos"><span>View
+                                                        All Demos</span><i class="icon-long-arrow-right"></i></a>
                                             </div><!-- End .text-center -->
                                         </div><!-- End .menu-col -->
                                     </div><!-- End .megamenu -->
@@ -310,7 +326,7 @@ include("includes/connect.php");
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="blog.html" >Blog</a>
+                                    <a href="blog.html">Blog</a>
                                 </li>
                             </ul><!-- End .menu -->
                         </nav><!-- End .main-nav -->
@@ -321,7 +337,7 @@ include("includes/connect.php");
 
         <main class="main">
             <div class="intro-slider-container mb-5">
-                <div class="intro-slider owl-carousel owl-theme owl-nav-inside owl-light" data-toggle="owl" 
+                <div class="intro-slider owl-carousel owl-theme owl-nav-inside owl-light" data-toggle="owl"
                     data-owl-options='{
                         "dots": true,
                         "nav": false, 
@@ -332,11 +348,13 @@ include("includes/connect.php");
                             }
                         }
                     }'>
-                    <div class="intro-slide" style="background-image: url(assets/images/demos/demo-4/slider/slide-1.png);">
+                    <div class="intro-slide"
+                        style="background-image: url(assets/images/demos/demo-4/slider/slide-1.png);">
                         <div class="container intro-content">
                             <div class="row justify-content-end">
                                 <div class="col-auto col-sm-7 col-md-6 col-lg-5">
-                                    <h3 class="intro-subtitle text-third">Deals and Promotions</h3><!-- End .h3 intro-subtitle -->
+                                    <h3 class="intro-subtitle text-third">Deals and Promotions</h3>
+                                    <!-- End .h3 intro-subtitle -->
                                     <h1 class="intro-title">Beats by</h1>
                                     <h1 class="intro-title">Dre Studio 3</h1><!-- End .intro-title -->
 
@@ -356,12 +374,15 @@ include("includes/connect.php");
                         </div><!-- End .intro-content -->
                     </div><!-- End .intro-slide -->
 
-                    <div class="intro-slide" style="background-image: url(assets/images/demos/demo-4/slider/slide-2.png);">
+                    <div class="intro-slide"
+                        style="background-image: url(assets/images/demos/demo-4/slider/slide-2.png);">
                         <div class="container intro-content">
                             <div class="row justify-content-end">
                                 <div class="col-auto col-sm-7 col-md-6 col-lg-5">
-                                    <h3 class="intro-subtitle text-primary">New Arrival</h3><!-- End .h3 intro-subtitle -->
-                                    <h1 class="intro-title">Apple iPad Pro <br>12.9 Inch, 64GB </h1><!-- End .intro-title -->
+                                    <h3 class="intro-subtitle text-primary">New Arrival</h3>
+                                    <!-- End .h3 intro-subtitle -->
+                                    <h1 class="intro-title">Apple iPad Pro <br>12.9 Inch, 64GB </h1>
+                                    <!-- End .intro-title -->
 
                                     <div class="intro-price">
                                         <sup>Today:</sup>
@@ -385,7 +406,7 @@ include("includes/connect.php");
 
             <div class="container">
                 <h2 class="title text-center mb-4">Explore Popular Categories</h2><!-- End .title text-center -->
-                
+
                 <div class="cat-blocks-container">
                     <div class="row">
                         <div class="col-6 col-sm-4 col-lg-2">
@@ -474,33 +495,41 @@ include("includes/connect.php");
                         <h2 class="title">New Arrivals</h2><!-- End .title -->
                     </div><!-- End .heading-left -->
 
-                   <div class="heading-right">
+                    <div class="heading-right">
                         <ul class="nav nav-pills nav-border-anim justify-content-center" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link active" id="new-all-link" data-toggle="tab" href="#new-all-tab" role="tab" aria-controls="new-all-tab" aria-selected="true">All</a>
+                                <a class="nav-link active" id="new-all-link" data-toggle="tab" href="#new-all-tab"
+                                    role="tab" aria-controls="new-all-tab" aria-selected="true">All</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="new-tv-link" data-toggle="tab" href="#new-tv-tab" role="tab" aria-controls="new-tv-tab" aria-selected="false">TV</a>
+                                <a class="nav-link" id="new-tv-link" data-toggle="tab" href="#new-tv-tab" role="tab"
+                                    aria-controls="new-tv-tab" aria-selected="false">TV</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="new-computers-link" data-toggle="tab" href="#new-computers-tab" role="tab" aria-controls="new-computers-tab" aria-selected="false">Computers</a>
+                                <a class="nav-link" id="new-computers-link" data-toggle="tab" href="#new-computers-tab"
+                                    role="tab" aria-controls="new-computers-tab" aria-selected="false">Computers</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="new-phones-link" data-toggle="tab" href="#new-phones-tab" role="tab" aria-controls="new-phones-tab" aria-selected="false">Tablets & Cell Phones</a>
+                                <a class="nav-link" id="new-phones-link" data-toggle="tab" href="#new-phones-tab"
+                                    role="tab" aria-controls="new-phones-tab" aria-selected="false">Tablets & Cell
+                                    Phones</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="new-watches-link" data-toggle="tab" href="#new-watches-tab" role="tab" aria-controls="new-watches-tab" aria-selected="false">Smartwatches</a>
+                                <a class="nav-link" id="new-watches-link" data-toggle="tab" href="#new-watches-tab"
+                                    role="tab" aria-controls="new-watches-tab" aria-selected="false">Smartwatches</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="new-acc-link" data-toggle="tab" href="#new-acc-tab" role="tab" aria-controls="new-acc-tab" aria-selected="false">Accessories</a>
+                                <a class="nav-link" id="new-acc-link" data-toggle="tab" href="#new-acc-tab" role="tab"
+                                    aria-controls="new-acc-tab" aria-selected="false">Accessories</a>
                             </li>
                         </ul>
-                   </div><!-- End .heading-right -->
+                    </div><!-- End .heading-right -->
                 </div><!-- End .heading -->
 
                 <div class="tab-content tab-content-carousel just-action-icons-sm">
-                    <div class="tab-pane p-0 fade show active" id="new-all-tab" role="tabpanel" aria-labelledby="new-all-link">
-                        <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl" 
+                    <div class="tab-pane p-0 fade show active" id="new-all-tab" role="tabpanel"
+                        aria-labelledby="new-all-link">
+                        <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl"
                             data-owl-options='{
                                 "nav": true, 
                                 "dots": true,
@@ -528,7 +557,8 @@ include("includes/connect.php");
                                 <figure class="product-media">
                                     <span class="product-label label-circle label-top">Top</span>
                                     <a href="product.html">
-                                        <img src="assets/images/demos/demo-4/products/product-1.jpg" alt="Product image" class="product-image">
+                                        <img src="assets/images/demos/demo-4/products/product-1.jpg" alt="Product image"
+                                            class="product-image">
                                     </a>
 
                                     <div class="product-action-vertical">
@@ -536,8 +566,10 @@ include("includes/connect.php");
                                     </div><!-- End .product-action -->
 
                                     <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
+                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to
+                                                cart</span></a>
+                                        <a href="popup/quickView.html" class="btn-product btn-quickview"
+                                            title="Quick view"><span>quick view</span></a>
                                     </div><!-- End .product-action -->
                                 </figure><!-- End .product-media -->
 
@@ -545,13 +577,15 @@ include("includes/connect.php");
                                     <div class="product-cat">
                                         <a href="#">Laptops</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">MacBook Pro 13" Display, i5</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="product.html">MacBook Pro 13" Display, i5</a>
+                                    </h3><!-- End .product-title -->
                                     <div class="product-price">
                                         $1,199.99
                                     </div><!-- End .product-price -->
                                     <div class="ratings-container">
                                         <div class="ratings">
-                                            <div class="ratings-val" style="width: 100%;"></div><!-- End .ratings-val -->
+                                            <div class="ratings-val" style="width: 100%;"></div>
+                                            <!-- End .ratings-val -->
                                         </div><!-- End .ratings -->
                                         <span class="ratings-text">( 4 Reviews )</span>
                                     </div><!-- End .rating-container -->
@@ -561,7 +595,8 @@ include("includes/connect.php");
                             <div class="product product-2">
                                 <figure class="product-media">
                                     <a href="product.html">
-                                        <img src="assets/images/demos/demo-4/products/product-2.jpg" alt="Product image" class="product-image">
+                                        <img src="assets/images/demos/demo-4/products/product-2.jpg" alt="Product image"
+                                            class="product-image">
                                     </a>
 
                                     <div class="product-action-vertical">
@@ -569,8 +604,10 @@ include("includes/connect.php");
                                     </div><!-- End .product-action -->
 
                                     <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
+                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to
+                                                cart</span></a>
+                                        <a href="popup/quickView.html" class="btn-product btn-quickview"
+                                            title="Quick view"><span>quick view</span></a>
                                     </div><!-- End .product-action -->
                                 </figure><!-- End .product-media -->
 
@@ -578,7 +615,8 @@ include("includes/connect.php");
                                     <div class="product-cat">
                                         <a href="#">Audio</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Bose - SoundLink Bluetooth Speaker</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="product.html">Bose - SoundLink Bluetooth
+                                            Speaker</a></h3><!-- End .product-title -->
                                     <div class="product-price">
                                         $79.99
                                     </div><!-- End .product-price -->
@@ -595,7 +633,8 @@ include("includes/connect.php");
                                 <figure class="product-media">
                                     <span class="product-label label-circle label-new">New</span>
                                     <a href="product.html">
-                                        <img src="assets/images/demos/demo-4/products/product-3.jpg" alt="Product image" class="product-image">
+                                        <img src="assets/images/demos/demo-4/products/product-3.jpg" alt="Product image"
+                                            class="product-image">
                                     </a>
 
                                     <div class="product-action-vertical">
@@ -603,8 +642,10 @@ include("includes/connect.php");
                                     </div><!-- End .product-action -->
 
                                     <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
+                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to
+                                                cart</span></a>
+                                        <a href="popup/quickView.html" class="btn-product btn-quickview"
+                                            title="Quick view"><span>quick view</span></a>
                                     </div><!-- End .product-action -->
                                 </figure><!-- End .product-media -->
 
@@ -612,7 +653,8 @@ include("includes/connect.php");
                                     <div class="product-cat">
                                         <a href="#">Tablets</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Apple - 11 Inch iPad Pro  with Wi-Fi 256GB </a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="product.html">Apple - 11 Inch iPad Pro with Wi-Fi
+                                            256GB </a></h3><!-- End .product-title -->
                                     <div class="product-price">
                                         $899.99
                                     </div><!-- End .product-price -->
@@ -624,9 +666,12 @@ include("includes/connect.php");
                                     </div><!-- End .rating-container -->
 
                                     <div class="product-nav product-nav-dots">
-                                        <a href="#" style="background: #edd2c8;"><span class="sr-only">Color name</span></a>
-                                        <a href="#" style="background: #eaeaec;"><span class="sr-only">Color name</span></a>
-                                        <a href="#" class="active" style="background: #333333;"><span class="sr-only">Color name</span></a>
+                                        <a href="#" style="background: #edd2c8;"><span class="sr-only">Color
+                                                name</span></a>
+                                        <a href="#" style="background: #eaeaec;"><span class="sr-only">Color
+                                                name</span></a>
+                                        <a href="#" class="active" style="background: #333333;"><span
+                                                class="sr-only">Color name</span></a>
                                     </div><!-- End .product-nav -->
                                 </div><!-- End .product-body -->
                             </div><!-- End .product -->
@@ -636,7 +681,8 @@ include("includes/connect.php");
                                     <span class="product-label label-circle label-top">Top</span>
                                     <span class="product-label label-circle label-sale">Sale</span>
                                     <a href="product.html">
-                                        <img src="assets/images/demos/demo-4/products/product-4.jpg" alt="Product image" class="product-image">
+                                        <img src="assets/images/demos/demo-4/products/product-4.jpg" alt="Product image"
+                                            class="product-image">
                                     </a>
 
                                     <div class="product-action-vertical">
@@ -644,8 +690,10 @@ include("includes/connect.php");
                                     </div><!-- End .product-action -->
 
                                     <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
+                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to
+                                                cart</span></a>
+                                        <a href="popup/quickView.html" class="btn-product btn-quickview"
+                                            title="Quick view"><span>quick view</span></a>
                                     </div><!-- End .product-action -->
                                 </figure><!-- End .product-media -->
 
@@ -653,22 +701,27 @@ include("includes/connect.php");
                                     <div class="product-cat">
                                         <a href="#">Cell Phone</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Google - Pixel 3 XL  128GB</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="product.html">Google - Pixel 3 XL 128GB</a></h3>
+                                    <!-- End .product-title -->
                                     <div class="product-price">
                                         <span class="new-price">$35.41</span>
                                         <span class="old-price">Was $41.67</span>
                                     </div><!-- End .product-price -->
                                     <div class="ratings-container">
                                         <div class="ratings">
-                                            <div class="ratings-val" style="width: 100%;"></div><!-- End .ratings-val -->
+                                            <div class="ratings-val" style="width: 100%;"></div>
+                                            <!-- End .ratings-val -->
                                         </div><!-- End .ratings -->
                                         <span class="ratings-text">( 10 Reviews )</span>
                                     </div><!-- End .rating-container -->
 
                                     <div class="product-nav product-nav-dots">
-                                        <a href="#" class="active" style="background: #edd2c8;"><span class="sr-only">Color name</span></a>
-                                        <a href="#" style="background: #eaeaec;"><span class="sr-only">Color name</span></a>
-                                        <a href="#" style="background: #333333;"><span class="sr-only">Color name</span></a>
+                                        <a href="#" class="active" style="background: #edd2c8;"><span
+                                                class="sr-only">Color name</span></a>
+                                        <a href="#" style="background: #eaeaec;"><span class="sr-only">Color
+                                                name</span></a>
+                                        <a href="#" style="background: #333333;"><span class="sr-only">Color
+                                                name</span></a>
                                     </div><!-- End .product-nav -->
                                 </div><!-- End .product-body -->
                             </div><!-- End .product -->
@@ -677,7 +730,8 @@ include("includes/connect.php");
                                 <figure class="product-media">
                                     <span class="product-label label-circle label-top">Top</span>
                                     <a href="product.html">
-                                        <img src="assets/images/demos/demo-4/products/product-5.jpg" alt="Product image" class="product-image">
+                                        <img src="assets/images/demos/demo-4/products/product-5.jpg" alt="Product image"
+                                            class="product-image">
                                     </a>
 
                                     <div class="product-action-vertical">
@@ -685,8 +739,10 @@ include("includes/connect.php");
                                     </div><!-- End .product-action -->
 
                                     <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
+                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to
+                                                cart</span></a>
+                                        <a href="popup/quickView.html" class="btn-product btn-quickview"
+                                            title="Quick view"><span>quick view</span></a>
                                     </div><!-- End .product-action -->
                                 </figure><!-- End .product-media -->
 
@@ -694,7 +750,8 @@ include("includes/connect.php");
                                     <div class="product-cat">
                                         <a href="#">TV & Home Theater</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Samsung - 55" Class  LED 2160p Smart</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="product.html">Samsung - 55" Class LED 2160p
+                                            Smart</a></h3><!-- End .product-title -->
                                     <div class="product-price">
                                         $899.99
                                     </div><!-- End .product-price -->
@@ -711,7 +768,8 @@ include("includes/connect.php");
                                 <figure class="product-media">
                                     <span class="product-label label-circle label-top">Top</span>
                                     <a href="product.html">
-                                        <img src="assets/images/demos/demo-4/products/product-1.jpg" alt="Product image" class="product-image">
+                                        <img src="assets/images/demos/demo-4/products/product-1.jpg" alt="Product image"
+                                            class="product-image">
                                     </a>
 
                                     <div class="product-action-vertical">
@@ -719,8 +777,10 @@ include("includes/connect.php");
                                     </div><!-- End .product-action -->
 
                                     <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
+                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to
+                                                cart</span></a>
+                                        <a href="popup/quickView.html" class="btn-product btn-quickview"
+                                            title="Quick view"><span>quick view</span></a>
                                     </div><!-- End .product-action -->
                                 </figure><!-- End .product-media -->
 
@@ -728,13 +788,15 @@ include("includes/connect.php");
                                     <div class="product-cat">
                                         <a href="#">Laptops</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">MacBook Pro 13" Display, i5</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="product.html">MacBook Pro 13" Display, i5</a>
+                                    </h3><!-- End .product-title -->
                                     <div class="product-price">
                                         $1,199.99
                                     </div><!-- End .product-price -->
                                     <div class="ratings-container">
                                         <div class="ratings">
-                                            <div class="ratings-val" style="width: 100%;"></div><!-- End .ratings-val -->
+                                            <div class="ratings-val" style="width: 100%;"></div>
+                                            <!-- End .ratings-val -->
                                         </div><!-- End .ratings -->
                                         <span class="ratings-text">( 4 Reviews )</span>
                                     </div><!-- End .rating-container -->
@@ -743,7 +805,7 @@ include("includes/connect.php");
                         </div><!-- End .owl-carousel -->
                     </div><!-- .End .tab-pane -->
                     <div class="tab-pane p-0 fade" id="new-tv-tab" role="tabpanel" aria-labelledby="new-tv-link">
-                        <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl" 
+                        <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl"
                             data-owl-options='{
                                 "nav": true, 
                                 "dots": true,
@@ -771,7 +833,8 @@ include("includes/connect.php");
                                 <figure class="product-media">
                                     <span class="product-label label-circle label-new">New</span>
                                     <a href="product.html">
-                                        <img src="assets/images/demos/demo-4/products/product-3.jpg" alt="Product image" class="product-image">
+                                        <img src="assets/images/demos/demo-4/products/product-3.jpg" alt="Product image"
+                                            class="product-image">
                                     </a>
 
                                     <div class="product-action-vertical">
@@ -779,8 +842,10 @@ include("includes/connect.php");
                                     </div><!-- End .product-action -->
 
                                     <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
+                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to
+                                                cart</span></a>
+                                        <a href="popup/quickView.html" class="btn-product btn-quickview"
+                                            title="Quick view"><span>quick view</span></a>
                                     </div><!-- End .product-action -->
                                 </figure><!-- End .product-media -->
 
@@ -788,7 +853,8 @@ include("includes/connect.php");
                                     <div class="product-cat">
                                         <a href="#">Tablets</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Apple - 11 Inch iPad Pro  with Wi-Fi 256GB </a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="product.html">Apple - 11 Inch iPad Pro with Wi-Fi
+                                            256GB </a></h3><!-- End .product-title -->
                                     <div class="product-price">
                                         $899.99
                                     </div><!-- End .product-price -->
@@ -800,9 +866,12 @@ include("includes/connect.php");
                                     </div><!-- End .rating-container -->
 
                                     <div class="product-nav product-nav-dots">
-                                        <a href="#" style="background: #edd2c8;"><span class="sr-only">Color name</span></a>
-                                        <a href="#" style="background: #eaeaec;"><span class="sr-only">Color name</span></a>
-                                        <a href="#" class="active" style="background: #333333;"><span class="sr-only">Color name</span></a>
+                                        <a href="#" style="background: #edd2c8;"><span class="sr-only">Color
+                                                name</span></a>
+                                        <a href="#" style="background: #eaeaec;"><span class="sr-only">Color
+                                                name</span></a>
+                                        <a href="#" class="active" style="background: #333333;"><span
+                                                class="sr-only">Color name</span></a>
                                     </div><!-- End .product-nav -->
                                 </div><!-- End .product-body -->
                             </div><!-- End .product -->
@@ -810,7 +879,8 @@ include("includes/connect.php");
                             <div class="product product-2">
                                 <figure class="product-media">
                                     <a href="product.html">
-                                        <img src="assets/images/demos/demo-4/products/product-2.jpg" alt="Product image" class="product-image">
+                                        <img src="assets/images/demos/demo-4/products/product-2.jpg" alt="Product image"
+                                            class="product-image">
                                     </a>
 
                                     <div class="product-action-vertical">
@@ -818,8 +888,10 @@ include("includes/connect.php");
                                     </div><!-- End .product-action -->
 
                                     <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
+                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to
+                                                cart</span></a>
+                                        <a href="popup/quickView.html" class="btn-product btn-quickview"
+                                            title="Quick view"><span>quick view</span></a>
                                     </div><!-- End .product-action -->
                                 </figure><!-- End .product-media -->
 
@@ -827,7 +899,8 @@ include("includes/connect.php");
                                     <div class="product-cat">
                                         <a href="#">Audio</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Bose - SoundLink Bluetooth Speaker</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="product.html">Bose - SoundLink Bluetooth
+                                            Speaker</a></h3><!-- End .product-title -->
                                     <div class="product-price">
                                         $79.99
                                     </div><!-- End .product-price -->
@@ -845,7 +918,8 @@ include("includes/connect.php");
                                     <span class="product-label label-circle label-top">Top</span>
                                     <span class="product-label label-circle label-sale">Sale</span>
                                     <a href="product.html">
-                                        <img src="assets/images/demos/demo-4/products/product-4.jpg" alt="Product image" class="product-image">
+                                        <img src="assets/images/demos/demo-4/products/product-4.jpg" alt="Product image"
+                                            class="product-image">
                                     </a>
 
                                     <div class="product-action-vertical">
@@ -853,8 +927,10 @@ include("includes/connect.php");
                                     </div><!-- End .product-action -->
 
                                     <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
+                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to
+                                                cart</span></a>
+                                        <a href="popup/quickView.html" class="btn-product btn-quickview"
+                                            title="Quick view"><span>quick view</span></a>
                                     </div><!-- End .product-action -->
                                 </figure><!-- End .product-media -->
 
@@ -862,22 +938,27 @@ include("includes/connect.php");
                                     <div class="product-cat">
                                         <a href="#">Cell Phone</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Google - Pixel 3 XL  128GB</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="product.html">Google - Pixel 3 XL 128GB</a></h3>
+                                    <!-- End .product-title -->
                                     <div class="product-price">
                                         <span class="new-price">$35.41</span>
                                         <span class="old-price">Was $41.67</span>
                                     </div><!-- End .product-price -->
                                     <div class="ratings-container">
                                         <div class="ratings">
-                                            <div class="ratings-val" style="width: 100%;"></div><!-- End .ratings-val -->
+                                            <div class="ratings-val" style="width: 100%;"></div>
+                                            <!-- End .ratings-val -->
                                         </div><!-- End .ratings -->
                                         <span class="ratings-text">( 10 Reviews )</span>
                                     </div><!-- End .rating-container -->
 
                                     <div class="product-nav product-nav-dots">
-                                        <a href="#" class="active" style="background: #edd2c8;"><span class="sr-only">Color name</span></a>
-                                        <a href="#" style="background: #eaeaec;"><span class="sr-only">Color name</span></a>
-                                        <a href="#" style="background: #333333;"><span class="sr-only">Color name</span></a>
+                                        <a href="#" class="active" style="background: #edd2c8;"><span
+                                                class="sr-only">Color name</span></a>
+                                        <a href="#" style="background: #eaeaec;"><span class="sr-only">Color
+                                                name</span></a>
+                                        <a href="#" style="background: #333333;"><span class="sr-only">Color
+                                                name</span></a>
                                     </div><!-- End .product-nav -->
                                 </div><!-- End .product-body -->
                             </div><!-- End .product -->
@@ -886,7 +967,8 @@ include("includes/connect.php");
                                 <figure class="product-media">
                                     <span class="product-label label-circle label-top">Top</span>
                                     <a href="product.html">
-                                        <img src="assets/images/demos/demo-4/products/product-5.jpg" alt="Product image" class="product-image">
+                                        <img src="assets/images/demos/demo-4/products/product-5.jpg" alt="Product image"
+                                            class="product-image">
                                     </a>
 
                                     <div class="product-action-vertical">
@@ -894,8 +976,10 @@ include("includes/connect.php");
                                     </div><!-- End .product-action -->
 
                                     <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
+                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to
+                                                cart</span></a>
+                                        <a href="popup/quickView.html" class="btn-product btn-quickview"
+                                            title="Quick view"><span>quick view</span></a>
                                     </div><!-- End .product-action -->
                                 </figure><!-- End .product-media -->
 
@@ -903,7 +987,8 @@ include("includes/connect.php");
                                     <div class="product-cat">
                                         <a href="#">TV & Home Theater</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Samsung - 55" Class  LED 2160p Smart</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="product.html">Samsung - 55" Class LED 2160p
+                                            Smart</a></h3><!-- End .product-title -->
                                     <div class="product-price">
                                         $899.99
                                     </div><!-- End .product-price -->
@@ -920,7 +1005,8 @@ include("includes/connect.php");
                                 <figure class="product-media">
                                     <span class="product-label label-circle label-top">Top</span>
                                     <a href="product.html">
-                                        <img src="assets/images/demos/demo-4/products/product-1.jpg" alt="Product image" class="product-image">
+                                        <img src="assets/images/demos/demo-4/products/product-1.jpg" alt="Product image"
+                                            class="product-image">
                                     </a>
 
                                     <div class="product-action-vertical">
@@ -928,8 +1014,10 @@ include("includes/connect.php");
                                     </div><!-- End .product-action -->
 
                                     <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
+                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to
+                                                cart</span></a>
+                                        <a href="popup/quickView.html" class="btn-product btn-quickview"
+                                            title="Quick view"><span>quick view</span></a>
                                     </div><!-- End .product-action -->
                                 </figure><!-- End .product-media -->
 
@@ -937,13 +1025,15 @@ include("includes/connect.php");
                                     <div class="product-cat">
                                         <a href="#">Laptops</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">MacBook Pro 13" Display, i5</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="product.html">MacBook Pro 13" Display, i5</a>
+                                    </h3><!-- End .product-title -->
                                     <div class="product-price">
                                         $1,199.99
                                     </div><!-- End .product-price -->
                                     <div class="ratings-container">
                                         <div class="ratings">
-                                            <div class="ratings-val" style="width: 100%;"></div><!-- End .ratings-val -->
+                                            <div class="ratings-val" style="width: 100%;"></div>
+                                            <!-- End .ratings-val -->
                                         </div><!-- End .ratings -->
                                         <span class="ratings-text">( 4 Reviews )</span>
                                     </div><!-- End .rating-container -->
@@ -951,8 +1041,9 @@ include("includes/connect.php");
                             </div><!-- End .product -->
                         </div><!-- End .owl-carousel -->
                     </div><!-- .End .tab-pane -->
-                    <div class="tab-pane p-0 fade" id="new-computers-tab" role="tabpanel" aria-labelledby="new-computers-link">
-                        <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl" 
+                    <div class="tab-pane p-0 fade" id="new-computers-tab" role="tabpanel"
+                        aria-labelledby="new-computers-link">
+                        <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl"
                             data-owl-options='{
                                 "nav": true, 
                                 "dots": true,
@@ -980,7 +1071,8 @@ include("includes/connect.php");
                                 <figure class="product-media">
                                     <span class="product-label label-circle label-top">Top</span>
                                     <a href="product.html">
-                                        <img src="assets/images/demos/demo-4/products/product-5.jpg" alt="Product image" class="product-image">
+                                        <img src="assets/images/demos/demo-4/products/product-5.jpg" alt="Product image"
+                                            class="product-image">
                                     </a>
 
                                     <div class="product-action-vertical">
@@ -988,8 +1080,10 @@ include("includes/connect.php");
                                     </div><!-- End .product-action -->
 
                                     <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
+                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to
+                                                cart</span></a>
+                                        <a href="popup/quickView.html" class="btn-product btn-quickview"
+                                            title="Quick view"><span>quick view</span></a>
                                     </div><!-- End .product-action -->
                                 </figure><!-- End .product-media -->
 
@@ -997,7 +1091,8 @@ include("includes/connect.php");
                                     <div class="product-cat">
                                         <a href="#">TV & Home Theater</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Samsung - 55" Class  LED 2160p Smart</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="product.html">Samsung - 55" Class LED 2160p
+                                            Smart</a></h3><!-- End .product-title -->
                                     <div class="product-price">
                                         $899.99
                                     </div><!-- End .product-price -->
@@ -1014,7 +1109,8 @@ include("includes/connect.php");
                                 <figure class="product-media">
                                     <span class="product-label label-circle label-top">Top</span>
                                     <a href="product.html">
-                                        <img src="assets/images/demos/demo-4/products/product-1.jpg" alt="Product image" class="product-image">
+                                        <img src="assets/images/demos/demo-4/products/product-1.jpg" alt="Product image"
+                                            class="product-image">
                                     </a>
 
                                     <div class="product-action-vertical">
@@ -1022,8 +1118,10 @@ include("includes/connect.php");
                                     </div><!-- End .product-action -->
 
                                     <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
+                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to
+                                                cart</span></a>
+                                        <a href="popup/quickView.html" class="btn-product btn-quickview"
+                                            title="Quick view"><span>quick view</span></a>
                                     </div><!-- End .product-action -->
                                 </figure><!-- End .product-media -->
 
@@ -1031,13 +1129,15 @@ include("includes/connect.php");
                                     <div class="product-cat">
                                         <a href="#">Laptops</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">MacBook Pro 13" Display, i5</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="product.html">MacBook Pro 13" Display, i5</a>
+                                    </h3><!-- End .product-title -->
                                     <div class="product-price">
                                         $1,199.99
                                     </div><!-- End .product-price -->
                                     <div class="ratings-container">
                                         <div class="ratings">
-                                            <div class="ratings-val" style="width: 100%;"></div><!-- End .ratings-val -->
+                                            <div class="ratings-val" style="width: 100%;"></div>
+                                            <!-- End .ratings-val -->
                                         </div><!-- End .ratings -->
                                         <span class="ratings-text">( 4 Reviews )</span>
                                     </div><!-- End .rating-container -->
@@ -1048,7 +1148,8 @@ include("includes/connect.php");
                                 <figure class="product-media">
                                     <span class="product-label label-circle label-new">New</span>
                                     <a href="product.html">
-                                        <img src="assets/images/demos/demo-4/products/product-3.jpg" alt="Product image" class="product-image">
+                                        <img src="assets/images/demos/demo-4/products/product-3.jpg" alt="Product image"
+                                            class="product-image">
                                     </a>
 
                                     <div class="product-action-vertical">
@@ -1056,8 +1157,10 @@ include("includes/connect.php");
                                     </div><!-- End .product-action -->
 
                                     <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
+                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to
+                                                cart</span></a>
+                                        <a href="popup/quickView.html" class="btn-product btn-quickview"
+                                            title="Quick view"><span>quick view</span></a>
                                     </div><!-- End .product-action -->
                                 </figure><!-- End .product-media -->
 
@@ -1065,7 +1168,8 @@ include("includes/connect.php");
                                     <div class="product-cat">
                                         <a href="#">Tablets</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Apple - 11 Inch iPad Pro  with Wi-Fi 256GB </a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="product.html">Apple - 11 Inch iPad Pro with Wi-Fi
+                                            256GB </a></h3><!-- End .product-title -->
                                     <div class="product-price">
                                         $899.99
                                     </div><!-- End .product-price -->
@@ -1077,9 +1181,12 @@ include("includes/connect.php");
                                     </div><!-- End .rating-container -->
 
                                     <div class="product-nav product-nav-dots">
-                                        <a href="#" style="background: #edd2c8;"><span class="sr-only">Color name</span></a>
-                                        <a href="#" style="background: #eaeaec;"><span class="sr-only">Color name</span></a>
-                                        <a href="#" class="active" style="background: #333333;"><span class="sr-only">Color name</span></a>
+                                        <a href="#" style="background: #edd2c8;"><span class="sr-only">Color
+                                                name</span></a>
+                                        <a href="#" style="background: #eaeaec;"><span class="sr-only">Color
+                                                name</span></a>
+                                        <a href="#" class="active" style="background: #333333;"><span
+                                                class="sr-only">Color name</span></a>
                                     </div><!-- End .product-nav -->
                                 </div><!-- End .product-body -->
                             </div><!-- End .product -->
@@ -1087,7 +1194,8 @@ include("includes/connect.php");
                             <div class="product product-2">
                                 <figure class="product-media">
                                     <a href="product.html">
-                                        <img src="assets/images/demos/demo-4/products/product-2.jpg" alt="Product image" class="product-image">
+                                        <img src="assets/images/demos/demo-4/products/product-2.jpg" alt="Product image"
+                                            class="product-image">
                                     </a>
 
                                     <div class="product-action-vertical">
@@ -1095,8 +1203,10 @@ include("includes/connect.php");
                                     </div><!-- End .product-action -->
 
                                     <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
+                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to
+                                                cart</span></a>
+                                        <a href="popup/quickView.html" class="btn-product btn-quickview"
+                                            title="Quick view"><span>quick view</span></a>
                                     </div><!-- End .product-action -->
                                 </figure><!-- End .product-media -->
 
@@ -1104,7 +1214,8 @@ include("includes/connect.php");
                                     <div class="product-cat">
                                         <a href="#">Audio</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Bose - SoundLink Bluetooth Speaker</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="product.html">Bose - SoundLink Bluetooth
+                                            Speaker</a></h3><!-- End .product-title -->
                                     <div class="product-price">
                                         $79.99
                                     </div><!-- End .product-price -->
@@ -1122,7 +1233,8 @@ include("includes/connect.php");
                                     <span class="product-label label-circle label-top">Top</span>
                                     <span class="product-label label-circle label-sale">Sale</span>
                                     <a href="product.html">
-                                        <img src="assets/images/demos/demo-4/products/product-4.jpg" alt="Product image" class="product-image">
+                                        <img src="assets/images/demos/demo-4/products/product-4.jpg" alt="Product image"
+                                            class="product-image">
                                     </a>
 
                                     <div class="product-action-vertical">
@@ -1130,8 +1242,10 @@ include("includes/connect.php");
                                     </div><!-- End .product-action -->
 
                                     <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
+                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to
+                                                cart</span></a>
+                                        <a href="popup/quickView.html" class="btn-product btn-quickview"
+                                            title="Quick view"><span>quick view</span></a>
                                     </div><!-- End .product-action -->
                                 </figure><!-- End .product-media -->
 
@@ -1139,29 +1253,35 @@ include("includes/connect.php");
                                     <div class="product-cat">
                                         <a href="#">Cell Phone</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Google - Pixel 3 XL  128GB</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="product.html">Google - Pixel 3 XL 128GB</a></h3>
+                                    <!-- End .product-title -->
                                     <div class="product-price">
                                         <span class="new-price">$35.41</span>
                                         <span class="old-price">Was $41.67</span>
                                     </div><!-- End .product-price -->
                                     <div class="ratings-container">
                                         <div class="ratings">
-                                            <div class="ratings-val" style="width: 100%;"></div><!-- End .ratings-val -->
+                                            <div class="ratings-val" style="width: 100%;"></div>
+                                            <!-- End .ratings-val -->
                                         </div><!-- End .ratings -->
                                         <span class="ratings-text">( 10 Reviews )</span>
                                     </div><!-- End .rating-container -->
 
                                     <div class="product-nav product-nav-dots">
-                                        <a href="#" class="active" style="background: #edd2c8;"><span class="sr-only">Color name</span></a>
-                                        <a href="#" style="background: #eaeaec;"><span class="sr-only">Color name</span></a>
-                                        <a href="#" style="background: #333333;"><span class="sr-only">Color name</span></a>
+                                        <a href="#" class="active" style="background: #edd2c8;"><span
+                                                class="sr-only">Color name</span></a>
+                                        <a href="#" style="background: #eaeaec;"><span class="sr-only">Color
+                                                name</span></a>
+                                        <a href="#" style="background: #333333;"><span class="sr-only">Color
+                                                name</span></a>
                                     </div><!-- End .product-nav -->
                                 </div><!-- End .product-body -->
                             </div><!-- End .product -->
                         </div><!-- End .owl-carousel -->
                     </div><!-- .End .tab-pane -->
-                    <div class="tab-pane p-0 fade" id="new-phones-tab" role="tabpanel" aria-labelledby="new-phones-link">
-                        <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl" 
+                    <div class="tab-pane p-0 fade" id="new-phones-tab" role="tabpanel"
+                        aria-labelledby="new-phones-link">
+                        <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl"
                             data-owl-options='{
                                 "nav": true, 
                                 "dots": true,
@@ -1189,7 +1309,8 @@ include("includes/connect.php");
                                 <figure class="product-media">
                                     <span class="product-label label-circle label-top">Top</span>
                                     <a href="product.html">
-                                        <img src="assets/images/demos/demo-4/products/product-1.jpg" alt="Product image" class="product-image">
+                                        <img src="assets/images/demos/demo-4/products/product-1.jpg" alt="Product image"
+                                            class="product-image">
                                     </a>
 
                                     <div class="product-action-vertical">
@@ -1197,8 +1318,10 @@ include("includes/connect.php");
                                     </div><!-- End .product-action -->
 
                                     <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
+                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to
+                                                cart</span></a>
+                                        <a href="popup/quickView.html" class="btn-product btn-quickview"
+                                            title="Quick view"><span>quick view</span></a>
                                     </div><!-- End .product-action -->
                                 </figure><!-- End .product-media -->
 
@@ -1206,13 +1329,15 @@ include("includes/connect.php");
                                     <div class="product-cat">
                                         <a href="#">Laptops</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">MacBook Pro 13" Display, i5</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="product.html">MacBook Pro 13" Display, i5</a>
+                                    </h3><!-- End .product-title -->
                                     <div class="product-price">
                                         $1,199.99
                                     </div><!-- End .product-price -->
                                     <div class="ratings-container">
                                         <div class="ratings">
-                                            <div class="ratings-val" style="width: 100%;"></div><!-- End .ratings-val -->
+                                            <div class="ratings-val" style="width: 100%;"></div>
+                                            <!-- End .ratings-val -->
                                         </div><!-- End .ratings -->
                                         <span class="ratings-text">( 4 Reviews )</span>
                                     </div><!-- End .rating-container -->
@@ -1222,7 +1347,8 @@ include("includes/connect.php");
                             <div class="product product-2">
                                 <figure class="product-media">
                                     <a href="product.html">
-                                        <img src="assets/images/demos/demo-4/products/product-2.jpg" alt="Product image" class="product-image">
+                                        <img src="assets/images/demos/demo-4/products/product-2.jpg" alt="Product image"
+                                            class="product-image">
                                     </a>
 
                                     <div class="product-action-vertical">
@@ -1230,8 +1356,10 @@ include("includes/connect.php");
                                     </div><!-- End .product-action -->
 
                                     <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
+                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to
+                                                cart</span></a>
+                                        <a href="popup/quickView.html" class="btn-product btn-quickview"
+                                            title="Quick view"><span>quick view</span></a>
                                     </div><!-- End .product-action -->
                                 </figure><!-- End .product-media -->
 
@@ -1239,7 +1367,8 @@ include("includes/connect.php");
                                     <div class="product-cat">
                                         <a href="#">Audio</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Bose - SoundLink Bluetooth Speaker</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="product.html">Bose - SoundLink Bluetooth
+                                            Speaker</a></h3><!-- End .product-title -->
                                     <div class="product-price">
                                         $79.99
                                     </div><!-- End .product-price -->
@@ -1256,7 +1385,8 @@ include("includes/connect.php");
                                 <figure class="product-media">
                                     <span class="product-label label-circle label-new">New</span>
                                     <a href="product.html">
-                                        <img src="assets/images/demos/demo-4/products/product-3.jpg" alt="Product image" class="product-image">
+                                        <img src="assets/images/demos/demo-4/products/product-3.jpg" alt="Product image"
+                                            class="product-image">
                                     </a>
 
                                     <div class="product-action-vertical">
@@ -1264,8 +1394,10 @@ include("includes/connect.php");
                                     </div><!-- End .product-action -->
 
                                     <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
+                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to
+                                                cart</span></a>
+                                        <a href="popup/quickView.html" class="btn-product btn-quickview"
+                                            title="Quick view"><span>quick view</span></a>
                                     </div><!-- End .product-action -->
                                 </figure><!-- End .product-media -->
 
@@ -1273,7 +1405,8 @@ include("includes/connect.php");
                                     <div class="product-cat">
                                         <a href="#">Tablets</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Apple - 11 Inch iPad Pro  with Wi-Fi 256GB </a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="product.html">Apple - 11 Inch iPad Pro with Wi-Fi
+                                            256GB </a></h3><!-- End .product-title -->
                                     <div class="product-price">
                                         $899.99
                                     </div><!-- End .product-price -->
@@ -1285,9 +1418,12 @@ include("includes/connect.php");
                                     </div><!-- End .rating-container -->
 
                                     <div class="product-nav product-nav-dots">
-                                        <a href="#" style="background: #edd2c8;"><span class="sr-only">Color name</span></a>
-                                        <a href="#" style="background: #eaeaec;"><span class="sr-only">Color name</span></a>
-                                        <a href="#" class="active" style="background: #333333;"><span class="sr-only">Color name</span></a>
+                                        <a href="#" style="background: #edd2c8;"><span class="sr-only">Color
+                                                name</span></a>
+                                        <a href="#" style="background: #eaeaec;"><span class="sr-only">Color
+                                                name</span></a>
+                                        <a href="#" class="active" style="background: #333333;"><span
+                                                class="sr-only">Color name</span></a>
                                     </div><!-- End .product-nav -->
                                 </div><!-- End .product-body -->
                             </div><!-- End .product -->
@@ -1296,7 +1432,8 @@ include("includes/connect.php");
                                 <figure class="product-media">
                                     <span class="product-label label-circle label-top">Top</span>
                                     <a href="product.html">
-                                        <img src="assets/images/demos/demo-4/products/product-5.jpg" alt="Product image" class="product-image">
+                                        <img src="assets/images/demos/demo-4/products/product-5.jpg" alt="Product image"
+                                            class="product-image">
                                     </a>
 
                                     <div class="product-action-vertical">
@@ -1304,8 +1441,10 @@ include("includes/connect.php");
                                     </div><!-- End .product-action -->
 
                                     <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
+                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to
+                                                cart</span></a>
+                                        <a href="popup/quickView.html" class="btn-product btn-quickview"
+                                            title="Quick view"><span>quick view</span></a>
                                     </div><!-- End .product-action -->
                                 </figure><!-- End .product-media -->
 
@@ -1313,7 +1452,8 @@ include("includes/connect.php");
                                     <div class="product-cat">
                                         <a href="#">TV & Home Theater</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Samsung - 55" Class  LED 2160p Smart</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="product.html">Samsung - 55" Class LED 2160p
+                                            Smart</a></h3><!-- End .product-title -->
                                     <div class="product-price">
                                         $899.99
                                     </div><!-- End .product-price -->
@@ -1330,7 +1470,8 @@ include("includes/connect.php");
                                 <figure class="product-media">
                                     <span class="product-label label-circle label-top">Top</span>
                                     <a href="product.html">
-                                        <img src="assets/images/demos/demo-4/products/product-1.jpg" alt="Product image" class="product-image">
+                                        <img src="assets/images/demos/demo-4/products/product-1.jpg" alt="Product image"
+                                            class="product-image">
                                     </a>
 
                                     <div class="product-action-vertical">
@@ -1338,8 +1479,10 @@ include("includes/connect.php");
                                     </div><!-- End .product-action -->
 
                                     <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
+                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to
+                                                cart</span></a>
+                                        <a href="popup/quickView.html" class="btn-product btn-quickview"
+                                            title="Quick view"><span>quick view</span></a>
                                     </div><!-- End .product-action -->
                                 </figure><!-- End .product-media -->
 
@@ -1347,13 +1490,15 @@ include("includes/connect.php");
                                     <div class="product-cat">
                                         <a href="#">Laptops</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">MacBook Pro 13" Display, i5</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="product.html">MacBook Pro 13" Display, i5</a>
+                                    </h3><!-- End .product-title -->
                                     <div class="product-price">
                                         $1,199.99
                                     </div><!-- End .product-price -->
                                     <div class="ratings-container">
                                         <div class="ratings">
-                                            <div class="ratings-val" style="width: 100%;"></div><!-- End .ratings-val -->
+                                            <div class="ratings-val" style="width: 100%;"></div>
+                                            <!-- End .ratings-val -->
                                         </div><!-- End .ratings -->
                                         <span class="ratings-text">( 4 Reviews )</span>
                                     </div><!-- End .rating-container -->
@@ -1365,7 +1510,8 @@ include("includes/connect.php");
                                     <span class="product-label label-circle label-top">Top</span>
                                     <span class="product-label label-circle label-sale">Sale</span>
                                     <a href="product.html">
-                                        <img src="assets/images/demos/demo-4/products/product-4.jpg" alt="Product image" class="product-image">
+                                        <img src="assets/images/demos/demo-4/products/product-4.jpg" alt="Product image"
+                                            class="product-image">
                                     </a>
 
                                     <div class="product-action-vertical">
@@ -1373,8 +1519,10 @@ include("includes/connect.php");
                                     </div><!-- End .product-action -->
 
                                     <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
+                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to
+                                                cart</span></a>
+                                        <a href="popup/quickView.html" class="btn-product btn-quickview"
+                                            title="Quick view"><span>quick view</span></a>
                                     </div><!-- End .product-action -->
                                 </figure><!-- End .product-media -->
 
@@ -1382,29 +1530,35 @@ include("includes/connect.php");
                                     <div class="product-cat">
                                         <a href="#">Cell Phone</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Google - Pixel 3 XL  128GB</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="product.html">Google - Pixel 3 XL 128GB</a></h3>
+                                    <!-- End .product-title -->
                                     <div class="product-price">
                                         <span class="new-price">$35.41</span>
                                         <span class="old-price">Was $41.67</span>
                                     </div><!-- End .product-price -->
                                     <div class="ratings-container">
                                         <div class="ratings">
-                                            <div class="ratings-val" style="width: 100%;"></div><!-- End .ratings-val -->
+                                            <div class="ratings-val" style="width: 100%;"></div>
+                                            <!-- End .ratings-val -->
                                         </div><!-- End .ratings -->
                                         <span class="ratings-text">( 10 Reviews )</span>
                                     </div><!-- End .rating-container -->
 
                                     <div class="product-nav product-nav-dots">
-                                        <a href="#" class="active" style="background: #edd2c8;"><span class="sr-only">Color name</span></a>
-                                        <a href="#" style="background: #eaeaec;"><span class="sr-only">Color name</span></a>
-                                        <a href="#" style="background: #333333;"><span class="sr-only">Color name</span></a>
+                                        <a href="#" class="active" style="background: #edd2c8;"><span
+                                                class="sr-only">Color name</span></a>
+                                        <a href="#" style="background: #eaeaec;"><span class="sr-only">Color
+                                                name</span></a>
+                                        <a href="#" style="background: #333333;"><span class="sr-only">Color
+                                                name</span></a>
                                     </div><!-- End .product-nav -->
                                 </div><!-- End .product-body -->
                             </div><!-- End .product -->
                         </div><!-- End .owl-carousel -->
                     </div><!-- .End .tab-pane -->
-                    <div class="tab-pane p-0 fade" id="new-watches-tab" role="tabpanel" aria-labelledby="new-watches-link">
-                        <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl" 
+                    <div class="tab-pane p-0 fade" id="new-watches-tab" role="tabpanel"
+                        aria-labelledby="new-watches-link">
+                        <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl"
                             data-owl-options='{
                                 "nav": true, 
                                 "dots": true,
@@ -1433,7 +1587,8 @@ include("includes/connect.php");
                                     <span class="product-label label-circle label-top">Top</span>
                                     <span class="product-label label-circle label-sale">Sale</span>
                                     <a href="product.html">
-                                        <img src="assets/images/demos/demo-4/products/product-4.jpg" alt="Product image" class="product-image">
+                                        <img src="assets/images/demos/demo-4/products/product-4.jpg" alt="Product image"
+                                            class="product-image">
                                     </a>
 
                                     <div class="product-action-vertical">
@@ -1441,8 +1596,10 @@ include("includes/connect.php");
                                     </div><!-- End .product-action -->
 
                                     <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
+                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to
+                                                cart</span></a>
+                                        <a href="popup/quickView.html" class="btn-product btn-quickview"
+                                            title="Quick view"><span>quick view</span></a>
                                     </div><!-- End .product-action -->
                                 </figure><!-- End .product-media -->
 
@@ -1450,22 +1607,27 @@ include("includes/connect.php");
                                     <div class="product-cat">
                                         <a href="#">Cell Phone</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Google - Pixel 3 XL  128GB</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="product.html">Google - Pixel 3 XL 128GB</a></h3>
+                                    <!-- End .product-title -->
                                     <div class="product-price">
                                         <span class="new-price">$35.41</span>
                                         <span class="old-price">Was $41.67</span>
                                     </div><!-- End .product-price -->
                                     <div class="ratings-container">
                                         <div class="ratings">
-                                            <div class="ratings-val" style="width: 100%;"></div><!-- End .ratings-val -->
+                                            <div class="ratings-val" style="width: 100%;"></div>
+                                            <!-- End .ratings-val -->
                                         </div><!-- End .ratings -->
                                         <span class="ratings-text">( 10 Reviews )</span>
                                     </div><!-- End .rating-container -->
 
                                     <div class="product-nav product-nav-dots">
-                                        <a href="#" class="active" style="background: #edd2c8;"><span class="sr-only">Color name</span></a>
-                                        <a href="#" style="background: #eaeaec;"><span class="sr-only">Color name</span></a>
-                                        <a href="#" style="background: #333333;"><span class="sr-only">Color name</span></a>
+                                        <a href="#" class="active" style="background: #edd2c8;"><span
+                                                class="sr-only">Color name</span></a>
+                                        <a href="#" style="background: #eaeaec;"><span class="sr-only">Color
+                                                name</span></a>
+                                        <a href="#" style="background: #333333;"><span class="sr-only">Color
+                                                name</span></a>
                                     </div><!-- End .product-nav -->
                                 </div><!-- End .product-body -->
                             </div><!-- End .product -->
@@ -1474,7 +1636,8 @@ include("includes/connect.php");
                                 <figure class="product-media">
                                     <span class="product-label label-circle label-top">Top</span>
                                     <a href="product.html">
-                                        <img src="assets/images/demos/demo-4/products/product-1.jpg" alt="Product image" class="product-image">
+                                        <img src="assets/images/demos/demo-4/products/product-1.jpg" alt="Product image"
+                                            class="product-image">
                                     </a>
 
                                     <div class="product-action-vertical">
@@ -1482,8 +1645,10 @@ include("includes/connect.php");
                                     </div><!-- End .product-action -->
 
                                     <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
+                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to
+                                                cart</span></a>
+                                        <a href="popup/quickView.html" class="btn-product btn-quickview"
+                                            title="Quick view"><span>quick view</span></a>
                                     </div><!-- End .product-action -->
                                 </figure><!-- End .product-media -->
 
@@ -1491,13 +1656,15 @@ include("includes/connect.php");
                                     <div class="product-cat">
                                         <a href="#">Laptops</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">MacBook Pro 13" Display, i5</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="product.html">MacBook Pro 13" Display, i5</a>
+                                    </h3><!-- End .product-title -->
                                     <div class="product-price">
                                         $1,199.99
                                     </div><!-- End .product-price -->
                                     <div class="ratings-container">
                                         <div class="ratings">
-                                            <div class="ratings-val" style="width: 100%;"></div><!-- End .ratings-val -->
+                                            <div class="ratings-val" style="width: 100%;"></div>
+                                            <!-- End .ratings-val -->
                                         </div><!-- End .ratings -->
                                         <span class="ratings-text">( 4 Reviews )</span>
                                     </div><!-- End .rating-container -->
@@ -1507,7 +1674,8 @@ include("includes/connect.php");
                             <div class="product product-2">
                                 <figure class="product-media">
                                     <a href="product.html">
-                                        <img src="assets/images/demos/demo-4/products/product-2.jpg" alt="Product image" class="product-image">
+                                        <img src="assets/images/demos/demo-4/products/product-2.jpg" alt="Product image"
+                                            class="product-image">
                                     </a>
 
                                     <div class="product-action-vertical">
@@ -1515,8 +1683,10 @@ include("includes/connect.php");
                                     </div><!-- End .product-action -->
 
                                     <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
+                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to
+                                                cart</span></a>
+                                        <a href="popup/quickView.html" class="btn-product btn-quickview"
+                                            title="Quick view"><span>quick view</span></a>
                                     </div><!-- End .product-action -->
                                 </figure><!-- End .product-media -->
 
@@ -1524,7 +1694,8 @@ include("includes/connect.php");
                                     <div class="product-cat">
                                         <a href="#">Audio</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Bose - SoundLink Bluetooth Speaker</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="product.html">Bose - SoundLink Bluetooth
+                                            Speaker</a></h3><!-- End .product-title -->
                                     <div class="product-price">
                                         $79.99
                                     </div><!-- End .product-price -->
@@ -1541,7 +1712,8 @@ include("includes/connect.php");
                                 <figure class="product-media">
                                     <span class="product-label label-circle label-new">New</span>
                                     <a href="product.html">
-                                        <img src="assets/images/demos/demo-4/products/product-3.jpg" alt="Product image" class="product-image">
+                                        <img src="assets/images/demos/demo-4/products/product-3.jpg" alt="Product image"
+                                            class="product-image">
                                     </a>
 
                                     <div class="product-action-vertical">
@@ -1549,8 +1721,10 @@ include("includes/connect.php");
                                     </div><!-- End .product-action -->
 
                                     <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
+                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to
+                                                cart</span></a>
+                                        <a href="popup/quickView.html" class="btn-product btn-quickview"
+                                            title="Quick view"><span>quick view</span></a>
                                     </div><!-- End .product-action -->
                                 </figure><!-- End .product-media -->
 
@@ -1558,7 +1732,8 @@ include("includes/connect.php");
                                     <div class="product-cat">
                                         <a href="#">Tablets</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Apple - 11 Inch iPad Pro  with Wi-Fi 256GB </a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="product.html">Apple - 11 Inch iPad Pro with Wi-Fi
+                                            256GB </a></h3><!-- End .product-title -->
                                     <div class="product-price">
                                         $899.99
                                     </div><!-- End .product-price -->
@@ -1570,16 +1745,19 @@ include("includes/connect.php");
                                     </div><!-- End .rating-container -->
 
                                     <div class="product-nav product-nav-dots">
-                                        <a href="#" style="background: #edd2c8;"><span class="sr-only">Color name</span></a>
-                                        <a href="#" style="background: #eaeaec;"><span class="sr-only">Color name</span></a>
-                                        <a href="#" class="active" style="background: #333333;"><span class="sr-only">Color name</span></a>
+                                        <a href="#" style="background: #edd2c8;"><span class="sr-only">Color
+                                                name</span></a>
+                                        <a href="#" style="background: #eaeaec;"><span class="sr-only">Color
+                                                name</span></a>
+                                        <a href="#" class="active" style="background: #333333;"><span
+                                                class="sr-only">Color name</span></a>
                                     </div><!-- End .product-nav -->
                                 </div><!-- End .product-body -->
                             </div><!-- End .product -->
                         </div><!-- End .owl-carousel -->
                     </div><!-- .End .tab-pane -->
                     <div class="tab-pane p-0 fade" id="new-acc-tab" role="tabpanel" aria-labelledby="new-acc-link">
-                        <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl" 
+                        <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl"
                             data-owl-options='{
                                 "nav": true, 
                                 "dots": true,
@@ -1607,7 +1785,8 @@ include("includes/connect.php");
                                 <figure class="product-media">
                                     <span class="product-label label-circle label-top">Top</span>
                                     <a href="product.html">
-                                        <img src="assets/images/demos/demo-4/products/product-1.jpg" alt="Product image" class="product-image">
+                                        <img src="assets/images/demos/demo-4/products/product-1.jpg" alt="Product image"
+                                            class="product-image">
                                     </a>
 
                                     <div class="product-action-vertical">
@@ -1615,8 +1794,10 @@ include("includes/connect.php");
                                     </div><!-- End .product-action -->
 
                                     <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
+                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to
+                                                cart</span></a>
+                                        <a href="popup/quickView.html" class="btn-product btn-quickview"
+                                            title="Quick view"><span>quick view</span></a>
                                     </div><!-- End .product-action -->
                                 </figure><!-- End .product-media -->
 
@@ -1624,13 +1805,15 @@ include("includes/connect.php");
                                     <div class="product-cat">
                                         <a href="#">Laptops</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">MacBook Pro 13" Display, i5</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="product.html">MacBook Pro 13" Display, i5</a>
+                                    </h3><!-- End .product-title -->
                                     <div class="product-price">
                                         $1,199.99
                                     </div><!-- End .product-price -->
                                     <div class="ratings-container">
                                         <div class="ratings">
-                                            <div class="ratings-val" style="width: 100%;"></div><!-- End .ratings-val -->
+                                            <div class="ratings-val" style="width: 100%;"></div>
+                                            <!-- End .ratings-val -->
                                         </div><!-- End .ratings -->
                                         <span class="ratings-text">( 4 Reviews )</span>
                                     </div><!-- End .rating-container -->
@@ -1641,7 +1824,8 @@ include("includes/connect.php");
                                 <figure class="product-media">
                                     <span class="product-label label-circle label-top">Top</span>
                                     <a href="product.html">
-                                        <img src="assets/images/demos/demo-4/products/product-5.jpg" alt="Product image" class="product-image">
+                                        <img src="assets/images/demos/demo-4/products/product-5.jpg" alt="Product image"
+                                            class="product-image">
                                     </a>
 
                                     <div class="product-action-vertical">
@@ -1649,8 +1833,10 @@ include("includes/connect.php");
                                     </div><!-- End .product-action -->
 
                                     <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
+                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to
+                                                cart</span></a>
+                                        <a href="popup/quickView.html" class="btn-product btn-quickview"
+                                            title="Quick view"><span>quick view</span></a>
                                     </div><!-- End .product-action -->
                                 </figure><!-- End .product-media -->
 
@@ -1658,7 +1844,8 @@ include("includes/connect.php");
                                     <div class="product-cat">
                                         <a href="#">TV & Home Theater</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Samsung - 55" Class  LED 2160p Smart</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="product.html">Samsung - 55" Class LED 2160p
+                                            Smart</a></h3><!-- End .product-title -->
                                     <div class="product-price">
                                         $899.99
                                     </div><!-- End .product-price -->
@@ -1675,7 +1862,8 @@ include("includes/connect.php");
                                 <figure class="product-media">
                                     <span class="product-label label-circle label-top">Top</span>
                                     <a href="product.html">
-                                        <img src="assets/images/demos/demo-4/products/product-1.jpg" alt="Product image" class="product-image">
+                                        <img src="assets/images/demos/demo-4/products/product-1.jpg" alt="Product image"
+                                            class="product-image">
                                     </a>
 
                                     <div class="product-action-vertical">
@@ -1683,8 +1871,10 @@ include("includes/connect.php");
                                     </div><!-- End .product-action -->
 
                                     <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
+                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to
+                                                cart</span></a>
+                                        <a href="popup/quickView.html" class="btn-product btn-quickview"
+                                            title="Quick view"><span>quick view</span></a>
                                     </div><!-- End .product-action -->
                                 </figure><!-- End .product-media -->
 
@@ -1692,13 +1882,15 @@ include("includes/connect.php");
                                     <div class="product-cat">
                                         <a href="#">Laptops</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">MacBook Pro 13" Display, i5</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="product.html">MacBook Pro 13" Display, i5</a>
+                                    </h3><!-- End .product-title -->
                                     <div class="product-price">
                                         $1,199.99
                                     </div><!-- End .product-price -->
                                     <div class="ratings-container">
                                         <div class="ratings">
-                                            <div class="ratings-val" style="width: 100%;"></div><!-- End .ratings-val -->
+                                            <div class="ratings-val" style="width: 100%;"></div>
+                                            <!-- End .ratings-val -->
                                         </div><!-- End .ratings -->
                                         <span class="ratings-text">( 4 Reviews )</span>
                                     </div><!-- End .rating-container -->
@@ -1708,7 +1900,8 @@ include("includes/connect.php");
                             <div class="product product-2">
                                 <figure class="product-media">
                                     <a href="product.html">
-                                        <img src="assets/images/demos/demo-4/products/product-2.jpg" alt="Product image" class="product-image">
+                                        <img src="assets/images/demos/demo-4/products/product-2.jpg" alt="Product image"
+                                            class="product-image">
                                     </a>
 
                                     <div class="product-action-vertical">
@@ -1716,8 +1909,10 @@ include("includes/connect.php");
                                     </div><!-- End .product-action -->
 
                                     <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
+                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to
+                                                cart</span></a>
+                                        <a href="popup/quickView.html" class="btn-product btn-quickview"
+                                            title="Quick view"><span>quick view</span></a>
                                     </div><!-- End .product-action -->
                                 </figure><!-- End .product-media -->
 
@@ -1725,7 +1920,8 @@ include("includes/connect.php");
                                     <div class="product-cat">
                                         <a href="#">Audio</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Bose - SoundLink Bluetooth Speaker</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="product.html">Bose - SoundLink Bluetooth
+                                            Speaker</a></h3><!-- End .product-title -->
                                     <div class="product-price">
                                         $79.99
                                     </div><!-- End .product-price -->
@@ -1742,7 +1938,8 @@ include("includes/connect.php");
                                 <figure class="product-media">
                                     <span class="product-label label-circle label-new">New</span>
                                     <a href="product.html">
-                                        <img src="assets/images/demos/demo-4/products/product-3.jpg" alt="Product image" class="product-image">
+                                        <img src="assets/images/demos/demo-4/products/product-3.jpg" alt="Product image"
+                                            class="product-image">
                                     </a>
 
                                     <div class="product-action-vertical">
@@ -1750,8 +1947,10 @@ include("includes/connect.php");
                                     </div><!-- End .product-action -->
 
                                     <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
+                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to
+                                                cart</span></a>
+                                        <a href="popup/quickView.html" class="btn-product btn-quickview"
+                                            title="Quick view"><span>quick view</span></a>
                                     </div><!-- End .product-action -->
                                 </figure><!-- End .product-media -->
 
@@ -1759,7 +1958,8 @@ include("includes/connect.php");
                                     <div class="product-cat">
                                         <a href="#">Tablets</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Apple - 11 Inch iPad Pro  with Wi-Fi 256GB </a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="product.html">Apple - 11 Inch iPad Pro with Wi-Fi
+                                            256GB </a></h3><!-- End .product-title -->
                                     <div class="product-price">
                                         $899.99
                                     </div><!-- End .product-price -->
@@ -1771,9 +1971,12 @@ include("includes/connect.php");
                                     </div><!-- End .rating-container -->
 
                                     <div class="product-nav product-nav-dots">
-                                        <a href="#" style="background: #edd2c8;"><span class="sr-only">Color name</span></a>
-                                        <a href="#" style="background: #eaeaec;"><span class="sr-only">Color name</span></a>
-                                        <a href="#" class="active" style="background: #333333;"><span class="sr-only">Color name</span></a>
+                                        <a href="#" style="background: #edd2c8;"><span class="sr-only">Color
+                                                name</span></a>
+                                        <a href="#" style="background: #eaeaec;"><span class="sr-only">Color
+                                                name</span></a>
+                                        <a href="#" class="active" style="background: #333333;"><span
+                                                class="sr-only">Color name</span></a>
                                     </div><!-- End .product-nav -->
                                 </div><!-- End .product-body -->
                             </div><!-- End .product -->
@@ -1784,8 +1987,8 @@ include("includes/connect.php");
 
             <div class="mb-6"></div><!-- End .mb-6 -->
 
-            
-            
+
+
             <div class="mb-5"></div><!-- End .mb-5 -->
 
             <div class="container for-you">
@@ -1794,327 +1997,83 @@ include("includes/connect.php");
                         <h2 class="title">Recommendation For You</h2><!-- End .title -->
                     </div><!-- End .heading-left -->
 
-                   <div class="heading-right">
+                    <div class="heading-right">
                         <a href="#" class="title-link">View All Recommendadion <i class="icon-long-arrow-right"></i></a>
-                   </div><!-- End .heading-right -->
+                    </div><!-- End .heading-right -->
                 </div><!-- End .heading -->
 
                 <div class="products">
                     <div class="row justify-content-center">
-                        <div class="col-6 col-md-4 col-lg-3">
-                            <div class="product product-2">
-                                <figure class="product-media">
-                                    <span class="product-label label-circle label-sale">Sale</span>
-                                    <a href="product.html">
-                                        <img src="assets/images/demos/demo-4/products/product-10.jpg" alt="Product image" class="product-image">
-                                    </a>
+                        <?php
+// SQL query to fetch products
+$select_query = "SELECT * FROM `products` order by rand() limit 0,9";
+$result_query = mysqli_query($con, $select_query);
 
-                                    <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"></a>
-                                    </div><!-- End .product-action -->
+while ($row = mysqli_fetch_assoc($result_query)) {
+    // Extract data from the database
+    $product_id = $row['product_id'];
+    $product_title = $row['product_title'];
+    $product_description = $row['product_description'];
+    $product_keywords = $row['product_keywords'];
+    $product_image1 = $row['product_image1'];
+    $category_id = $row['category_id'];
+    $brand_id = $row['brand_id'];
+    $product_price = $row['product_price']; // Add product price if available
+    $product_old_price = $row['product_old_price'] ?? ""; // Optional field
 
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                    </div><!-- End .product-action -->
-                                </figure><!-- End .product-media -->
+    // Output the product card HTML
+    echo '
+    <div class="col-6 col-md-4 col-lg-3">
+        <div class="product product-2">
+            <figure class="product-media">
+                <span class="product-label label-circle label-sale">Sale</span>
+                <a href="product.php?id=' . $product_id . '">
+            <img src="./admin_area/product_images/' . $product_image1 . '" alt="' . $product_title . '" class="product-image">
+        </a>
 
-                                <div class="product-body">
-                                    <div class="product-cat">
-                                        <a href="#">Headphones</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Beats by Dr. Dre Wireless  Headphones</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        <span class="new-price">$279.99</span>
-                                        <span class="old-price">Was $349.99</span>
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 40%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 4 Reviews )</span>
-                                    </div><!-- End .rating-container -->
+                <div class="product-action-vertical">
+                    <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"></a>
+                </div><!-- End .product-action -->
 
-                                    <div class="product-nav product-nav-dots">
-                                        <a href="#" class="active" style="background: #666666;"><span class="sr-only">Color name</span></a>
-                                        <a href="#" style="background: #ff887f;"><span class="sr-only">Color name</span></a>
-                                        <a href="#" style="background: #6699cc;"><span class="sr-only">Color name</span></a>
-                                        <a href="#" style="background: #f3dbc1;"><span class="sr-only">Color name</span></a>
-                                        <a href="#" style="background: #eaeaec;"><span class="sr-only">Color name</span></a>
-                                    </div><!-- End .product-nav -->
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-                        </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
+                <div class="product-action">
+                    <a href="add_to_cart.php?id=' . $product_id . '" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                    <a href="popup/quickView.php?id=' . $product_id . '" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
+                </div><!-- End .product-action -->
+            </figure><!-- End .product-media -->
 
-                        <div class="col-6 col-md-4 col-lg-3">
-                            <div class="product product-2">
-                                <figure class="product-media">
-                                    <a href="product.html">
-                                        <img src="assets/images/demos/demo-4/products/product-11.jpg" alt="Product image" class="product-image">
-                                    </a>
+            <div class="product-body">
+                <div class="product-cat">
+                    <a href="category.php?id=' . $category_id . '">Category</a>
+                </div><!-- End .product-cat -->
+                <h3 class="product-title"><a href="product.php?id=' . $product_id . '">' . $product_title . '</a></h3><!-- End .product-title -->
+                <div class="product-price">
+                    <span class="new-price">$' . $product_price . '</span>';
+                    if (!empty($product_old_price)) {
+                        echo '<span class="old-price">Was $' . $product_old_price . '</span>';
+                    }
+                echo '
+                </div><!-- End .product-price -->
+                <div class="ratings-container">
+                    <div class="ratings">
+                        <div class="ratings-val" style="width: 40%;"></div><!-- End .ratings-val -->
+                    </div><!-- End .ratings -->
+                    <span class="ratings-text">( 4 Reviews )</span>
+                </div><!-- End .rating-container -->
 
-                                    <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"></a>
-                                    </div><!-- End .product-action -->
+                <div class="product-nav product-nav-dots">
+                    <a href="#" class="active" style="background: #666666;"><span class="sr-only">Color name</span></a>
+                    <a href="#" style="background: #ff887f;"><span class="sr-only">Color name</span></a>
+                    <a href="#" style="background: #6699cc;"><span class="sr-only">Color name</span></a>
+                    <a href="#" style="background: #f3dbc1;"><span class="sr-only">Color name</span></a>
+                    <a href="#" style="background: #eaeaec;"><span class="sr-only">Color name</span></a>
+                </div><!-- End .product-nav -->
+            </div><!-- End .product-body -->
+        </div><!-- End .product -->
+    </div><!-- End .col-6 col-md-4 col-lg-3 -->
+    ';
+}
+?>
 
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                    </div><!-- End .product-action -->
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body">
-                                    <div class="product-cat">
-                                        <a href="#">Cameras & Camcorders</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">GoPro - HERO7 Black HD Waterproof Action</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        $349.99
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 60%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 2 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-                        </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
-
-                        <div class="col-6 col-md-4 col-lg-3">
-                            <div class="product product-2">
-                                <figure class="product-media">
-                                    <span class="product-label label-circle label-new">New</span>
-                                    <a href="product.html">
-                                        <img src="assets/images/demos/demo-4/products/product-12.jpg" alt="Product image" class="product-image">
-                                        <img src="assets/images/demos/demo-4/products/product-12-2.jpg" alt="Product image" class="product-image-hover">
-                                    </a>
-
-                                    <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"></a>
-                                    </div><!-- End .product-action -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                    </div><!-- End .product-action -->
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body">
-                                    <div class="product-cat">
-                                        <a href="#">Smartwatches</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Apple - Apple Watch Series 3 with White Sport Band</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        $214.49
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 0%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 0 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-
-                                    <div class="product-nav product-nav-dots">
-                                        <a href="#" class="active" style="background: #e2e2e2;"><span class="sr-only">Color name</span></a>
-                                        <a href="#" style="background: #333333;"><span class="sr-only">Color name</span></a>
-                                        <a href="#" style="background: #f2bc9e;"><span class="sr-only">Color name</span></a>
-                                    </div><!-- End .product-nav -->
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-                        </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
-
-                        <div class="col-6 col-md-4 col-lg-3">
-                            <div class="product product-2">
-                                <figure class="product-media">
-                                    <a href="product.html">
-                                        <img src="assets/images/demos/demo-4/products/product-13.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                    <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"></a>
-                                    </div><!-- End .product-action -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                    </div><!-- End .product-action -->
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body">
-                                    <div class="product-cat">
-                                        <a href="#">Laptops</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Lenovo - 330-15IKBR 15.6"</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        <span class="out-price">$339.99</span>
-                                        <span class="out-text">Out Of Stock</span>
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 60%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 11 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-                        </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
-
-                        <div class="col-6 col-md-4 col-lg-3">
-                            <div class="product product-2">
-                                <figure class="product-media">
-                                    <a href="product.html">
-                                        <img src="assets/images/demos/demo-4/products/product-14.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                    <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"></a>
-                                    </div><!-- End .product-action -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                    </div><!-- End .product-action -->
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body">
-                                    <div class="product-cat">
-                                        <a href="#">Digital Cameras</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Sony - Alpha a5100 Mirrorless Camera</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        $499.99
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 50%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 11 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-                        </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
-
-                        <div class="col-6 col-md-4 col-lg-3">
-                            <div class="product product-2">
-                                <figure class="product-media">
-                                    <a href="product.html">
-                                        <img src="assets/images/demos/demo-4/products/product-15.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                    <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"></a>
-                                    </div><!-- End .product-action -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                    </div><!-- End .product-action -->
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body">
-                                    <div class="product-cat">
-                                        <a href="#">Laptops</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Home Mini - Smart Speaker  with Google Assistant</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        $49.00
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 60%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 24 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-
-                                    <div class="product-nav product-nav-dots">
-                                        <a href="#" class="active" style="background: #ef837b;"><span class="sr-only">Color name</span></a>
-                                        <a href="#" style="background: #333333;"><span class="sr-only">Color name</span></a>
-                                        <a href="#" style="background: #e2e2e2;"><span class="sr-only">Color name</span></a>
-                                    </div><!-- End .product-nav -->
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-                        </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
-
-                        <div class="col-6 col-md-4 col-lg-3">
-                            <div class="product product-2">
-                                <figure class="product-media">
-                                    <span class="product-label label-circle label-sale">Sale</span>
-                                    <a href="product.html">
-                                        <img src="assets/images/demos/demo-4/products/product-16.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                    <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"></a>
-                                    </div><!-- End .product-action -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                    </div><!-- End .product-action -->
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body">
-                                    <div class="product-cat">
-                                        <a href="#">Audio</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">WONDERBOOM Portable Bluetooth Speaker</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        <span class="new-price">$99.99</span>
-                                        <span class="old-price">Was $129.99</span>
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 40%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 4 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-
-                                    <div class="product-nav product-nav-dots">
-                                        <a href="#" class="active" style="background: #666666;"><span class="sr-only">Color name</span></a>
-                                        <a href="#" style="background: #ff887f;"><span class="sr-only">Color name</span></a>
-                                        <a href="#" style="background: #6699cc;"><span class="sr-only">Color name</span></a>
-                                        <a href="#" style="background: #f3dbc1;"><span class="sr-only">Color name</span></a>
-                                        <a href="#" style="background: #eaeaec;"><span class="sr-only">Color name</span></a>
-                                    </div><!-- End .product-nav -->
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-                        </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
-
-                        <div class="col-6 col-md-4 col-lg-3">
-                            <div class="product product-2">
-                                <figure class="product-media">
-                                    <a href="product.html">
-                                        <img src="assets/images/demos/demo-4/products/product-17.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                    <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"></a>
-                                    </div><!-- End .product-action -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                    </div><!-- End .product-action -->
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body">
-                                    <div class="product-cat">
-                                        <a href="#">Smart Home</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Google - Home Hub with  Google Assistant</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        $149.00
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 60%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 2 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-                        </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
                     </div><!-- End .row -->
                 </div><!-- End .products -->
             </div><!-- End .container -->
@@ -2184,14 +2143,15 @@ include("includes/connect.php");
         </main><!-- End .main -->
 
         <footer class="footer">
-	        <div class="footer-bottom">
-	        	<div class="container">
-	        		<p class="footer-copyright">Copyright © 2019 Molla Store. All Rights Reserved.</p><!-- End .footer-copyright -->
-	        		<figure class="footer-payments">
-	        			<img src="assets/images/payments.png" alt="Payment methods" width="272" height="20">
-	        		</figure><!-- End .footer-payments -->
-	        	</div><!-- End .container -->
-	        </div><!-- End .footer-bottom -->
+            <div class="footer-bottom">
+                <div class="container">
+                    <p class="footer-copyright">Copyright © 2019 Molla Store. All Rights Reserved.</p>
+                    <!-- End .footer-copyright -->
+                    <figure class="footer-payments">
+                        <img src="assets/images/payments.png" alt="Payment methods" width="272" height="20">
+                    </figure><!-- End .footer-payments -->
+                </div><!-- End .container -->
+            </div><!-- End .footer-bottom -->
         </footer><!-- End .footer -->
     </div><!-- End .page-wrapper -->
     <button id="scroll-top" title="Back to Top"><i class="icon-arrow-up"></i></button>
@@ -2202,24 +2162,28 @@ include("includes/connect.php");
     <div class="mobile-menu-container mobile-menu-light">
         <div class="mobile-menu-wrapper">
             <span class="mobile-menu-close"><i class="icon-close"></i></span>
-            
+
             <form action="#" method="get" class="mobile-search">
                 <label for="mobile-search" class="sr-only">Search</label>
-                <input type="search" class="form-control" name="mobile-search" id="mobile-search" placeholder="Search in..." required>
+                <input type="search" class="form-control" name="mobile-search" id="mobile-search"
+                    placeholder="Search in..." required>
                 <button class="btn btn-primary" type="submit"><i class="icon-search"></i></button>
             </form>
 
             <ul class="nav nav-pills-mobile nav-border-anim" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active" id="mobile-menu-link" data-toggle="tab" href="#mobile-menu-tab" role="tab" aria-controls="mobile-menu-tab" aria-selected="true">Menu</a>
+                    <a class="nav-link active" id="mobile-menu-link" data-toggle="tab" href="#mobile-menu-tab"
+                        role="tab" aria-controls="mobile-menu-tab" aria-selected="true">Menu</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="mobile-cats-link" data-toggle="tab" href="#mobile-cats-tab" role="tab" aria-controls="mobile-cats-tab" aria-selected="false">Categories</a>
+                    <a class="nav-link" id="mobile-cats-link" data-toggle="tab" href="#mobile-cats-tab" role="tab"
+                        aria-controls="mobile-cats-tab" aria-selected="false">Categories</a>
                 </li>
             </ul>
 
             <div class="tab-content">
-                <div class="tab-pane fade show active" id="mobile-menu-tab" role="tabpanel" aria-labelledby="mobile-menu-link">
+                <div class="tab-pane fade show active" id="mobile-menu-tab" role="tabpanel"
+                    aria-labelledby="mobile-menu-link">
                     <nav class="mobile-nav">
                         <ul class="mobile-menu">
                             <li class="active">
@@ -2308,23 +2272,28 @@ include("includes/connect.php");
                         <div class="form-tab">
                             <ul class="nav nav-pills nav-fill nav-border-anim" role="tablist">
                                 <li class="nav-item">
-                                    <a class="nav-link active" id="signin-tab" data-toggle="tab" href="#signin" role="tab" aria-controls="signin" aria-selected="true">Sign In</a>
+                                    <a class="nav-link active" id="signin-tab" data-toggle="tab" href="#signin"
+                                        role="tab" aria-controls="signin" aria-selected="true">Sign In</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" id="register-tab" data-toggle="tab" href="#register" role="tab" aria-controls="register" aria-selected="false">Register</a>
+                                    <a class="nav-link" id="register-tab" data-toggle="tab" href="#register" role="tab"
+                                        aria-controls="register" aria-selected="false">Register</a>
                                 </li>
                             </ul>
                             <div class="tab-content" id="tab-content-5">
-                                <div class="tab-pane fade show active" id="signin" role="tabpanel" aria-labelledby="signin-tab">
+                                <div class="tab-pane fade show active" id="signin" role="tabpanel"
+                                    aria-labelledby="signin-tab">
                                     <form action="#">
                                         <div class="form-group">
                                             <label for="singin-email">Username or email address *</label>
-                                            <input type="text" class="form-control" id="singin-email" name="singin-email" required>
+                                            <input type="text" class="form-control" id="singin-email"
+                                                name="singin-email" required>
                                         </div><!-- End .form-group -->
 
                                         <div class="form-group">
                                             <label for="singin-password">Password *</label>
-                                            <input type="password" class="form-control" id="singin-password" name="singin-password" required>
+                                            <input type="password" class="form-control" id="singin-password"
+                                                name="singin-password" required>
                                         </div><!-- End .form-group -->
 
                                         <div class="form-footer">
@@ -2334,8 +2303,10 @@ include("includes/connect.php");
                                             </button>
 
                                             <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="signin-remember">
-                                                <label class="custom-control-label" for="signin-remember">Remember Me</label>
+                                                <input type="checkbox" class="custom-control-input"
+                                                    id="signin-remember">
+                                                <label class="custom-control-label" for="signin-remember">Remember
+                                                    Me</label>
                                             </div><!-- End .custom-checkbox -->
 
                                             <a href="#" class="forgot-link">Forgot Your Password?</a>
@@ -2363,12 +2334,14 @@ include("includes/connect.php");
                                     <form action="#">
                                         <div class="form-group">
                                             <label for="register-email">Your email address *</label>
-                                            <input type="email" class="form-control" id="register-email" name="register-email" required>
+                                            <input type="email" class="form-control" id="register-email"
+                                                name="register-email" required>
                                         </div><!-- End .form-group -->
 
                                         <div class="form-group">
                                             <label for="register-password">Password *</label>
-                                            <input type="password" class="form-control" id="register-password" name="register-password" required>
+                                            <input type="password" class="form-control" id="register-password"
+                                                name="register-password" required>
                                         </div><!-- End .form-group -->
 
                                         <div class="form-footer">
@@ -2378,8 +2351,10 @@ include("includes/connect.php");
                                             </button>
 
                                             <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="register-policy" required>
-                                                <label class="custom-control-label" for="register-policy">I agree to the <a href="#">privacy policy</a> *</label>
+                                                <input type="checkbox" class="custom-control-input" id="register-policy"
+                                                    required>
+                                                <label class="custom-control-label" for="register-policy">I agree to the
+                                                    <a href="#">privacy policy</a> *</label>
                                             </div><!-- End .custom-checkbox -->
                                         </div><!-- End .form-footer -->
                                     </form>
@@ -2415,12 +2390,15 @@ include("includes/connect.php");
                 <div class="row no-gutters bg-white newsletter-popup-content">
                     <div class="col-xl-3-5col col-lg-7 banner-content-wrap">
                         <div class="banner-content text-center">
-                            <img src="assets/images/popup/newsletter/logo.png" class="logo" alt="logo" width="60" height="15">
+                            <img src="assets/images/popup/newsletter/logo.png" class="logo" alt="logo" width="60"
+                                height="15">
                             <h2 class="banner-title">get <span>25<light>%</light></span> off</h2>
-                            <p>Subscribe to the Molla eCommerce newsletter to receive timely updates from your favorite products.</p>
+                            <p>Subscribe to the Molla eCommerce newsletter to receive timely updates from your favorite
+                                products.</p>
                             <form action="#">
                                 <div class="input-group input-group-round">
-                                    <input type="email" class="form-control form-control-white" placeholder="Your Email Address" aria-label="Email Adress" required>
+                                    <input type="email" class="form-control form-control-white"
+                                        placeholder="Your Email Address" aria-label="Email Adress" required>
                                     <div class="input-group-append">
                                         <button class="btn" type="submit"><span>go</span></button>
                                     </div><!-- .End .input-group-append -->
@@ -2428,7 +2406,8 @@ include("includes/connect.php");
                             </form>
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="register-policy-2" required>
-                                <label class="custom-control-label" for="register-policy-2">Do not show this popup again</label>
+                                <label class="custom-control-label" for="register-policy-2">Do not show this popup
+                                    again</label>
                             </div><!-- End .custom-checkbox -->
                         </div>
                     </div>
@@ -2457,4 +2436,5 @@ include("includes/connect.php");
 
 
 <!-- molla/index-4.html  22 Nov 2019 09:54:18 GMT -->
+
 </html>
