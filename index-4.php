@@ -39,6 +39,8 @@ include('./functions/common_function.php');
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/skins/skin-demo-4.css">
     <link rel="stylesheet" href="assets/css/demos/demo-4.css">
+
+    
 </head>
 
 <body>
@@ -84,7 +86,6 @@ include('./functions/common_function.php');
                             <span class="sr-only">Toggle mobile menu</span>
                             <i class="icon-bars"></i>
                         </button>
-
                         <a href="index.php" class="logo">
                             <img src="assets/images/demos/demo-4/logo.png" alt="Molla Logo" width="105" height="25">
                         </a>
@@ -94,19 +95,29 @@ include('./functions/common_function.php');
                         <div class="header-search header-search-extended header-search-visible d-none d-lg-block">
                             <a href="#" class="search-toggle" role="button"><i class="icon-search"></i></a>
                             <form action="#" method="get">
-                                <div class="header-search-wrapper search-wrapper-wide">
-                                    <label for="q" class="sr-only">Search</label>
-                                    <button class="btn btn-primary" type="submit"><i class="icon-search"></i></button>
-                                    <input type="search" class="form-control" name="q" id="q"
-                                        placeholder="Search product ..." required>
-                                </div><!-- End .header-search-wrapper -->
-                            </form>
+    <div class="header-search-wrapper search-wrapper-wide">
+        <label for="q" class="sr-only">Search</label>
+        <!-- Keep the button style and position -->
+        <button class="btn btn-primary" type="submit" name="search_action" value="search">
+            <i class="icon-search"></i>
+        </button>
+        <!-- Input field as per the required functionality -->
+        <input 
+            type="search" 
+            class="form-control" 
+            name="q" 
+            id="q" 
+            placeholder="Search product ..." 
+            required>
+    </div>
+</form>
+
                         </div><!-- End .header-search -->
                     </div>
 
                     <div class="header-right">
 
-
+                    
                         <div class="wishlist">
                             <a href="wishlist.html" title="Wishlist">
                                 <div class="icon">

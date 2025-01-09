@@ -39,6 +39,42 @@
 	<!-- Theme CSS -->
 	<link rel="stylesheet" href="assets/css/main.min.css">
 
+	<style>
+  .demos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust spacing between items */
+  }
+
+  .iso-item {
+    flex: 1 1 calc(25% - 20px); /* 4 items per row with space adjustment */
+    max-width: calc(25% - 20px); /* Ensure items don't exceed this width */
+    box-sizing: border-box; /* Include padding/border in width calculations */
+  }
+
+  @media (max-width: 1200px) {
+    .iso-item {
+      flex: 1 1 calc(33.33% - 20px); /* 3 items per row for medium screens */
+      max-width: calc(33.33% - 20px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .iso-item {
+      flex: 1 1 calc(50% - 20px); /* 2 items per row for small screens */
+      max-width: calc(50% - 20px);
+    }
+  }
+
+  @media (max-width: 576px) {
+    .iso-item {
+      flex: 1 1 100%; /* 1 item per row for very small screens */
+      max-width: 100%;
+    }
+  }
+</style>
+
+
 </head>
 
 <body>
@@ -91,7 +127,7 @@
 				</div>
 				<div class="row demos">
 
-					<div class="iso-item col-sm-6 col-md-4 col-lg-3 homepages">
+					<div class="iso-item homepages">
 						<a href="index-4.php" target="_blank">
 							<img src="assets/images/demos-img/lazy.png"
 								data-oi="assets/images/demos-img/molla_electronic2.jpg" width="500" height="385"
@@ -100,7 +136,7 @@
 						</a>
 					</div>
 
-					<div class="iso-item col-sm-6 col-md-4 col-lg-3 homepages">
+					<div class="iso-item homepages">
 						<a href="index-10.html" target="_blank">
 							<img src="assets/images/demos-img/lazy.png"
 								data-oi="assets/images/demos-img/molla_shoesstore.jpg" width="500" height="385"
@@ -108,7 +144,7 @@
 							<h5>Shoes Store</h5>
 						</a>
 					</div>
-					<div class="iso-item col-sm-6 col-md-4 col-lg-3 homepages">
+					<div class="iso-item homepages">
 						<a href="index-11.html" target="_blank">
 							<img src="assets/images/demos-img/lazy.png"
 								data-oi="assets/images/demos-img/molla_furniture_simple.jpg" width="500" height="385"
@@ -116,7 +152,7 @@
 							<h5>Furniture 3 <span>(Simple)</span></h5>
 						</a>
 					</div>
-					<div class="iso-item col-sm-6 col-md-4 col-lg-3 homepages">
+					<div class="iso-item homepages">
 						<a href="index-12.html" target="_blank">
 							<img src="assets/images/demos-img/lazy.png"
 								data-oi="assets/images/demos-img/molla_fashion_simple.jpg" width="500" height="385"
@@ -125,7 +161,7 @@
 						</a>
 					</div>
 
-					<div class="iso-item col-sm-6 col-md-4 col-lg-3 homepages">
+					<div class="iso-item homepages">
 						<a href="index-19.html" target="_blank">
 							<img src="assets/images/demos-img/lazy.png"
 								data-oi="assets/images/demos-img/molla_gamestore.jpg" width="500" height="385"
@@ -133,7 +169,7 @@
 							<h5>Game Store</h5>
 						</a>
 					</div>
-					<div class="iso-item col-sm-6 col-md-4 col-lg-3 homepages">
+					<div class="iso-item homepages">
 						<a href="index-20.html" target="_blank">
 							<img src="assets/images/demos-img/lazy.png"
 								data-oi="assets/images/demos-img/molla_bookstore.jpg" width="500" height="385"
@@ -141,7 +177,7 @@
 							<h5>Book Store</h5>
 						</a>
 					</div>
-					<div class="iso-item col-sm-6 col-md-4 col-lg-3 homepages">
+					<div class="iso-item homepages">
 						<a href="index-21.html" target="_blank">
 							<img src="assets/images/demos-img/lazy.png"
 								data-oi="assets/images/demos-img/molla_sport.jpg" width="500" height="385"
@@ -149,7 +185,7 @@
 							<h5>Sport Store</h5>
 						</a>
 					</div>
-					<div class="iso-item col-sm-6 col-md-4 col-lg-3 homepages">
+					<div class="iso-item homepages">
 						<a href="index-24.html" target="_blank">
 							<img src="assets/images/demos-img/lazy.png"
 								data-oi="assets/images/demos-img/molla_extreme_sport.jpg" width="500" height="385"
@@ -159,7 +195,7 @@
 					</div>
 
 					
-					<div class="iso-item col-sm-6 col-md-4 col-lg-3 shoppages">
+					<div class="iso-item shoppages">
 						<a href="cart.html" target="_blank">
 							<img src="assets/images/demos-img/lazy.png"
 								data-oi="assets/images/demos-img/29_shop_shopping_cart.jpg" width="500" height="385"
@@ -167,7 +203,7 @@
 							<h5>Shopping Cart</h5>
 						</a>
 					</div>
-					<div class="iso-item col-sm-6 col-md-4 col-lg-3 shoppages">
+					<div class="iso-item shoppages">
 						<a href="checkout.html" target="_blank">
 							<img src="assets/images/demos-img/lazy.png"
 								data-oi="assets/images/demos-img/30_shop_checkout.jpg" width="500" height="385"
@@ -175,7 +211,7 @@
 							<h5>Checkout</h5>
 						</a>
 					</div>
-					<div class="iso-item col-sm-6 col-md-4 col-lg-3 shoppages">
+					<div class="iso-item shoppages">
 						<a href="wishlist.html" target="_blank">
 							<img src="assets/images/demos-img/lazy.png"
 								data-oi="assets/images/demos-img/31_shop_wishlist.jpg" width="500" height="385"
@@ -183,7 +219,7 @@
 							<h5>Wishlist</h5>
 						</a>
 					</div>
-					<div class="iso-item col-sm-6 col-md-4 col-lg-3 shoppages">
+					<div class="iso-item shoppages">
 						<a href="dashboard.html" target="_blank">
 							<img src="assets/images/demos-img/lazy.png"
 								data-oi="assets/images/demos-img/shop_my_account.jpg" width="500" height="385"
@@ -192,7 +228,7 @@
 						</a>
 					</div>
 
-					<div class="iso-item col-sm-6 col-md-4 col-lg-3 otherpages">
+					<div class="iso-item otherpages">
 						<a href="about.html" target="_blank">
 							<img src="assets/images/demos-img/lazy.png"
 								data-oi="assets/images/demos-img/40_pages_aboutus.jpg" width="500" height="385"
@@ -201,7 +237,7 @@
 						</a>
 					</div>
 					
-					<div class="iso-item col-sm-6 col-md-4 col-lg-3 otherpages">
+					<div class="iso-item otherpages">
 						<a href="contact-2.html" target="_blank">
 							<img src="assets/images/demos-img/lazy.png"
 								data-oi="assets/images/demos-img/43_pages_contactus_2.jpg" width="500" height="385"
@@ -209,7 +245,7 @@
 							<h5>Contact us 2</h5>
 						</a>
 					</div>
-					<div class="iso-item col-sm-6 col-md-4 col-lg-3 otherpages">
+					<div class="iso-item otherpages">
 						<a href="login.html" target="_blank">
 							<img src="assets/images/demos-img/lazy.png"
 								data-oi="assets/images/demos-img/44_pages_login.jpg" width="500" height="385"
@@ -217,7 +253,7 @@
 							<h5>Login page</h5>
 						</a>
 					</div>
-					<div class="iso-item col-sm-6 col-md-4 col-lg-3 otherpages">
+					<div class="iso-item otherpages">
 						<a href="faq.html" target="_blank">
 							<img src="assets/images/demos-img/lazy.png"
 								data-oi="assets/images/demos-img/45_pages_FAQ.jpg" width="500" height="385"
