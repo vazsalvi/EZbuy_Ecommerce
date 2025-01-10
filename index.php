@@ -50,6 +50,7 @@
     flex: 1 1 calc(25% - 20px); /* 4 items per row with space adjustment */
     max-width: calc(25% - 20px); /* Ensure items don't exceed this width */
     box-sizing: border-box; /* Include padding/border in width calculations */
+	padding: 10px; /* Add padding on all sides */
   }
 
   @media (max-width: 1200px) {

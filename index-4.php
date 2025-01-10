@@ -1989,7 +1989,7 @@ include('./functions/common_function.php');
                     </div><!-- End .heading-left -->
 
                     <div class="heading-right">
-                        <a href="#" class="title-link">View All Recommendadion <i class="icon-long-arrow-right"></i></a>
+                        <a href="display_all.php" class="title-link">View All Recommendadion <i class="icon-long-arrow-right"></i></a>
                     </div><!-- End .heading-right -->
                 </div><!-- End .heading -->
 
@@ -2069,17 +2069,12 @@ include('./functions/common_function.php');
             </div><!-- End .icon-boxes-container -->
         </main><!-- End .main -->
 
-        <footer class="footer">
-            <div class="footer-bottom">
-                <div class="container">
-                    <p class="footer-copyright">Copyright © 2019 Molla Store. All Rights Reserved.</p>
-                    <!-- End .footer-copyright -->
-                    <figure class="footer-payments">
-                        <img src="assets/images/payments.png" alt="Payment methods" width="272" height="20">
-                    </figure><!-- End .footer-payments -->
-                </div><!-- End .container -->
-            </div><!-- End .footer-bottom -->
-        </footer><!-- End .footer -->
+        //include footer
+        <?php include("./includes/footer.php")?>
+        
+        </div>
+
+
     </div><!-- End .page-wrapper -->
     <button id="scroll-top" title="Back to Top"><i class="icon-arrow-up"></i></button>
 
