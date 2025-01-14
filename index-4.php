@@ -86,7 +86,7 @@ include('./functions/common_function.php');
                             <span class="sr-only">Toggle mobile menu</span>
                             <i class="icon-bars"></i>
                         </button>
-                        <a href="index.php" class="logo">
+                        <a href="index.html" class="logo">
                             <img src="assets/images/demos/demo-4/logo.png" alt="Molla Logo" width="105" height="25">
                         </a>
                     </div><!-- End .header-left -->
@@ -94,23 +94,23 @@ include('./functions/common_function.php');
                     <div class="header-center">
                         <div class="header-search header-search-extended header-search-visible d-none d-lg-block">
                             <a href="#" class="search-toggle" role="button"><i class="icon-search"></i></a>
-                            <form action="#" method="get">
-    <div class="header-search-wrapper search-wrapper-wide">
-        <label for="q" class="sr-only">Search</label>
-        <!-- Keep the button style and position -->
-        <button class="btn btn-primary" type="submit" name="search_action" value="search">
-            <i class="icon-search"></i>
-        </button>
-        <!-- Input field as per the required functionality -->
-        <input 
-            type="search" 
-            class="form-control" 
-            name="q" 
-            id="q" 
-            placeholder="Search product ..." 
-            required>
-    </div>
-</form>
+                        <form action="category.php" method="get">
+                            <div class="header-search-wrapper search-wrapper-wide">
+                                <label for="q" class="sr-only">Search</label>
+                                <!-- Keep the button style and position -->
+                                <button class="btn btn-primary" type="submit" name="search_action" value="search">
+                                    <i class="icon-search"></i>
+                                </button>
+                                <!-- Input field as per the required functionality -->
+                                <input 
+                                type="search" 
+                                class="form-control" 
+                                name="q" 
+                                id="q" 
+                                placeholder="Search product ..." 
+                                required>
+                            </div>
+                        </form>
 
                         </div><!-- End .header-search -->
                     </div>
@@ -1989,7 +1989,7 @@ include('./functions/common_function.php');
                     </div><!-- End .heading-left -->
 
                     <div class="heading-right">
-                        <a href="display_all.php" class="title-link">View All Recommendadion <i class="icon-long-arrow-right"></i></a>
+                        <a href="category.php" class="title-link">View All Recommendadion <i class="icon-long-arrow-right"></i></a>
                     </div><!-- End .heading-right -->
                 </div><!-- End .heading -->
 
@@ -2069,7 +2069,7 @@ include('./functions/common_function.php');
             </div><!-- End .icon-boxes-container -->
         </main><!-- End .main -->
 
-        //include footer
+        <!-- //include footer// -->
         <?php include("./includes/footer.php")?>
         
         </div>
