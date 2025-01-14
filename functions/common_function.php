@@ -43,7 +43,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
 
                 <div class="product-action">
                     <a href="add_to_cart.php?id=' . $product_id . '" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                    <a href="popup/quickView.php?id=' . $product_id . '" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
+                    <a href="product.php?product_id=' . $product_id . '" class="btn-product btn" title="view"><span>view</span></a>
                 </div><!-- End .product-action -->
             </figure><!-- End .product-media -->
 

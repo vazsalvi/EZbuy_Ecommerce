@@ -86,7 +86,7 @@ include('./functions/common_function.php');
                             <span class="sr-only">Toggle mobile menu</span>
                             <i class="icon-bars"></i>
                         </button>
-                        <a href="index.html" class="logo">
+                        <a href="index.php" class="logo">
                             <img src="assets/images/demos/demo-4/logo.png" alt="Molla Logo" width="105" height="25">
                         </a>
                     </div><!-- End .header-left -->
@@ -239,7 +239,7 @@ include('./functions/common_function.php');
                         <nav class="main-nav">
                             <ul class="menu sf-arrows">
                                 <li class="megamenu-container active">
-                                    <a href="index.html" class="sf-with-ul">Home</a>
+                                    <a href="index.php" class="sf-with-ul">Home</a>
 
                                     <div class="megamenu demo">
                                         <div class="menu-col">
@@ -2072,7 +2072,7 @@ include('./functions/common_function.php');
         <!-- //include footer// -->
         <?php include("./includes/footer.php")?>
         
-        </div>
+        
 
 
     </div><!-- End .page-wrapper -->
@@ -2109,7 +2109,7 @@ include('./functions/common_function.php');
                     <nav class="mobile-nav">
                         <ul class="mobile-menu">
                             <li class="active">
-                                <a href="index.html">Home</a>
+                                <a href="index.php">Home</a>
 
                                 <ul>
                                     <li><a href="index-4.html">04 - electronic store</a></li>
