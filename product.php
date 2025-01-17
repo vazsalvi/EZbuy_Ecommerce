@@ -209,7 +209,7 @@ include('./functions/common_function.php');
                         <div class="dropdown cart-dropdown">
                             <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
                                 <i class="icon-shopping-cart"></i>
-                                <span class="cart-count">2</span>
+                                <sup class="cart-count"><?php cart_item();?></sup>
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right">
@@ -258,7 +258,7 @@ include('./functions/common_function.php');
                                 <div class="dropdown-cart-total">
                                     <span>Total</span>
 
-                                    <span class="cart-total-price">$160.00</span>
+                                    <span class="cart-total-price"><?php total_cart_price(); ?></span>
                                 </div><!-- End .dropdown-cart-total -->
 
                                 <div class="dropdown-cart-action">
@@ -297,6 +297,7 @@ include('./functions/common_function.php');
 
             <div class="page-content">
                 <div class="container">
+                    <!-- the pphp code -->
                 <?php
 include("includes/connect.php");
 
@@ -308,6 +309,7 @@ if (isset($_GET['product_id'])) {
     $result = mysqli_query($con, $query);
 
     if ($row = mysqli_fetch_assoc($result)) {
+        $product_id = $_GET['product_id'];
         $product_title = $row['product_title'];
         $product_description = $row['product_description'];
         $product_price = $row['product_price'];
@@ -415,7 +417,7 @@ if (isset($_GET['product_id'])) {
                 </div><!-- End .details-filter-row -->
 
                 <div class="product-details-action">
-                    <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
+                    <a href="product.php?add_to_cart='. $product_id . '" class="btn-product btn-cart"><span>add to cart</span></a>
 
                     <div class="details-action-wrapper">
                         <a href="#" class="btn-product btn-wishlist" title="Wishlist"><span>Add to Wishlist</span></a>
@@ -494,7 +496,7 @@ if (isset($_GET['product_id'])) {
                                 <div class="product-desc-content">
                                     <h3>Delivery & returns</h3>
                                     <p>We deliver to over 100 countries around the world. For full details of the delivery options we offer, please view our <a href="#">Delivery information</a><br>
-                                    We hope you’ll love every purchase, but if you ever need to return an item you can do so within a month of receipt. For full details of how to make a return, please view our <a href="#">Returns information</a></p>
+                                    We hope youll love every purchase, but if you ever need to return an item you can do so within a month of receipt. For full details of how to make a return, please view our <a href="#">Returns information</a></p>
                                 </div><!-- End .product-desc-content -->
                             </div><!-- .End .tab-pane -->
                             <div class="tab-pane fade" id="product-review-tab" role="tabpanel" aria-labelledby="product-review-link">

@@ -134,7 +134,7 @@ include('./functions/common_function.php');
                             <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false" data-display="static">
                                 <div class="icon">
-                                    <i class="icon-shopping-cart"></i><sup class="cart-count">3</sup>
+                                    <i class="icon-shopping-cart"></i><sup class="cart-count"><?php cart_item();?></sup>
                                 </div>
                                 <p>Cart</p>
                             </a>
@@ -187,7 +187,7 @@ include('./functions/common_function.php');
                                 <div class="dropdown-cart-total">
                                     <span>Total</span>
 
-                                    <span class="cart-total-price">$160.00</span>
+                                    <span class="cart-total-price"><?php total_cart_price(); ?></span>
                                 </div><!-- End .dropdown-cart-total -->
 
                                 <div class="dropdown-cart-action">
@@ -328,6 +328,11 @@ include('./functions/common_function.php');
                 </div><!-- End .container -->
             </div><!-- End .header-bottom -->
         </header><!-- End .header -->
+
+        <!-- cart function call -->
+         <?php
+         cart();
+         ?>
 
         <main class="main">
             <div class="intro-slider-container mb-5">
