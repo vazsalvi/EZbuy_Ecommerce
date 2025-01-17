@@ -42,8 +42,8 @@ while ($row = mysqli_fetch_assoc($result_query)) {
                 </div><!-- End .product-action -->
 
                 <div class="product-action">
-                    <a href="add_to_cart.php?id=' . $product_id . '" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                    <a href="product.php?product_id=' . $product_id . '" class="btn-product btn" title="view"><span>view</span></a>
+                    <a href="index-4.php?add_to_cart.php?id=' . $product_id . '" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
+                    <a href="product.php?product_id=' . $product_id . '" class="btn-product icon-eye" title="view more"><span>view more</span></a>
                 </div><!-- End .product-action -->
             </figure><!-- End .product-media -->
 
@@ -453,5 +453,27 @@ while ($row = mysqli_fetch_assoc($result_query)) {
     ';
 }
 }
+}
+// get ip adress function
+
+function getUserIP() {
+    if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+        $ip = $_SERVER['HTTP_CLIENT_IP'];
+    } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+        $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    } else {
+        $ip = $_SERVER['REMOTE_ADDR'];
+    }
+    return $ip;
+}
+
+
+// // Example usage
+// $user_ip = getUserIP();
+// echo "User IP Address: " . $user_ip;
+
+//cart function
+function cart(){
+
 }
 ?>

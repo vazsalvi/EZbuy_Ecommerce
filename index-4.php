@@ -2,6 +2,9 @@
 <?php
 include('./includes/connect.php');
 include('./functions/common_function.php');
+
+// $user_ip = getUserIP();
+// echo "User IP Address: " . $user_ip;
 ?>
 <!DOCTYPE html>
 <html lang="en">
