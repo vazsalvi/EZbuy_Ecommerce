@@ -569,7 +569,7 @@ function cart(){
             echo "<script>window.open('index-4.php','_self')</script>";
         }
         else{
-            $insert_query = "INSERT INTO `cart_details` (product_id, ip_address, quantity) VALUES ('$get_product_id', '$get_ip_add', 0)";
+            $insert_query = "INSERT INTO `cart_details` (product_id, ip_address, quantity) VALUES ('$get_product_id', '$get_ip_add', 1)";
             $result_query = mysqli_query($con, $insert_query);
             echo "<script>alert('This item inserted in cart')</script>";
             echo "<script>window.open('index-4.php','_self')</script>";
@@ -602,6 +602,7 @@ function total_cart_price(){
     // Loop through each item in the cart
     while ($row = mysqli_fetch_array($result)) {
         $product_id = $row['product_id'];
+        $quantity = $row['quantity'];  // Get the quantity from the cart details
 
         // Query to get product details
         $select_products = "SELECT * FROM `products` WHERE product_id='$product_id'";
@@ -610,13 +611,16 @@ function total_cart_price(){
         // Loop through the product details to get the price
         while ($row_product_price = mysqli_fetch_array($result_products)) {
             $product_price = $row_product_price['product_price'];  // Correct field for product price
-            $total_price += $product_price;  // Add product price to total
+
+            // Multiply price by quantity and add to total
+            $total_price += ($product_price * $quantity);  
         }
     }
 
     // Output the total price
-    echo $total_price;
+    echo "$" . number_format($total_price, 2);  // Format the price with 2 decimal places
 }
+
 
 
 

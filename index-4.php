@@ -141,47 +141,60 @@ include('./functions/common_function.php');
 
                             <div class="dropdown-menu dropdown-menu-right">
                                 <div class="dropdown-cart-products">
-                                    <div class="product">
-                                        <div class="product-cart-details">
-                                            <h4 class="product-title">
-                                                <a href="product.html">Beige knitted elastic runner shoes</a>
-                                            </h4>
+                                <?php
 
-                                            <span class="cart-product-info">
-                                                <span class="cart-product-qty">1</span>
-                                                x $84.00
-                                            </span>
-                                        </div><!-- End .product-cart-details -->
+if (!$con) {
+    die("Connection failed: " . mysqli_connect_error());
+}
 
-                                        <figure class="product-image-container">
-                                            <a href="product.html" class="product-image">
-                                                <img src="assets/images/products/cart/product-1.jpg" alt="product">
-                                            </a>
-                                        </figure>
-                                        <a href="#" class="btn-remove" title="Remove Product"><i
-                                                class="icon-close"></i></a>
-                                    </div><!-- End .product -->
+// Fetch cart items for the current user
+$get_ip_add = getUserIP();
+$cart_query = "SELECT * FROM cart_details WHERE ip_address='$get_ip_add'";
+$result = mysqli_query($con, $cart_query);
+$total_cart_price = 0; // Grand total
 
-                                    <div class="product">
-                                        <div class="product-cart-details">
-                                            <h4 class="product-title">
-                                                <a href="product.html">Blue utility pinafore denim dress</a>
-                                            </h4>
+while ($row = mysqli_fetch_assoc($result)) {
+    $product_id = $row['product_id'];
+    $quantity = $row['quantity'];
 
-                                            <span class="cart-product-info">
-                                                <span class="cart-product-qty">1</span>
-                                                x $76.00
-                                            </span>
-                                        </div><!-- End .product-cart-details -->
+    // Fetch product details
+    $product_query = "SELECT * FROM products WHERE product_id='$product_id'";
+    $product_result = mysqli_query($con, $product_query);
+    $product_data = mysqli_fetch_assoc($product_result);
 
-                                        <figure class="product-image-container">
-                                            <a href="product.html" class="product-image">
-                                                <img src="assets/images/products/cart/product-2.jpg" alt="product">
-                                            </a>
-                                        </figure>
-                                        <a href="#" class="btn-remove" title="Remove Product"><i
-                                                class="icon-close"></i></a>
-                                    </div><!-- End .product -->
+    $product_title = $product_data['product_title'];
+    $product_image = $product_data['product_image1'];
+    $product_price = $product_data['product_price'];
+    $total_price = $product_price * $quantity;
+    $total_cart_price += $total_price;
+
+    echo '
+    <div class="product">
+        <div class="product-cart-details">
+            <h4 class="product-title">
+                <a href="product.php?product_id=' . $product_id . '">' . $product_title . '</a>
+            </h4>
+            <span class="cart-product-info">
+                <span class="cart-product-qty">' . $quantity . '</span> x $' . $product_price . '
+            </span>
+        </div><!-- End .product-cart-details -->
+
+        <figure class="product-image-container">
+            <a href="product.php?product_id=' . $product_id . '" class="product-image">
+                <img src="/EZbuy_Ecommerce/admin_area/product_images/' . $product_image . '" alt="' . $product_title . '">
+            </a>
+        </figure>
+        
+        <a href="remove_cart.php?remove_id=' . $product_id . '" class="btn-remove" title="Remove Product">
+            <i class="icon-close"></i>
+        </a>
+    </div><!-- End .product -->
+    ';
+}
+?>
+
+
+                                    
                                 </div><!-- End .cart-product -->
 
                                 <div class="dropdown-cart-total">
@@ -191,7 +204,7 @@ include('./functions/common_function.php');
                                 </div><!-- End .dropdown-cart-total -->
 
                                 <div class="dropdown-cart-action">
-                                    <a href="cart.html" class="btn btn-primary">View Cart</a>
+                                    <a href="cart.php" class="btn btn-primary">View Cart</a>
                                     <a href="checkout.html" class="btn btn-outline-primary-2"><span>Checkout</span><i
                                             class="icon-long-arrow-right"></i></a>
                                 </div><!-- End .dropdown-cart-total -->
@@ -2080,7 +2093,10 @@ include('./functions/common_function.php');
         <!-- //include footer// -->
         <?php include("./includes/footer.php")?>
         
-        
+         <!-- Sign in / Register Modal -->
+     <?php
+     include("./includes/signuplogin.php")
+     ?>
 
 
     </div><!-- End .page-wrapper -->
@@ -2189,130 +2205,8 @@ include('./functions/common_function.php');
     </div><!-- End .mobile-menu-container -->
 
 
-    <!-- Sign in / Register Modal -->
-    <div class="modal fade" id="signin-modal" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="icon-close"></i></span>
-                    </button>
+    
 
-                    <div class="form-box">
-                        <div class="form-tab">
-                            <ul class="nav nav-pills nav-fill nav-border-anim" role="tablist">
-                                <li class="nav-item">
-                                    <a class="nav-link active" id="signin-tab" data-toggle="tab" href="#signin"
-                                        role="tab" aria-controls="signin" aria-selected="true">Sign In</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="register-tab" data-toggle="tab" href="#register" role="tab"
-                                        aria-controls="register" aria-selected="false">Register</a>
-                                </li>
-                            </ul>
-                            <div class="tab-content" id="tab-content-5">
-                                <div class="tab-pane fade show active" id="signin" role="tabpanel"
-                                    aria-labelledby="signin-tab">
-                                    <form action="#">
-                                        <div class="form-group">
-                                            <label for="singin-email">Username or email address *</label>
-                                            <input type="text" class="form-control" id="singin-email"
-                                                name="singin-email" required>
-                                        </div><!-- End .form-group -->
-
-                                        <div class="form-group">
-                                            <label for="singin-password">Password *</label>
-                                            <input type="password" class="form-control" id="singin-password"
-                                                name="singin-password" required>
-                                        </div><!-- End .form-group -->
-
-                                        <div class="form-footer">
-                                            <button type="submit" class="btn btn-outline-primary-2">
-                                                <span>LOG IN</span>
-                                                <i class="icon-long-arrow-right"></i>
-                                            </button>
-
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input"
-                                                    id="signin-remember">
-                                                <label class="custom-control-label" for="signin-remember">Remember
-                                                    Me</label>
-                                            </div><!-- End .custom-checkbox -->
-
-                                            <a href="#" class="forgot-link">Forgot Your Password?</a>
-                                        </div><!-- End .form-footer -->
-                                    </form>
-                                    <div class="form-choice">
-                                        <p class="text-center">or sign in with</p>
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <a href="#" class="btn btn-login btn-g">
-                                                    <i class="icon-google"></i>
-                                                    Login With Google
-                                                </a>
-                                            </div><!-- End .col-6 -->
-                                            <div class="col-sm-6">
-                                                <a href="#" class="btn btn-login btn-f">
-                                                    <i class="icon-facebook-f"></i>
-                                                    Login With Facebook
-                                                </a>
-                                            </div><!-- End .col-6 -->
-                                        </div><!-- End .row -->
-                                    </div><!-- End .form-choice -->
-                                </div><!-- .End .tab-pane -->
-                                <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
-                                    <form action="#">
-                                        <div class="form-group">
-                                            <label for="register-email">Your email address *</label>
-                                            <input type="email" class="form-control" id="register-email"
-                                                name="register-email" required>
-                                        </div><!-- End .form-group -->
-
-                                        <div class="form-group">
-                                            <label for="register-password">Password *</label>
-                                            <input type="password" class="form-control" id="register-password"
-                                                name="register-password" required>
-                                        </div><!-- End .form-group -->
-
-                                        <div class="form-footer">
-                                            <button type="submit" class="btn btn-outline-primary-2">
-                                                <span>SIGN UP</span>
-                                                <i class="icon-long-arrow-right"></i>
-                                            </button>
-
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="register-policy"
-                                                    required>
-                                                <label class="custom-control-label" for="register-policy">I agree to the
-                                                    <a href="#">privacy policy</a> *</label>
-                                            </div><!-- End .custom-checkbox -->
-                                        </div><!-- End .form-footer -->
-                                    </form>
-                                    <div class="form-choice">
-                                        <p class="text-center">or sign in with</p>
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <a href="#" class="btn btn-login btn-g">
-                                                    <i class="icon-google"></i>
-                                                    Login With Google
-                                                </a>
-                                            </div><!-- End .col-6 -->
-                                            <div class="col-sm-6">
-                                                <a href="#" class="btn btn-login  btn-f">
-                                                    <i class="icon-facebook-f"></i>
-                                                    Login With Facebook
-                                                </a>
-                                            </div><!-- End .col-6 -->
-                                        </div><!-- End .row -->
-                                    </div><!-- End .form-choice -->
-                                </div><!-- .End .tab-pane -->
-                            </div><!-- End .tab-content -->
-                        </div><!-- End .form-tab -->
-                    </div><!-- End .form-box -->
-                </div><!-- End .modal-body -->
-            </div><!-- End .modal-content -->
-        </div><!-- End .modal-dialog -->
-    </div><!-- End .modal -->
 
     <div class="container newsletter-popup-container mfp-hide" id="newsletter-popup-form">
         <div class="row justify-content-center">

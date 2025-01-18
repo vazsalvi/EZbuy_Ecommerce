@@ -617,13 +617,20 @@ pre code {
 }
 
 .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 0;  /* Remove negative margin */
+    margin-left: 0;   /* Remove negative margin */
+}
+.custom-row {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin-right: -15px;
-    margin-left: -15px
+    margin-left: -15px;
 }
+
 
 .no-gutters {
     margin-right: 0;
