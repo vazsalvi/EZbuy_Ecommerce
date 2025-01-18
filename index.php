@@ -247,7 +247,7 @@
 						</a>
 					</div>
 					<div class="iso-item otherpages">
-						<a href="login.html" target="_blank">
+						<a href="login.php" target="_blank">
 							<img src="assets/images/demos-img/lazy.png"
 								data-oi="assets/images/demos-img/44_pages_login.jpg" width="500" height="385"
 								class="molla-lz" style="padding-top: 77%" alt="Login page">

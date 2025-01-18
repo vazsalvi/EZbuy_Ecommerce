@@ -141,7 +141,7 @@
                                         <li>
                                             <a href="contact.html">Contact</a>
                                         </li>
-                                        <li><a href="login.html">Login</a></li>
+                                        <li><a href="login.php">Login</a></li>
                                         <li><a href="faq.html">FAQs</a></li>
                                         <li><a href="404.html">Error 404</a></li>
                                         <li><a href="coming-soon.html">Coming Soon</a></li>
@@ -235,7 +235,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                                 </div><!-- End .dropdown-cart-total -->
 
                                 <div class="dropdown-cart-action">
-                                    <a href="cart.html" class="btn btn-primary">View Cart</a>
+                                    <a href="cart.php" class="btn btn-primary">View Cart</a>
                                     <a href="checkout.html" class="btn btn-outline-primary-2"><span>Checkout</span><i class="icon-long-arrow-right"></i></a>
                                 </div><!-- End .dropdown-cart-total -->
                             </div><!-- End .dropdown-menu -->

@@ -1,3 +1,4 @@
+
 <?php
 include('./includes/connect.php');
 include('./functions/common_function.php');
@@ -37,6 +38,8 @@ include('./functions/common_function.php');
     <div class="page-wrapper">
         <!-- //include header// -->
     <?php include("./includes/header.php")?>
+
+
 
 
         <main class="main">
@@ -246,11 +249,38 @@ if (isset($_POST['update_cart'])) {
                         </tr><!-- End .summary-total -->
                     </tbody>
                 </table><!-- End .table table-summary -->
+    
+                <a href="#" id="checkout-btn" class="btn btn-outline-primary-2 btn-order btn-block">
+    PROCEED TO CHECKOUT
+</a>
 
-                <a href="checkout.html" class="btn btn-outline-primary-2 btn-order btn-block">PROCEED TO CHECKOUT</a>
+<script>
+document.getElementById('checkout-btn').addEventListener('click', function(event) {
+    <?php if (isset($_SESSION['username'])) { ?>
+        window.location.href = 'checkout.php'; // Redirect to checkout if logged in
+    <?php } else { ?>
+        event.preventDefault(); // Stop default behavior
+        document.querySelector('a[href="#signin-modal"]').click(); // Simulate login button click
+    <?php } ?>
+});
+</script>
+
+
+
             </div><!-- End .summary -->
 
-            <a href="category.html" class="btn btn-outline-dark-2 btn-block mb-3"><span>CONTINUE SHOPPING</span><i class="icon-refresh"></i></a>
+            <form method="post">
+    <button type="submit" name="continue_shopping" class="btn btn-outline-dark-2 btn-block mb-3">
+        <span>CONTINUE SHOPPING</span>
+        <i class="icon-refresh"></i>
+    </button>
+</form>
+
+<?php
+if (isset($_POST['continue_shopping'])) {
+    echo "<script>window.open('category.php','_self')</script>";
+}
+?>
         </aside><!-- End .col-lg-3 -->
     </div><!-- End .row -->
 </form><!-- End form -->
@@ -329,7 +359,7 @@ if (isset($_POST['update_cart'])) {
                         <li><a href="product-category-boxed.html">Product Category Boxed</a></li>
                         <li><a href="product-category-fullwidth.html"><span>Product Category Fullwidth<span class="tip tip-new">New</span></span></a></li>
                         <li><a href="cart.html">Cart</a></li>
-                        <li><a href="checkout.html">Checkout</a></li>
+                        <li><a href="checkout.php">Checkout</a></li>
                         <li><a href="wishlist.html">Wishlist</a></li>
                         <li><a href="#">Lookbook</a></li>
                     </ul>

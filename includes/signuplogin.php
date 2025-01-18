@@ -1,3 +1,4 @@
+
 <div class="modal fade" id="signin-modal" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -62,29 +63,45 @@
                                     </div><!-- End .form-choice -->
                                 </div><!-- .End .tab-pane -->
                                 <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
-                                    <form action="#">
-                                        <div class="form-group">
-                                            <label for="register-email">Your email address *</label>
-                                            <input type="email" class="form-control" id="register-email" name="register-email" required>
-                                        </div><!-- End .form-group -->
+                                <form action="register.php" method="post">
+    <div class="form-group">
+        <label for="username">Username *</label>
+        <input type="text" class="form-control" id="username" name="username" required>
+    </div><!-- End .form-group -->
 
-                                        <div class="form-group">
-                                            <label for="register-password">Password *</label>
-                                            <input type="password" class="form-control" id="register-password" name="register-password" required>
-                                        </div><!-- End .form-group -->
+    <div class="form-group">
+        <label for="register-email">Email Address *</label>
+        <input type="email" class="form-control" id="register-email" name="email" required>
+    </div><!-- End .form-group -->
 
-                                        <div class="form-footer">
-                                            <button type="submit" class="btn btn-outline-primary-2">
-                                                <span>SIGN UP</span>
-                                                <i class="icon-long-arrow-right"></i>
-                                            </button>
+    <div class="form-group">
+        <label for="register-password">Password *</label>
+        <input type="password" class="form-control" id="register-password" name="password" required>
+    </div><!-- End .form-group -->
 
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="register-policy" required>
-                                                <label class="custom-control-label" for="register-policy">I agree to the <a href="#">privacy policy</a> *</label>
-                                            </div><!-- End .custom-checkbox -->
-                                        </div><!-- End .form-footer -->
-                                    </form>
+    <div class="form-group">
+        <label for="confirm-password">Confirm Password *</label>
+        <input type="password" class="form-control" id="confirm-password" name="confirm_password" required>
+    </div><!-- End .form-group -->
+
+    <div class="form-group">
+        <label for="contact">Contact (Optional)</label>
+        <input type="tel" class="form-control" id="contact" name="contact">
+    </div><!-- End .form-group -->
+
+    <div class="form-footer">
+        <button type="submit" class="btn btn-outline-primary-2">
+            <span>SIGN UP</span>
+            <i class="icon-long-arrow-right"></i>
+        </button>
+
+        <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="register-policy" required>
+            <label class="custom-control-label" for="register-policy">I agree to the <a href="#">privacy policy</a> *</label>
+        </div><!-- End .custom-checkbox -->
+    </div><!-- End .form-footer -->
+</form>
+
                                     <div class="form-choice">
                                         <p class="text-center">or sign in with</p>
                                         <div class="row">
