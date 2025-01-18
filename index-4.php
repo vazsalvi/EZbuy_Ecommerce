@@ -2094,9 +2094,9 @@ while ($row = mysqli_fetch_assoc($result)) {
         <?php include("./includes/footer.php")?>
         
          <!-- Sign in / Register Modal -->
-     <?php
-     include("./includes/signuplogin.php")
-     ?>
+        <?php
+        include("./includes/signuplogin.php")
+        ?>
 
 
     </div><!-- End .page-wrapper -->
