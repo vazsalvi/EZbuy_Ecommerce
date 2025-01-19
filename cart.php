@@ -1,3 +1,12 @@
+<?php
+// Start the session
+session_start();
+
+
+
+// Now, you can use $_SESSION['username'] for the logged-in user's username
+echo "Welcome, " . $_SESSION['username'];  // Display the username
+?>
 
 <?php
 include('./includes/connect.php');
@@ -249,7 +258,7 @@ if (isset($_POST['update_cart'])) {
                         </tr><!-- End .summary-shipping-row -->
 
                         <tr class="summary-shipping-estimate">
-                            <td>Estimate for Your Country<br> <a href="dashboard.html">Change address</a></td>
+                            <td>Estimate for Your Country<br> <a href="dashboard.php">Change address</a></td>
                             <td>&nbsp;</td>
                         </tr><!-- End .summary-shipping-estimate -->
 

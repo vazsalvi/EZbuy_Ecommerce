@@ -1,3 +1,29 @@
+<?php
+// Start the session
+session_start();
+// Check if the logout link is clicked
+if (isset($_GET['logout']) && $_GET['logout'] == 'true') {
+    // Destroy all session variables and the session itself
+    session_unset();
+    session_destroy();
+
+    // Redirect the user to the login page after logging out
+    header("Location: login.php"); // Replace 'login.php' with your actual login page
+    exit();
+}
+
+
+// Now, you can use $_SESSION['username'] for the logged-in user's username
+// Check if the user is logged in by verifying the session variable
+if (isset($_SESSION['username'])) {
+    // Display the username if logged in
+    echo "Welcome, " . $_SESSION['username'];
+} else {
+    // If the user is not logged in, you can display a message or leave it blank
+    echo "Please log in to continue.";
+}
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -221,7 +247,7 @@
 						</a>
 					</div>
 					<div class="iso-item shoppages">
-						<a href="dashboard.html" target="_blank">
+						<a href="dashboard.php" target="_blank">
 							<img src="assets/images/demos-img/lazy.png"
 								data-oi="assets/images/demos-img/shop_my_account.jpg" width="500" height="385"
 								class="molla-lz" style="padding-top: 77%" alt="My Account">

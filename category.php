@@ -1,4 +1,14 @@
 <?php
+// Start the session
+session_start();
+
+
+
+// Now, you can use $_SESSION['username'] for the logged-in user's username
+echo "Welcome, " . $_SESSION['username'];  // Display the username
+?>
+
+<?php
 include('./includes/connect.php');
 include('./functions/common_function.php');
 ?>

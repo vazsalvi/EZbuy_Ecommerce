@@ -1,3 +1,28 @@
+<?php
+// Start the session
+session_start();
+// Check if the logout link is clicked
+if (isset($_GET['logout']) && $_GET['logout'] == 'true') {
+    // Destroy all session variables and the session itself
+    session_unset();
+    session_destroy();
+
+    // Redirect the user to the login page after logging out
+    header("Location: index.php"); // Replace 'login.php' with your actual login page
+    exit();
+}
+
+
+// Now, you can use $_SESSION['username'] for the logged-in user's username
+// Check if the user is logged in by verifying the session variable
+if (isset($_SESSION['username'])) {
+    // Display the username if logged in
+    echo "Welcome, " . $_SESSION['username'];
+} else {
+    // If the user is not logged in, you can display a message or leave it blank
+    echo "Please log in to continue.";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -301,9 +326,10 @@
 								    <li class="nav-item">
 								        <a class="nav-link" id="tab-account-link" data-toggle="tab" href="#tab-account" role="tab" aria-controls="tab-account" aria-selected="false">Account Details</a>
 								    </li>
-								    <li class="nav-item">
-								        <a class="nav-link" href="#">Sign Out</a>
-								    </li>
+                                    <li class="nav-item">
+                                    <a class="nav-link" href="?logout=true">Sign Out</a>
+                                    </li>
+
 								</ul>
 	                		</aside><!-- End .col-lg-3 -->
 

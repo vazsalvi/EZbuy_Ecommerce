@@ -1,3 +1,13 @@
+<?php
+// Start the session
+session_start();
+
+
+
+// Now, you can use $_SESSION['username'] for the logged-in user's username
+echo "Welcome, " . $_SESSION['username'];  // Display the username
+?>
+
 <!-- connection -->
 <?php
 include('./includes/connect.php');
@@ -205,7 +215,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 
                                 <div class="dropdown-cart-action">
                                     <a href="cart.php" class="btn btn-primary">View Cart</a>
-                                    <a href="checkout.html" class="btn btn-outline-primary-2"><span>Checkout</span><i
+                                    <a href="checkout.php" class="btn btn-outline-primary-2"><span>Checkout</span><i
                                             class="icon-long-arrow-right"></i></a>
                                 </div><!-- End .dropdown-cart-total -->
                             </div><!-- End .dropdown-menu -->
