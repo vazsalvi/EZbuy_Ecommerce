@@ -32,6 +32,16 @@ include('./functions/common_function.php');
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Main CSS File -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .custom-row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: 100px;
+}
+    </style>
 </head>
 
 <body>
@@ -166,7 +176,7 @@ if (isset($_POST['update_cart'])) {
             <i class='icon-close'></i>
         </button>
     </form>
-</td>';
+</td>
 
                             </tr>";
                         }
