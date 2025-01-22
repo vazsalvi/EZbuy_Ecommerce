@@ -39,54 +39,89 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['signin'])) {
 
 // Registration Handling
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['register'])) {
-    // Collect form data
-    $username = mysqli_real_escape_string($con, $_POST['username']);
-    $email = mysqli_real_escape_string($con, $_POST['email']);
-    $password = mysqli_real_escape_string($con, $_POST['password']);
-    $confirm_password = mysqli_real_escape_string($con, $_POST['confirm_password']);
-    $address = mysqli_real_escape_string($con, $_POST['user_address']);
-    $mobile = mysqli_real_escape_string($con, $_POST['user_mobile']);
-    $user_ip = getUserIP();
+    $fields = [
+        'username' => 'Username',
+        'user_email' => 'Email Address',
+        'user_password' => 'Password',
+        'confirm_password' => 'Confirm Password',
+        'user_full_name' => 'Full Name',
+        'user_country_name' => 'Country',
+        'user_street_name' => 'Street Address',
+        'user_town_city' => 'City/Town',
+        'user_state_country' => 'State',
+        'user_post_zip' => 'Postal/ZIP Code'
+    ];
 
-    // Check if passwords match
+    foreach ($fields as $field => $label) {
+        if (empty($_POST[$field])) {
+            echo "<script>alert('$label is required!');</script>";
+            exit();
+        }
+    }
+
+    $password = $_POST['user_password'];
+    $confirm_password = $_POST['confirm_password'];
     if ($password !== $confirm_password) {
         echo "<script>alert('Passwords do not match!');</script>";
         exit();
-    } else {
-        // Hash the password
-        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+    }
 
-        // Check for duplicate username or email
-        $check_query = "SELECT * FROM user_table WHERE username='$username' OR user_email='$email'";
-        $result = mysqli_query($con, $check_query);
-        if (mysqli_num_rows($result) > 0) {
-            echo "<script>alert('Username or Email already exists!');</script>";
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+    $username = $_POST['username'];
+    $email = $_POST['user_email'];
+    $user_ip = getUserIP();
+    $mobile = $_POST['user_mobile'];
+
+    $check_query = "SELECT * FROM user_table WHERE username = ? OR user_email = ?";
+    $stmt = mysqli_prepare($con, $check_query);
+    mysqli_stmt_bind_param($stmt, "ss", $username, $email);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_store_result($stmt);
+
+    if (mysqli_stmt_num_rows($stmt) > 0) {
+        echo "<script>alert('Username or Email already exists!');</script>";
+        exit();
+    }
+    mysqli_stmt_close($stmt);
+
+    $image_name = "";
+    if (!empty($_FILES["user_image"]["name"])) {
+        $image_name = basename($_FILES["user_image"]["name"]);
+        $image_tmp = $_FILES["user_image"]["tmp_name"];
+        $image_folder = "includes/user_images/";
+        $allowed_types = ['jpg', 'jpeg', 'png', 'gif'];
+        $file_ext = strtolower(pathinfo($image_name, PATHINFO_EXTENSION));
+
+        if (!in_array($file_ext, $allowed_types)) {
+            echo "<script>alert('Invalid image format! Only JPG, JPEG, PNG, and GIF are allowed.');</script>";
             exit();
-        } else {
-            // Image Upload Handling
-            $image_name = "";
-            if (!empty($_FILES["user_image"]["name"])) {
-                $image_name = $_FILES["user_image"]["name"];
-                $image_tmp = $_FILES["user_image"]["tmp_name"];
-                $image_folder = "includes/user_images/";
+        }
 
-                if (!move_uploaded_file($image_tmp, $image_folder . $image_name)) {
-                    echo "<script>alert('Failed to upload image!');</script>";
-                    exit();
-                }
-            }
+        if ($_FILES["user_image"]["size"] > 2 * 1024 * 1024) {
+            echo "<script>alert('Image size exceeds 2MB!');</script>";
+            exit();
+        }
 
-            // Insert user into database
-            $insert_query = "INSERT INTO user_table (username, user_email, user_password, user_image, user_ip, user_address, user_mobile) 
-                             VALUES ('$username', '$email', '$hashed_password', '$image_name', '$user_ip', '$address', '$mobile')";
-
-            if (mysqli_query($con, $insert_query)) {
-                echo "<script>alert('Registration Successful!');</script>";
-            } else {
-                echo "<script>alert('Error: " . mysqli_error($con) . "');</script>";
-            }
+        $new_image_name = uniqid("user_") . "." . $file_ext;
+        if (!move_uploaded_file($image_tmp, $image_folder . $new_image_name)) {
+            echo "<script>alert('Failed to upload image!');</script>";
+            exit();
         }
     }
+
+    $insert_query = "INSERT INTO user_table (username, user_email, user_password, user_image, user_ip, user_mobile, user_full_name, user_country_name, user_street_name, user_town_city, user_state_country, user_post_zip) 
+                     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    
+    $stmt = mysqli_prepare($con, $insert_query);
+    mysqli_stmt_bind_param($stmt, "ssssssssssss", $username, $email, $hashed_password, $new_image_name, $user_ip, $mobile, $_POST['user_full_name'], $_POST['user_country_name'], $_POST['user_street_name'], $_POST['user_town_city'], $_POST['user_state_country'], $_POST['user_post_zip']);
+
+    if (mysqli_stmt_execute($stmt)) {
+        echo "<script>alert('Registration Successful!');</script>";
+    } else {
+        echo "<script>alert('Error: " . mysqli_error($con) . "');</script>";
+    }
+
+    mysqli_stmt_close($stmt);
 }
 
 
@@ -164,56 +199,84 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['register'])) {
 
                             <!-- Register Tab -->
                             <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
-                                <form action="" method="POST" enctype="multipart/form-data">
-                                    <div class="form-group">
-                                        <label for="username">Username *</label>
-                                        <input type="text" class="form-control" id="username" name="username" required>
-                                    </div>
+                            <form action="" method="POST" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="user_full_name">Full Name *</label>
+        <input type="text" class="form-control" id="user_full_name" name="user_full_name" required>
+    </div>
 
-                                    <div class="form-group">
-                                        <label for="register-email">Email Address *</label>
-                                        <input type="email" class="form-control" id="register-email" name="email" required>
-                                    </div>
+    <div class="form-group">
+        <label for="username">Username *</label>
+        <input type="text" class="form-control" id="username" name="username" required>
+    </div>
 
-                                    <div class="form-group">
-                                        <label for="register-password">Password *</label>
-                                        <input type="password" class="form-control" id="register-password" name="password" required>
-                                    </div>
+    <div class="form-group">
+        <label for="register-email">Email Address *</label>
+        <input type="email" class="form-control" id="register-email" name="user_email" required>
+    </div>
 
-                                    <div class="form-group">
-                                        <label for="confirm-password">Confirm Password *</label>
-                                        <input type="password" class="form-control" id="confirm-password" name="confirm_password" required>
-                                    </div>
+    <div class="form-group">
+        <label for="register-password">Password *</label>
+        <input type="password" class="form-control" id="register-password" name="user_password" required>
+    </div>
 
-                                    <div class="form-group">
-                                        <label for="user_address">Address *</label>
-                                        <input type="text" class="form-control" id="user_address" name="user_address" required>
-                                    </div>
+    <div class="form-group">
+        <label for="confirm-password">Confirm Password *</label>
+        <input type="password" class="form-control" id="confirm-password" name="confirm_password" required>
+    </div>
 
-                                    <div class="form-group">
-                                        <label for="contact">Mobile Number (Optional)</label>
-                                        <input type="tel" class="form-control" id="contact" name="user_mobile">
-                                    </div>
+    <div class="form-group">
+        <label for="user_country_name">Country *</label>
+        <input type="text" class="form-control" id="user_country_name" name="user_country_name" required>
+    </div>
 
-                                    <div class="form-group">
-                                        <label for="user_image">Profile Picture</label>
-                                        <input type="file" class="form-control" id="user_image" name="user_image" accept="image/*">
-                                    </div>
+    <div class="form-group">
+        <label for="user_street_name">Street Address *</label>
+        <input type="text" class="form-control" id="user_street_name" name="user_street_name" required>
+    </div>
 
-                                    <input type="hidden" name="user_ip" value="<?php echo $_SERVER['REMOTE_ADDR']; ?>">
+    <div class="form-group">
+        <label for="user_town_city">City/Town *</label>
+        <input type="text" class="form-control" id="user_town_city" name="user_town_city" required>
+    </div>
 
-                                    <div class="form-footer">
-                                        <button type="submit" name="register" class="btn btn-outline-primary-2">
-                                            <span>SIGN UP</span>
-                                            <i class="icon-long-arrow-right"></i>
-                                        </button>
+    <div class="form-group">
+        <label for="user_state_country">State *</label>
+        <input type="text" class="form-control" id="user_state_country" name="user_state_country" required>
+    </div>
 
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="register-policy" required>
-                                            <label class="custom-control-label" for="register-policy">I agree to the <a href="#">privacy policy</a> *</label>
-                                        </div>
-                                    </div>
-                                </form>
+    <div class="form-group">
+        <label for="user_post_zip">Postal/ZIP Code *</label>
+        <input type="text" class="form-control" id="user_post_zip" name="user_post_zip" required>
+    </div>
+
+    <div class="form-group">
+        <label for="contact">Mobile Number (Optional)</label>
+        <input type="tel" class="form-control" id="contact" name="user_mobile">
+    </div>
+
+    <div class="form-group">
+        <label for="user_image">Profile Picture</label>
+        <input type="file" class="form-control" id="user_image" name="user_image" accept="image/*">
+    </div>
+
+    <input type="hidden" name="user_ip" value="<?php echo $_SERVER['REMOTE_ADDR']; ?>">
+
+    <div class="form-footer">
+        <button type="submit" name="register" class="btn btn-outline-primary-2">
+            <span>SIGN UP</span>
+            <i class="icon-long-arrow-right"></i>
+        </button>
+
+        <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="register-policy" required>
+            <label class="custom-control-label" for="register-policy">
+                I agree to the <a href="#">privacy policy</a> *
+            </label>
+        </div>
+    </div>
+</form>
+
 
                                 <div class="form-choice">
                                     <p class="text-center">or sign in with</p>
