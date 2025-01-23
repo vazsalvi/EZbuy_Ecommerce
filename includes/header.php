@@ -113,7 +113,7 @@
 
                                             <div class="demo-list">
                                                 <div class="demo-item">
-                                                    <a href="index-4.html">
+                                                    <a href="index-4.php">
                                                         <span class="demo-bg" style="background-image: url(assets/images/menu/demos/4.jpg);"></span>
                                                         <span class="demo-title">04 - electronic store</span>
                                                     </a>
