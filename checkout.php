@@ -79,6 +79,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['place_order'])) {
         $invoice_number = "INV" . time(); // Unique invoice number
         $order_date = date("Y-m-d H:i:s");
 
+        echo "Invoice Number: " . $invoice_number . "<br>";
+        echo "Products Name: " . $products_name . "<br>";
+        echo "Total Price: " . $total_price . "<br>";
+
         // Insert order into `user_orders`
         $insert_order = "INSERT INTO user_orders (user_id, amount_due, invoice_number, products_name, 
                         order_date, order_status, payment_method) 

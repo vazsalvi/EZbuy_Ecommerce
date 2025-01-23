@@ -27,7 +27,52 @@ if (isset($_SESSION['username'])) {
 <?php
 include('./includes/connect.php');
 include('./functions/common_function.php');
+include('update_shipping.php');
+
 ?>
+<?php
+// Fetch user data from the database
+$user_id = $_SESSION['user_id']; // Assuming user is logged in
+$query = "SELECT shipping_address FROM user_table WHERE user_id = '$user_id'";
+$result = mysqli_query($con, $query);
+$row = mysqli_fetch_assoc($result);
+
+// Check if the shipping address exists
+$shipping_address = !empty($row['shipping_address']) ? $row['shipping_address'] : null;
+?>
+
+<?php
+// Assuming you have already started the session
+
+$user_id = $_SESSION['user_id']; // Get the logged-in user ID
+
+
+
+// Query to fetch user data based on user_id
+$query = "SELECT * FROM user_table WHERE user_id = '$user_id'";
+$result = mysqli_query($con, $query);
+
+// Check if the user exists
+if (mysqli_num_rows($result) > 0) {
+    // Fetch the user data
+    $user_data = mysqli_fetch_assoc($result);
+
+    // Assign the fetched data to variables
+    $user_full_name = $user_data['user_full_name'];
+    $user_email = $user_data['user_email'];
+    $username = $user_data['username'];
+    $user_mobile = $user_data['user_mobile'];
+    $user_country_name = $user_data['user_country_name'];
+    $user_street_name = $user_data['user_street_name'];
+    $user_town_city = $user_data['user_town_city'];
+    $user_state_country = $user_data['user_state_country'];
+    $user_post_zip = $user_data['user_post_zip'];
+    // You can add more variables as needed
+} else {
+    echo "No user data found!";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -57,6 +102,43 @@ include('./functions/common_function.php');
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Main CSS File -->
     <link rel="stylesheet" href="assets/css/style.css">
+	<style>
+    .table.borderless td, .table.borderless th {
+        border: none;
+		padding: 3px;
+    }
+
+    .product-col {
+        width: 20%; /* Adjust the width percentage as per your design */
+    }
+
+    .price-col {
+        width: 10%; /* Adjust the width percentage as per your design */
+    }
+</style>
+<style>
+    .table-borderless td, .table-borderless th {
+        border: none;
+    }
+
+    /* Adjust the horizontal line */
+    .table-borderless hr {
+        height: 1px; /* Make the line thinner */
+        border: none;
+        background-color: #ccc; /* Line color */
+        margin: 2px 0; /* Reduce space above and below the line */
+    }
+
+    /* Reduce the height of the row */
+    .table-borderless tr {
+        height: 20px; /* Adjust this value to reduce row height */
+    }
+	
+</style>
+
+
+
+
 </head>
 
 <body>
@@ -93,13 +175,13 @@ include('./functions/common_function.php');
 								        <a class="nav-link" id="tab-orders-link" data-toggle="tab" href="#tab-orders" role="tab" aria-controls="tab-orders" aria-selected="false">Orders</a>
 								    </li>
 								    <li class="nav-item">
-								        <a class="nav-link" id="tab-downloads-link" data-toggle="tab" href="#tab-downloads" role="tab" aria-controls="tab-downloads" aria-selected="false">Downloads</a>
+								        <a class="nav-link" id="tab-downloads-link" data-toggle="tab" href="#tab-downloads" role="tab" aria-controls="tab-downloads" aria-selected="false">Delete Account</a>
 								    </li>
 								    <li class="nav-item">
 								        <a class="nav-link" id="tab-address-link" data-toggle="tab" href="#tab-address" role="tab" aria-controls="tab-address" aria-selected="false">Adresses</a>
 								    </li>
 								    <li class="nav-item">
-								        <a class="nav-link" id="tab-account-link" data-toggle="tab" href="#tab-account" role="tab" aria-controls="tab-account" aria-selected="false">Account Details</a>
+								        <a class="nav-link" id="tab-account-link" data-toggle="tab" href="#tab-account" role="tab" aria-controls="tab-account" aria-selected="false">Account Edit</a>
 								    </li>
                                     <li class="nav-item">
                                     <a class="nav-link" href="?logout=true">Sign Out</a>
@@ -116,85 +198,224 @@ include('./functions/common_function.php');
 								    	From your account dashboard you can view your <a href="#tab-orders" class="tab-trigger-link link-underline">recent orders</a>, manage your <a href="#tab-address" class="tab-trigger-link">shipping and billing addresses</a>, and <a href="#tab-account" class="tab-trigger-link">edit your password and account details</a>.</p>
 								    </div><!-- .End .tab-pane -->
 
-								    <div class="tab-pane fade" id="tab-orders" role="tabpanel" aria-labelledby="tab-orders-link">
-								    	<p>No order has been made yet.</p>
-								    	<a href="category.html" class="btn btn-outline-primary-2"><span>GO SHOP</span><i class="icon-long-arrow-right"></i></a>
-								    </div><!-- .End .tab-pane -->
+								    <?php
+$user_id = $_SESSION['user_id']; // Assuming user is logged in
+$query = "SELECT * FROM user_orders WHERE user_id = '$user_id'";
+$result = mysqli_query($con, $query);
+?>
+
+<div class="tab-pane fade" id="tab-orders" role="tabpanel" aria-labelledby="tab-orders-link">
+    <?php if (mysqli_num_rows($result) > 0): ?>
+        <div class="table-responsive ">
+            <table class="table borderless ">
+                <thead>
+                    <tr>
+                        
+                        <th>Products</th>
+                        <th>Amount Due</th>
+                        <th>Invoice Number</th>
+                        <th>Order Date</th>
+                        <th>Payment </th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php while ($row = mysqli_fetch_assoc($result)): ?>
+                        <tr>
+    <td class='product-col' style="font-size: small;">
+        <div class='product'>
+            <h3 class='product-title' style="font-size: small;">
+                <?php echo $row['products_name']; ?>
+            </h3>
+        </div>
+    </td>
+    <td class='price-col' style="font-size: small;">$<?php echo $row['amount_due']; ?></td>
+    <td style="font-size: small;"><?php echo $row['invoice_number']; ?></td>
+    <td style="font-size: small;"><?php echo $row['order_date']; ?></td>
+    <td style="font-size: small;"><?php echo $row['payment_method']; ?></td>
+    <td style="font-size: small;"><?php echo ucfirst($row['order_status']); ?></td>
+</tr>
+                        <tr><td colspan="7"><hr></td></tr>
+                    <?php endwhile; ?>
+                </tbody>
+            </table>
+        </div>
+    <?php else: ?>
+        <p>No order has been made yet.</p>
+        <a href="category.html" class="btn btn-outline-primary-2">
+            <span>GO SHOP</span>
+            <i class="icon-long-arrow-right"></i>
+        </a>
+    <?php endif; ?>
+</div>
+
+<style>
+    .table.borderless td, .table.borderless th {
+        border: none;
+    }
+</style>
+
 
 								    <div class="tab-pane fade" id="tab-downloads" role="tabpanel" aria-labelledby="tab-downloads-link">
-								    	<p>No downloads available yet.</p>
-								    	<a href="category.html" class="btn btn-outline-primary-2"><span>GO SHOP</span><i class="icon-long-arrow-right"></i></a>
+								    	<p>Are you sure you want to delete the account ,once deleted can not recovered.</p>
+								    	<a href="category.html" class="btn btn-outline-primary-2"><span>CONFIRM DELETE</span><i class="icon-long-arrow-right"></i></a>
 								    </div><!-- .End .tab-pane -->
 
 								    <div class="tab-pane fade" id="tab-address" role="tabpanel" aria-labelledby="tab-address-link">
 								    	<p>The following addresses will be used on the checkout page by default.</p>
 
-								    	<div class="row">
-								    		<div class="col-lg-6">
-								    			<div class="card card-dashboard">
-								    				<div class="card-body">
-								    					<h3 class="card-title">Billing Address</h3><!-- End .card-title -->
+								    	<?php
+// Assuming you have a valid database connection
+$user_id = $_SESSION['user_id']; // Get user_id from session (assuming user is logged in)
+$query = "SELECT username, user_email, user_mobile, user_street_name, user_town_city, user_state_country, user_post_zip, user_country_name FROM user_table WHERE user_id = '$user_id'";
+$result = mysqli_query($con, $query);
 
-														<p>User Name<br>
-														User Company<br>
-														John str<br>
-														New York, NY 10001<br>
-														1-234-987-6543<br>
-														yourmail@mail.com<br>
-														<a href="#">Edit <i class="icon-edit"></i></a></p>
-								    				</div><!-- End .card-body -->
-								    			</div><!-- End .card-dashboard -->
-								    		</div><!-- End .col-lg-6 -->
+if ($row = mysqli_fetch_assoc($result)) {
+    $username = $row['username'];
+    $email = $row['user_email'];
+    $mobile = $row['user_mobile'];
+    $street_name = $row['user_street_name'];
+    $town_city = $row['user_town_city'];
+    $state_country = $row['user_state_country'];
+    $post_zip = $row['user_post_zip'];
+    $country = $row['user_country_name'];
+} else {
+    // Handle case if no user data is found
+    $username = "N/A";
+    $email = "N/A";
+    $mobile = "N/A";
+    $street_name = "N/A";
+    $town_city = "N/A";
+    $state_country = "N/A";
+    $post_zip = "N/A";
+    $country = "N/A";
+}
+?>
 
-								    		<div class="col-lg-6">
-								    			<div class="card card-dashboard">
-								    				<div class="card-body">
-								    					<h3 class="card-title">Shipping Address</h3><!-- End .card-title -->
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card card-dashboard">
+            <div class="card-body">
+                <h3 class="card-title">Billing Address</h3><!-- End .card-title -->
+                <p>
+                    <?php echo $username; ?><br>
+                    <?php echo $street_name; ?><br>
+                    <?php echo $town_city . ', ' . $state_country . ' ' . $post_zip; ?><br>
+                    <?php echo $country; ?><br>
+                    <?php echo $mobile; ?><br>
+                    <?php echo $email; ?><br>
+                    <a href="#tab-account" class="tab-trigger-link">Edit <i class="icon-edit"></i></a>
+                </p>
+            </div><!-- End .card-body -->
+        </div><!-- End .card-dashboard -->
+    </div><!-- End .col-lg-6 -->
 
-														<p>You have not set up this type of address yet.<br>
-														<a href="#">Edit <i class="icon-edit"></i></a></p>
-								    				</div><!-- End .card-body -->
-								    			</div><!-- End .card-dashboard -->
-								    		</div><!-- End .col-lg-6 -->
-								    	</div><!-- End .row -->
+    <div class="col-lg-6">
+    <div class="card card-dashboard">
+        <div class="card-body">
+            <h3 class="card-title">Shipping Address</h3><!-- End .card-title -->
+
+            <p id="shippingAddressText">
+                <?php if ($shipping_address): ?>
+                    <?php echo $shipping_address; ?>
+                <?php else: ?>
+                    You have not set up this type of address yet.
+                <?php endif; ?>
+            </p>
+
+            <!-- Edit Button -->
+            <a href="update_shipping.php" id="editShippingBtn"><i class="icon-edit"></i> Edit</a>
+
+            <!-- Hidden Form for Updating Address -->
+            <form id="shippingAddressForm" method="POST" action="update_shipping.php" style="display: none;">
+                <input type="text" name="shipping_address" id="shippingInput" 
+                    value="<?php echo htmlspecialchars($shipping_address); ?>" required>
+                <input type="hidden" name="user_id" value="<?php echo $user_id; ?>">
+                <button type="submit">Save</button>
+            </form>
+        </div><!-- End .card-body -->
+    </div><!-- End .card-dashboard -->
+</div><!-- End .col-lg-6 -->
+
+<script>
+    document.getElementById('editShippingBtn').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.getElementById('shippingAddressText').style.display = 'none';
+        document.getElementById('editShippingBtn').style.display = 'none';
+        document.getElementById('shippingAddressForm').style.display = 'block';
+    });
+</script>
+</div><!-- End .row -->
+
 								    </div><!-- .End .tab-pane -->
 
 								    <div class="tab-pane fade" id="tab-account" role="tabpanel" aria-labelledby="tab-account-link">
-								    	<form action="#">
-			                				<div class="row">
-			                					<div class="col-sm-6">
-			                						<label>First Name *</label>
-			                						<input type="text" class="form-control" required>
-			                					</div><!-- End .col-sm-6 -->
+    <form action="update_account.php" method="POST" enctype="multipart/form-data">
+        <div class="row">
+            <!-- Full Name -->
+            <div class="col-sm-6">
+                <label>Full Name *</label>
+                <input type="text" class="form-control" name="full_name" value="<?php echo $user_full_name; ?>" required>
+            </div><!-- End .col-sm-6 -->
 
-			                					<div class="col-sm-6">
-			                						<label>Last Name *</label>
-			                						<input type="text" class="form-control" required>
-			                					</div><!-- End .col-sm-6 -->
-			                				</div><!-- End .row -->
+            <!-- Email -->
+            <div class="col-sm-6">
+                <label>Email Address *</label>
+                <input type="email" class="form-control" name="email" value="<?php echo $user_email; ?>" required>
+            </div><!-- End .col-sm-6 -->
+        </div><!-- End .row -->
 
-		            						<label>Display Name *</label>
-		            						<input type="text" class="form-control" required>
-		            						<small class="form-text">This will be how your name will be displayed in the account section and in reviews</small>
+        <!-- Username -->
+        <label>Username *</label>
+        <input type="text" class="form-control" name="username" value="<?php echo $username; ?>" required>
 
-		                					<label>Email address *</label>
-		        							<input type="email" class="form-control" required>
+        <!-- Mobile Number -->
+        <label>Mobile Number</label>
+        <input type="text" class="form-control" name="mobile" value="<?php echo $user_mobile; ?>">
 
-		            						<label>Current password (leave blank to leave unchanged)</label>
-		            						<input type="password" class="form-control">
+        <!-- Country -->
+        <label>Country</label>
+        <input type="text" class="form-control" name="country" value="<?php echo $user_country_name; ?>">
 
-		            						<label>New password (leave blank to leave unchanged)</label>
-		            						<input type="password" class="form-control">
+        <!-- Street Name -->
+        <label>Street Address</label>
+        <input type="text" class="form-control" name="street_name" value="<?php echo $user_street_name; ?>">
 
-		            						<label>Confirm new password</label>
-		            						<input type="password" class="form-control mb-2">
+        <!-- City -->
+        <label>City</label>
+        <input type="text" class="form-control" name="city" value="<?php echo $user_town_city; ?>">
 
-		                					<button type="submit" class="btn btn-outline-primary-2">
-			                					<span>SAVE CHANGES</span>
-			            						<i class="icon-long-arrow-right"></i>
-			                				</button>
-			                			</form>
-								    </div><!-- .End .tab-pane -->
+        <!-- State/Province -->
+        <label>State/Province</label>
+        <input type="text" class="form-control" name="state" value="<?php echo $user_state_country; ?>">
+
+        <!-- Postal Code -->
+        <label>Postal Code</label>
+        <input type="text" class="form-control" name="postal_code" value="<?php echo $user_post_zip; ?>">
+
+        <!-- Profile Picture -->
+        <label>Profile Picture</label>
+        <input type="file" class="form-control" name="profile_image">
+
+        <!-- Current Password (Required for Changes) -->
+        <label>Current Password *</label>
+        <input type="password" class="form-control" name="current_password" required>
+
+        <!-- New Password -->
+        <label>New Password (Leave blank to keep current password)</label>
+        <input type="password" class="form-control" name="new_password">
+
+        <!-- Confirm New Password -->
+        <label>Confirm New Password</label>
+        <input type="password" class="form-control mb-2" name="confirm_new_password">
+
+        <button type="submit" class="btn btn-outline-primary-2">
+            <span>SAVE CHANGES</span>
+            <i class="icon-long-arrow-right"></i>
+        </button>
+    </form>
+</div><!-- .End .tab-pane -->
+
 								</div>
 	                		</div><!-- End .col-lg-9 -->
 	                	</div><!-- End .row -->
