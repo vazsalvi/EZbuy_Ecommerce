@@ -170,13 +170,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['place_order'])) {
                                                 <p class="form-control bg-white"><?php echo htmlspecialchars($full_name); ?></p>
                                             </div>
                                         </div>
-
+                                        
                                         <label class="font-weight-bold">Country *</label>
                                         <p class="form-control bg-white"><?php echo htmlspecialchars($country); ?></p>
 
                                         <label class="font-weight-bold">Street Address *</label>
                                         <p class="form-control bg-white"><?php echo htmlspecialchars($street); ?></p>
-
+                                        
                                         <div class="row mb-3">
                                             <div class="col-sm-6">
                                                 <label class="font-weight-bold">Town / City *</label>
@@ -187,7 +187,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['place_order'])) {
                                                 <p class="form-control bg-white"><?php echo htmlspecialchars($state); ?></p>
                                             </div>
                                         </div>
-
+                                        
                                         <div class="row mb-3">
                                             <div class="col-sm-6">
                                                 <label class="font-weight-bold">Postcode / ZIP *</label>
@@ -203,31 +203,92 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['place_order'])) {
                                         <p class="form-control bg-white"><?php echo htmlspecialchars($email); ?></p>
                                     </div>
 
-                                    <div class="custom-control custom-checkbox mt-4">
-                                        <input type="checkbox" class="custom-control-input" id="checkout-diff-address">
-                                        <label class="custom-control-label font-weight-bold" for="checkout-diff-address">Ship to a different address?</label>
-                                    </div>
 
+                                    
                                     <label class="font-weight-bold mt-3">Order Notes (Optional)</label>
                                     <textarea class="form-control" cols="30" rows="4" placeholder="Notes about your order, e.g. special notes for delivery"></textarea>
                                 </div>
-                            </div>
-                            <label for="payment-method">Payment Method *</label>
-<select name="payment_method" id="payment-method" class="form-control" required>
-    <option value="credit_card">Credit Card</option>
-    <option value="paypal">PayPal</option>
-    <option value="bank_transfer">Bank Transfer</option>
-</select>
-                            <div class="checkout-actions">
-                                <div class="checkout-action">
-                                    <button type="submit" name="place_order" class="btn btn-primary">Place Order</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </main>
-    </div>
-</body>
-</html>
+                                <aside class="col-lg-3">
+                                    <div class="summary">
+                                        <h3 class="summary-title">Your Order</h3><!-- End .summary-title -->
+                                    
+                                    <table class="table table-summary">
+                                        <thead>
+                                            <tr>
+                                                <th>Product</th>
+                                                <th>Total</th>
+                                                </tr>
+                                                </thead>
+                                                
+                                                <tbody>
+                                    <?php
+                                            $total_price = 0;
+                                            // Fetch cart details from the database
+                                            $query = "SELECT p.product_title, p.product_price, c.quantity 
+                                            FROM cart_details c
+                                            JOIN products p ON c.product_id = p.product_id
+                                            WHERE c.ip_address = ?";
+                                            $stmt = mysqli_prepare($con, $query);
+                                            mysqli_stmt_bind_param($stmt, "s", $user_ip);
+                                            mysqli_stmt_execute($stmt);
+                                            $result = mysqli_stmt_get_result($stmt);
+                                            
+                                            if (mysqli_num_rows($result) > 0) {
+                                                while ($row = mysqli_fetch_assoc($result)) {
+                                                    $product_total = $row['product_price'] * $row['quantity'];
+                                                    echo "<tr><td><a href='#'>{$row['product_title']}</a></td><td>₹{$product_total}</td></tr>";
+                                                    $total_price += $product_total;
+                                                }
+                                            } else {
+                                                echo "<tr><td colspan='2'>No products in the cart</td></tr>";
+                                            }
+                                            ?>
+                                            
+                                            <tr class="summary-subtotal">
+                                                <td>Subtotal:</td>
+                                                <td>₹<?php echo number_format($total_price, 2); ?></td>
+                                                </tr><!-- End .summary-subtotal -->
+                                                <tr>
+                                                    <td>Shipping:</td>
+                                                    <td>Free shipping</td>
+                                                    </tr>
+                                                    <tr class="summary-total">
+                                                        <td>Total:</td>
+                                                        <td>₹<?php echo number_format($total_price, 2); ?></td>
+                                                        </tr><!-- End .summary-total -->
+                                                        </tbody>
+                                                        </table><!-- End .table table-summary -->
+                                                        </div><!-- End .summary -->
+                                                        <div class="custom-control custom-checkbox mt-4">
+                                                            <input type="checkbox" class="custom-control-input" id="checkout-diff-address">
+                                                            <label class="custom-control-label font-weight-bold" for="checkout-diff-address">Ship to a different address?</label>
+                                                        </div>
+                                                        <label for="payment_method">Payment Method</label>
+                                                        <select name="payment_method" id="payment_method" class="form-control" required onchange="updateFormAction()">
+                                                            <option value="UPI">UPI</option>
+                                                            <option value="Cash on delivery">Cash on delivery</option>
+                                                            <option value="E-Wallet">E-Wallet</option>
+                                                            <option value="PayPal">PayPal</option>
+                                                            <option value="Credit Card">Credit Card</option>
+                                                            </select>
+                                                            <div class="checkout-actions">
+                                                                <div class="checkout-action">
+                                                                    <button type="submit" name="place_order" class="btn btn-outline-primary-2 btn-order btn-block">
+                                                                        <span class="btn-text">Place Order</span>
+                                                                        <span class="btn-hover-text">Proceed to Checkout</span>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                        </aside>
+                                                        
+                                                        </div>
+                                                        
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </main>
+                                        </div>
+                                    </body>
+                                    </html>
+                                    
