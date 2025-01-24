@@ -9,6 +9,10 @@ echo "Welcome, " . $_SESSION['username'];  // Display the username
 include('./includes/connect.php');
 include('./functions/common_function.php');
 ?>
+<!-- cart function call -->
+<?php
+         cart();
+         ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -327,10 +331,7 @@ include('./functions/common_function.php');
         </div><!-- End .mobile-menu-wrapper -->
     </div><!-- End .mobile-menu-container -->
 
-    <!-- Sign in / Register Modal -->
-    <?php
-        include("./includes/signuplogin.php")
-        ?>
+   
 
     <!-- Plugins JS File -->
     <script src="assets/js/jquery.min.js"></script>

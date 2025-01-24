@@ -317,9 +317,6 @@ if (isset($_POST['continue_shopping'])) {
     <button id="scroll-top" title="Back to Top"><i class="icon-arrow-up"></i></button>
 
 
-        <?php
-        include("./includes/signuplogin.php")
-        ?>
 
         <!-- Mobile Menu -->
         <div class="mobile-menu-overlay"></div><!-- End .mobil-menu-overlay -->

@@ -524,10 +524,6 @@ include('./functions/common_function.php');
         </div><!-- End .mobile-menu-wrapper -->
     </div><!-- End .mobile-menu-container -->
 
-    <!-- Sign in / Register Modal -->
-    <?php
-    include("./includes/signuplogin.php")
-    ?>
 
     
     <!-- Mobile Menu -->

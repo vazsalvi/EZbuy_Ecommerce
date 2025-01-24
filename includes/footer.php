@@ -1,5 +1,5 @@
 
-<footer class="footer footer-dark">
+<footer class="footer mt-3">
 
 <div class="footer-bottom">
     <div class="container">
