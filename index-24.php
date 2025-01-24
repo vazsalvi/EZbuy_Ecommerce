@@ -65,7 +65,7 @@ include('./functions/common_function.php');
 
 		
 		<main class="main">
-		<div class="background" style="background-image: url(assets/images/demos/demo-24/slider/back-1.jpg);">
+		<div class="background" style="background-image: url(assets/images/demos/demo-24/slider/23back-11.jpg);">
 			
 	        <div class="slider">
 	        	<div class="intro">
@@ -80,7 +80,7 @@ include('./functions/common_function.php');
 	        			<a href="category.html">discover now</a>
 	        		</div>
 	        	</div>
-	        	<img src="assets/images/demos/demo-24/slider/back-2.png">
+	        	<img src="assets/images/demos/demo-24/slider/back-2.png" alt="Outdoor Gear">
 	        </div>
 		</div>
 			<section class="logos">
