@@ -78,8 +78,8 @@
                                 <ul>
                                     <li><a href="tel:#"><i class="icon-phone"></i>Call: +0123 456 789</a></li>
                                     <li><a href="wishlist.php"><i class="icon-heart-o"></i>Wishlist </a></li>
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li><a href="contact.html">Contact Us</a></li>
+                                    <li><a href="about.php">About Us</a></li>
+                                    <li><a href="contact.php">Contact Us</a></li>
                                     <li><a href="#signin-modal" data-toggle="modal"><i class="icon-user"></i>Login</a></li>
                                     
                                     
@@ -121,21 +121,21 @@
 
                                                 
                                                 <div class="demo-item">
-                                                    <a href="index-10.html">
+                                                    <a href="index-10.php">
                                                         <span class="demo-bg" style="background-image: url(assets/images/menu/demos/10.jpg);"></span>
                                                         <span class="demo-title">10 - shoes store</span>
                                                     </a>
                                                 </div><!-- End .demo-item -->
 
                                                 <div class="demo-item hidden">
-                                                    <a href="index-11.html">
+                                                    <a href="index-11.php">
                                                         <span class="demo-bg" style="background-image: url(assets/images/menu/demos/11.jpg);"></span>
                                                         <span class="demo-title">11 - furniture simple store</span>
                                                     </a>
                                                 </div><!-- End .demo-item -->
 
                                                 <div class="demo-item hidden">
-                                                    <a href="index-12.html">
+                                                    <a href="index-12.php">
                                                         <span class="demo-bg" style="background-image: url(assets/images/menu/demos/12.jpg);"></span>
                                                         <span class="demo-title">12 - fashion simple store</span>
                                                     </a>
@@ -143,21 +143,21 @@
 
                                                 
                                                 <div class="demo-item hidden">
-                                                    <a href="index-19.html">
+                                                    <a href="index-19.php">
                                                         <span class="demo-bg" style="background-image: url(assets/images/menu/demos/19.jpg);"></span>
                                                         <span class="demo-title">19 - games store</span>
                                                     </a>
                                                 </div><!-- End .demo-item -->
 
                                                 <div class="demo-item hidden">
-                                                    <a href="index-20.html">
+                                                    <a href="index-20.php">
                                                         <span class="demo-bg" style="background-image: url(assets/images/menu/demos/20.jpg);"></span>
                                                         <span class="demo-title">20 - book store</span>
                                                     </a>
                                                 </div><!-- End .demo-item -->
 
                                                 <div class="demo-item hidden">
-                                                    <a href="index-21.html">
+                                                    <a href="index-21.php">
                                                         <span class="demo-bg" style="background-image: url(assets/images/menu/demos/21.jpg);"></span>
                                                         <span class="demo-title">21 - sport store</span>
                                                     </a>
@@ -165,7 +165,7 @@
 
                                                 
                                                 <div class="demo-item hidden">
-                                                    <a href="index-24.html">
+                                                    <a href="index-24.php">
                                                         <span class="demo-bg" style="background-image: url(assets/images/menu/demos/24.jpg);"></span>
                                                         <span class="demo-title">24 - extreme sport store</span>
                                                     </a>
@@ -184,19 +184,19 @@
 
                                     <ul>
                                         <li>
-                                            <a href="about.html" >About</a>
+                                            <a href="about.php" >About</a>
                                         </li>
                                         <li>
-                                            <a href="contact.html">Contact</a>
+                                            <a href="contact.php">Contact</a>
                                         </li>
                                         <li><a href="login.php">Login</a></li>
-                                        <li><a href="faq.html">FAQs</a></li>
-                                        <li><a href="404.html">Error 404</a></li>
-                                        <li><a href="coming-soon.html">Coming Soon</a></li>
+                                        <li><a href="faq.php">FAQs</a></li>
+                                        <li><a href="404.php">Error 404</a></li>
+                                        <li><a href="coming-soon.php">Coming Soon</a></li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="blog.html" >Blog</a>
+                                    <a href="blog.php" >Blog</a>
                                 </li>
                             </ul><!-- End .menu -->
                         </nav><!-- End .main-nav -->
