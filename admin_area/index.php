@@ -1,3 +1,26 @@
+<?php
+session_start();
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h1>Welcome, <?php echo $_SESSION['admin_name']; ?>!</h1>
+    <!-- Rest of your admin dashboard content -->
+</body>
+</html>
+
+<?php
+include('../includes/connect.php');
+include('../functions/common_function.php');
+
+// $user_ip = getUserIP();
+// echo "User IP Address: " . $user_ip;
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -66,7 +89,7 @@
                                             </div><!-- End .header-menu -->
                                         </div>
                                     </li>
-                                    <li><a href="#signin-modal" data-toggle="modal">Sign in / Sign up</a></li>
+                                    <li><a href="/EZbuy_Ecommerce/admin_area/admins_registration.php" >Sign in / Sign up</a></li>
                                 </ul>
                             </li>
                         </ul><!-- End .top-menu -->
@@ -191,14 +214,14 @@
                 </div>
                 <div class="button text-center">
                     <button class="my-3"><a href="insert_product.php" class="nav-link text-light bg-info my-1">Insert Product</a></button>
-                    <button class="my-3"><a href=""class="nav-link text-light bg-info my-1">View Product</a></button>
+                    <button class="my-3"><a href="index.php?view_products"class="nav-link text-light bg-info my-1">View Product</a></button>
                     <button class="my-3"><a href="index.php?insert_categories"class="nav-link text-light bg-info my-1">Insert Categories</a></button>
-                    <button class="my-3"><a href=""class="nav-link text-light bg-info my-1">View Categories</a></button>
+                    <button class="my-3"><a href="index.php?view_categories"class="nav-link text-light bg-info my-1">View Categories</a></button>
                     <button class="my-3"><a href="index.php?insert_brands"class="nav-link text-light bg-info my-1">Insert brands</a></button>
-                    <button class="my-3"><a href=""class="nav-link text-light bg-info my-1">View Brands</a></button>
-                    <button class="my-3"><a href=""class="nav-link text-light bg-info my-1">All orders</a></button>
-                    <button class="my-3"><a href=""class="nav-link text-light bg-info my-1">AllPayments</a></button>
-                    <button class="my-3"><a href=""class="nav-link text-light bg-info my-1">List User</a></button>
+                    <button class="my-3"><a href="index.php?view_brands"class="nav-link text-light bg-info my-1">View Brands</a></button>
+                    <button class="my-3"><a href="index.php?all_orders"class="nav-link text-light bg-info my-1">All orders</a></button>
+                    <button class="my-3"><a href="index.php?all_payments"class="nav-link text-light bg-info my-1">AllPayments</a></button>
+                    <button class="my-3"><a href="index.php?list_users"class="nav-link text-light bg-info my-1">List User</a></button>
                     <button class="my-3"><a href=""class="nav-link text-light bg-info my-1">Logout</a></button>
                 </div>
             </div><!--End .col-md-12 bg-secoundary p-1-->
@@ -212,6 +235,27 @@
             }
             if(isset($_GET['insert_brands'])){
                 include("insert_brands.php");
+            }
+            if(isset($_GET['view_products'])){
+                include("view_products.php");
+            }
+            if(isset($_GET['edit_products'])){
+                include("edit_products.php");
+            }
+            if(isset($_GET['view_categories'])){
+                include("view_categories.php");
+            }
+            if(isset($_GET['view_brands'])){
+                include("view_brands.php");
+            }
+            if(isset($_GET['all_orders'])){
+                include("all_orders.php");
+            }
+            if(isset($_GET['all_payments'])){
+                include("all_payments.php");
+            }
+            if(isset($_GET['list_users'])){
+                include("list_users.php");
             }
             ?>
          </div>

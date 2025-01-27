@@ -1,10 +1,14 @@
 <?php
+include 'C:\xampp\htdocs\EZbuy_Ecommerce\includes\connect.php';
+// Rest of your code
+?>
+
+<?php
 // Enable error reporting for debugging
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-// Include database connection
-include("includes/connect.php");
+
 
 // Sign-In Handling
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['signin'])) {
@@ -27,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['signin'])) {
             $_SESSION['username'] = $user['username'];  // Store username in session
 
             // Redirect to checkout.php
-            echo "<script>window.location.href = 'checkout.php';</script>";
+            echo "<script>window.location.href = 'users_area/checkout.php';</script>";
             exit();
         } else {
             echo "<script>alert('Incorrect Password!');</script>";

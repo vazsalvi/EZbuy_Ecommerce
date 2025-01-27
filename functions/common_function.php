@@ -1,7 +1,6 @@
 <?php
 
-//including connect files
-include('.\includes\connect.php');
+
 
 //geting unique category
 function getproducts(){

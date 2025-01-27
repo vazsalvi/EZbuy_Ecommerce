@@ -164,7 +164,7 @@ if (isset($_SESSION['username'])) {
 					</div>
 
 					<div class="iso-item homepages">
-						<a href="index-10.html" target="_blank">
+						<a href="index-10.php" target="_blank">
 							<img src="assets/images/demos-img/lazy.png"
 								data-oi="assets/images/demos-img/molla_shoesstore.jpg" width="500" height="385"
 								class="molla-lz" style="padding-top: 77%" alt="Shoes Store">
@@ -172,7 +172,7 @@ if (isset($_SESSION['username'])) {
 						</a>
 					</div>
 					<div class="iso-item homepages">
-						<a href="index-11.html" target="_blank">
+						<a href="index-11.php" target="_blank">
 							<img src="assets/images/demos-img/lazy.png"
 								data-oi="assets/images/demos-img/molla_furniture_simple.jpg" width="500" height="385"
 								class="molla-lz" style="padding-top: 77%" alt="Furniture 3">
@@ -180,7 +180,7 @@ if (isset($_SESSION['username'])) {
 						</a>
 					</div>
 					<div class="iso-item homepages">
-						<a href="index-12.html" target="_blank">
+						<a href="index-12.php" target="_blank">
 							<img src="assets/images/demos-img/lazy.png"
 								data-oi="assets/images/demos-img/molla_fashion_simple.jpg" width="500" height="385"
 								class="molla-lz" style="padding-top: 77%" alt="Fashion 6 (Simple)">
@@ -189,7 +189,7 @@ if (isset($_SESSION['username'])) {
 					</div>
 
 					<div class="iso-item homepages">
-						<a href="index-19.html" target="_blank">
+						<a href="index-19.php" target="_blank">
 							<img src="assets/images/demos-img/lazy.png"
 								data-oi="assets/images/demos-img/molla_gamestore.jpg" width="500" height="385"
 								class="molla-lz" style="padding-top: 77%" alt="Game Store">
@@ -197,7 +197,7 @@ if (isset($_SESSION['username'])) {
 						</a>
 					</div>
 					<div class="iso-item homepages">
-						<a href="index-20.html" target="_blank">
+						<a href="index-20.php" target="_blank">
 							<img src="assets/images/demos-img/lazy.png"
 								data-oi="assets/images/demos-img/molla_bookstore.jpg" width="500" height="385"
 								class="molla-lz" style="padding-top: 77%" alt="Book Store">
@@ -205,7 +205,7 @@ if (isset($_SESSION['username'])) {
 						</a>
 					</div>
 					<div class="iso-item homepages">
-						<a href="index-21.html" target="_blank">
+						<a href="index-21.php" target="_blank">
 							<img src="assets/images/demos-img/lazy.png"
 								data-oi="assets/images/demos-img/molla_sport.jpg" width="500" height="385"
 								class="molla-lz" style="padding-top: 77%" alt="Furniture 2">
@@ -213,7 +213,7 @@ if (isset($_SESSION['username'])) {
 						</a>
 					</div>
 					<div class="iso-item homepages">
-						<a href="index-24.html" target="_blank">
+						<a href="index-24.php" target="_blank">
 							<img src="assets/images/demos-img/lazy.png"
 								data-oi="assets/images/demos-img/molla_extreme_sport.jpg" width="500" height="385"
 								class="molla-lz" style="padding-top: 77%" alt="Furniture 2">
@@ -223,7 +223,7 @@ if (isset($_SESSION['username'])) {
 
 					
 					<div class="iso-item shoppages">
-						<a href="cart.html" target="_blank">
+						<a href="users_area/cart.php" target="_blank">
 							<img src="assets/images/demos-img/lazy.png"
 								data-oi="assets/images/demos-img/29_shop_shopping_cart.jpg" width="500" height="385"
 								class="molla-lz" style="padding-top: 77%" alt="Shopping Cart">
@@ -231,7 +231,7 @@ if (isset($_SESSION['username'])) {
 						</a>
 					</div>
 					<div class="iso-item shoppages">
-						<a href="checkout.html" target="_blank">
+						<a href="users_area/checkout.php" target="_blank">
 							<img src="assets/images/demos-img/lazy.png"
 								data-oi="assets/images/demos-img/30_shop_checkout.jpg" width="500" height="385"
 								class="molla-lz" style="padding-top: 77%" alt="Checkout">
@@ -239,7 +239,7 @@ if (isset($_SESSION['username'])) {
 						</a>
 					</div>
 					<div class="iso-item shoppages">
-						<a href="wishlist.html" target="_blank">
+						<a href="users_area/wishlist.php" target="_blank">
 							<img src="assets/images/demos-img/lazy.png"
 								data-oi="assets/images/demos-img/31_shop_wishlist.jpg" width="500" height="385"
 								class="molla-lz" style="padding-top: 77%" alt="Wishlist">
@@ -247,7 +247,7 @@ if (isset($_SESSION['username'])) {
 						</a>
 					</div>
 					<div class="iso-item shoppages">
-						<a href="dashboard.php" target="_blank">
+						<a href="users_area/dashboard.php" target="_blank">
 							<img src="assets/images/demos-img/lazy.png"
 								data-oi="assets/images/demos-img/shop_my_account.jpg" width="500" height="385"
 								class="molla-lz" style="padding-top: 77%" alt="My Account">
@@ -256,7 +256,7 @@ if (isset($_SESSION['username'])) {
 					</div>
 
 					<div class="iso-item otherpages">
-						<a href="about.html" target="_blank">
+						<a href="about.php" target="_blank">
 							<img src="assets/images/demos-img/lazy.png"
 								data-oi="assets/images/demos-img/40_pages_aboutus.jpg" width="500" height="385"
 								class="molla-lz" style="padding-top: 77%" alt="About Us">
@@ -265,7 +265,7 @@ if (isset($_SESSION['username'])) {
 					</div>
 					
 					<div class="iso-item otherpages">
-						<a href="contact-2.html" target="_blank">
+						<a href="contact-2.php" target="_blank">
 							<img src="assets/images/demos-img/lazy.png"
 								data-oi="assets/images/demos-img/43_pages_contactus_2.jpg" width="500" height="385"
 								class="molla-lz" style="padding-top: 77%" alt="Contact us 2">
@@ -281,7 +281,7 @@ if (isset($_SESSION['username'])) {
 						</a>
 					</div>
 					<div class="iso-item otherpages">
-						<a href="faq.html" target="_blank">
+						<a href="faq.php" target="_blank">
 							<img src="assets/images/demos-img/lazy.png"
 								data-oi="assets/images/demos-img/45_pages_FAQ.jpg" width="500" height="385"
 								class="molla-lz" style="padding-top: 77%" alt="F.A.Q page">

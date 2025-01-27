@@ -6,8 +6,8 @@ echo "Welcome, " . $_SESSION['username'];  // Display the username
 ?>
 
 <?php
-include('./includes/connect.php');
-include('./functions/common_function.php');
+include('../includes/connect.php');
+include('../functions/common_function.php');
 ?>
 <!-- cart function call -->
 <?php

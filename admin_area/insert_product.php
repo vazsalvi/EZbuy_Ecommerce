@@ -1,4 +1,27 @@
 <?php
+session_start();
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h1>Welcome, <?php echo $_SESSION['admin_name']; ?>!</h1>
+    <!-- Rest of your admin dashboard content -->
+</body>
+</html>
+
+<?php
+include('../includes/connect.php');
+include('../functions/common_function.php');
+
+// $user_ip = getUserIP();
+// echo "User IP Address: " . $user_ip;
+?>
+<?php
 // Include database connection
 include("../includes/connect.php");
 
