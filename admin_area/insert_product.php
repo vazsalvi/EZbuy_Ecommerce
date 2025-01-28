@@ -32,6 +32,7 @@ if (isset($_POST['insert_product'])) {
     $product_keywords = mysqli_real_escape_string($con, $_POST['product_keywords'] ?? '');
     $product_category = mysqli_real_escape_string($con, $_POST['product_category'] ?? '');
     $product_brand = mysqli_real_escape_string($con, $_POST['product_brand'] ?? '');
+    $product_website = mysqli_real_escape_string($con, $_POST['product_website'] ?? '');
     $product_price = mysqli_real_escape_string($con, $_POST['product_price'] ?? '');
     $product_status = 'true';
 
@@ -49,7 +50,7 @@ if (isset($_POST['insert_product'])) {
     if (
         empty($product_title) || empty($description) || empty($product_keywords) ||
         empty($product_category) || empty($product_brand) || empty($product_price) ||
-        empty($product_image1) || empty($product_image2) || empty($product_image3)
+        empty($product_image1) || empty($product_image2) || empty($product_image3) || empty($product_website)
     ) {
         echo "<script>alert('Please fill all the fields')</script>";
         exit();
@@ -78,9 +79,9 @@ if (isset($_POST['insert_product'])) {
     // Insert product into database
     $insert_products = "
         INSERT INTO `products` 
-        (product_title, product_description, product_keywords, category_id, brand_id, product_image1, product_image2, product_image3, product_price, date, status) 
+        (product_title, product_description, product_keywords, category_id, brand_id, website_id, product_image1, product_image2, product_image3, product_price, date, status) 
         VALUES 
-        ('$product_title', '$description', '$product_keywords', '$product_category', '$product_brand', '$product_image1', '$product_image2', '$product_image3', '$product_price', NOW(), '$product_status')
+        ('$product_title', '$description', '$product_keywords', '$product_category', '$product_brand', '$product_website', '$product_image1', '$product_image2', '$product_image3', '$product_price', NOW(), '$product_status')
     ";
 
     $run_product = mysqli_query($con, $insert_products);
@@ -148,6 +149,20 @@ if (isset($_POST['insert_product'])) {
                     $run_brands = mysqli_query($con, $get_brands);
                     while ($row_brands = mysqli_fetch_assoc($run_brands)) {
                         echo "<option value='{$row_brands['brand_id']}'>{$row_brands['brand_title']}</option>";
+                    }
+                    ?>
+                </select>
+            </div>
+            <!-- websites -->
+            <div class="form-outline mb-4 w-50 m-auto">
+                <label for="product_website" class="form-label">Website</label>
+                <select name="product_website" id="product_website" class="form-select" required>
+                    <option value="">Select a Website</option>
+                    <?php
+                    $get_websites = "SELECT * FROM `websites`";
+                    $run_websites = mysqli_query($con, $get_websites);
+                    while ($row_websites = mysqli_fetch_assoc($run_websites)) {
+                        echo "<option value='{$row_websites['website_id']}'>{$row_websites['website_title']}</option>";
                     }
                     ?>
                 </select>

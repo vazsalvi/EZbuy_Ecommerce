@@ -25,7 +25,7 @@ if (isset($_POST['insert_brand'])) {
     }
 }
 ?>
-<h2 class="text-center">Insert Categories</h2>
+<h2 class="text-center">Insert brands</h2>
 <!-- HTML Form -->
 <form action="" method="post" class="mb-2">
     <div class="input-group w-90 mb-2">

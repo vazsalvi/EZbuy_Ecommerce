@@ -219,6 +219,8 @@ include('../functions/common_function.php');
                     <button class="my-3"><a href="index.php?view_categories"class="nav-link text-light bg-info my-1">View Categories</a></button>
                     <button class="my-3"><a href="index.php?insert_brands"class="nav-link text-light bg-info my-1">Insert brands</a></button>
                     <button class="my-3"><a href="index.php?view_brands"class="nav-link text-light bg-info my-1">View Brands</a></button>
+                    <button class="my-3"><a href="index.php?insert_websites"class="nav-link text-light bg-info my-1">Insert website</a></button>
+                    <button class="my-3"><a href="index.php?view_websites"class="nav-link text-light bg-info my-1">View website</a></button>
                     <button class="my-3"><a href="index.php?all_orders"class="nav-link text-light bg-info my-1">All orders</a></button>
                     <button class="my-3"><a href="index.php?all_payments"class="nav-link text-light bg-info my-1">AllPayments</a></button>
                     <button class="my-3"><a href="index.php?list_users"class="nav-link text-light bg-info my-1">List User</a></button>
@@ -247,6 +249,12 @@ include('../functions/common_function.php');
             }
             if(isset($_GET['view_brands'])){
                 include("view_brands.php");
+            }
+            if(isset($_GET['insert_websites'])){
+                include("insert_websites.php");
+            }
+            if(isset($_GET['view_websites'])){
+                include("view_websites.php");
             }
             if(isset($_GET['all_orders'])){
                 include("all_orders.php");
