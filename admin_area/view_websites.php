@@ -24,9 +24,9 @@ $result = mysqli_query($con, $query);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>View websites</title>
+    <title>View Websites</title>
     <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrap.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -37,11 +37,31 @@ $result = mysqli_query($con, $query);
         .table-container h1 {
             margin-bottom: 20px;
         }
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+        .input-group-text {
+            background-color: #17a2b8;
+            color: white;
+        }
+        .btn-submit {
+            background-color: #17a2b8;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .btn-submit:hover {
+            background-color: #138496;
+        }
     </style>
     <script>
-        function enableEdit(brandId) {
-            var row = document.getElementById('brand-' + brandId);
-            var title = row.querySelector('.brand-title');
+        function enableEdit(websiteId) {
+            var row = document.getElementById('website-' + websiteId);
+            var title = row.querySelector('.website-title');
             var input = row.querySelector('.edit-title-input');
             var editButton = row.querySelector('.edit-btn');
             var saveButton = row.querySelector('.save-btn');
@@ -52,8 +72,8 @@ $result = mysqli_query($con, $query);
             saveButton.style.display = 'inline-block';
         }
 
-        function saveEdit(brandId) {
-            var row = document.getElementById('brand-' + brandId);
+        function saveEdit(websiteId) {
+            var row = document.getElementById('website-' + websiteId);
             var input = row.querySelector('.edit-title-input');
             var hiddenInput = row.querySelector('.hidden-edit-title-input');
             hiddenInput.value = input.value;
@@ -63,12 +83,12 @@ $result = mysqli_query($con, $query);
 <body>
     <div class="container">
         <div class="table-container">
-            <h1 class="my-4">View websites</h1>
+            <h1 class="my-4">View Websites</h1>
             <table class="table table-bordered">
                 <thead class="thead-dark">
                     <tr>
-                        <th>Brand ID</th>
-                        <th>Brand Title</th>
+                        <th>Website ID</th>
+                        <th>Website Title</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -76,10 +96,10 @@ $result = mysqli_query($con, $query);
                     <?php
                     if ($result && mysqli_num_rows($result) > 0) {
                         while ($row = mysqli_fetch_assoc($result)) {
-                            echo '<tr id="brand-' . $row['website_id'] . '">';
+                            echo '<tr id="website-' . $row['website_id'] . '">';
                             echo '<td>' . $row['website_id'] . '</td>';
                             echo '<td>
-                                    <span class="brand-title">' . $row['website_title'] . '</span>
+                                    <span class="website-title">' . $row['website_title'] . '</span>
                                     <input type="text" class="form-control edit-title-input" value="' . $row['website_title'] . '" style="display: none;">
                                   </td>';
                             echo '<td>
@@ -93,7 +113,7 @@ $result = mysqli_query($con, $query);
                                             <i class="fas fa-save"></i> Save
                                         </button>
                                     </form>
-                                    <a href="delete_brand.php?id=' . $row['website_id'] . '" class="btn btn-danger btn-sm">
+                                    <a href="delete_website.php?id=' . $row['website_id'] . '" class="btn btn-danger btn-sm">
                                         <i class="fas fa-trash"></i> Delete
                                     </a>
                                   </td>';

@@ -188,7 +188,7 @@ include('./functions/common_function.php');
         </div><!-- End .heading-left -->
 
         <div class="heading-right">
-            <a href="category.php" class="title-link">View All Recommendadion <i class="icon-long-arrow-right"></i></a>
+            <a href="users_area/category.php" class="title-link">View All Recommendadion <i class="icon-long-arrow-right"></i></a>
         </div><!-- End .heading-right -->
     </div><!-- End .heading -->
 

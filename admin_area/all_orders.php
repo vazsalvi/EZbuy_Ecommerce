@@ -26,7 +26,7 @@ $result = mysqli_query($con, $query);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Orders</title>
     <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrap.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -36,6 +36,9 @@ $result = mysqli_query($con, $query);
         }
         .table-container h1 {
             margin-bottom: 20px;
+        }
+        .table-container .btn {
+            margin-right: 5px;
         }
     </style>
 </head>
@@ -80,6 +83,14 @@ $result = mysqli_query($con, $query);
                                   </td>';
                             echo '<td>' . $row['order_date'] . '</td>';
                             echo '<td>' . $row['payment_method'] . '</td>';
+                            echo '<td>
+                                    <a href="view_order.php?id=' . $row['order_id'] . '" class="btn btn-info btn-sm">
+                                        <i class="fas fa-eye"></i> View
+                                    </a>
+                                    <a href="delete_order.php?id=' . $row['order_id'] . '" class="btn btn-danger btn-sm">
+                                        <i class="fas fa-trash"></i> Delete
+                                    </a>
+                                  </td>';
                             echo '</tr>';
                         }
                     } else {

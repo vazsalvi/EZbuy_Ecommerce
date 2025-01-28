@@ -12,7 +12,7 @@ $result = mysqli_query($con, $query);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>List Users</title>
     <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrap.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -27,6 +27,9 @@ $result = mysqli_query($con, $query);
             max-width: 50px;
             height: auto;
             border-radius: 4px;
+        }
+        .btn-action {
+            margin-right: 5px;
         }
     </style>
 </head>
@@ -43,6 +46,7 @@ $result = mysqli_query($con, $query);
                         <th>Image</th>
                         <th>Mobile</th>
                         <th>Full Name</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -56,10 +60,18 @@ $result = mysqli_query($con, $query);
                             echo '<td><img src="../includes/user_images/' . $row['user_image'] . '" alt="User Image" class="user-image"></td>';
                             echo '<td>' . $row['user_mobile'] . '</td>';
                             echo '<td>' . $row['user_full_name'] . '</td>';
+                            echo '<td>
+                                    <a href="view_user.php?id=' . $row['user_id'] . '" class="btn btn-info btn-sm btn-action">
+                                        <i class="fas fa-eye"></i> View
+                                    </a>
+                                    <a href="delete_user.php?id=' . $row['user_id'] . '" class="btn btn-danger btn-sm btn-action">
+                                        <i class="fas fa-trash"></i> Delete
+                                    </a>
+                                  </td>';
                             echo '</tr>';
                         }
                     } else {
-                        echo '<tr><td colspan="6">No users found.</td></tr>';
+                        echo '<tr><td colspan="7">No users found.</td></tr>';
                     }
                     ?>
                 </tbody>

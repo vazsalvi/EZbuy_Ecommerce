@@ -1,6 +1,12 @@
 <?php
 session_start();
 
+if (isset($_GET['action']) && $_GET['action'] == 'logout') {
+    session_unset();
+    session_destroy();
+    header("Location: admins_login.php"); // Redirect to the login page or any other page
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,10 +14,7 @@ session_start();
     <meta charset="UTF-8">
     <title>Admin Dashboard</title>
 </head>
-<body>
-    <h1>Welcome, <?php echo $_SESSION['admin_name']; ?>!</h1>
-    <!-- Rest of your admin dashboard content -->
-</body>
+
 </html>
 
 <?php
@@ -224,7 +227,8 @@ include('../functions/common_function.php');
                     <button class="my-3"><a href="index.php?all_orders"class="nav-link text-light bg-info my-1">All orders</a></button>
                     <button class="my-3"><a href="index.php?all_payments"class="nav-link text-light bg-info my-1">AllPayments</a></button>
                     <button class="my-3"><a href="index.php?list_users"class="nav-link text-light bg-info my-1">List User</a></button>
-                    <button class="my-3"><a href=""class="nav-link text-light bg-info my-1">Logout</a></button>
+                    <button class="my-3"><a href="#" class="nav-link text-light bg-info my-1" onclick="return confirmLogout()">Logout</a></button>
+                    
                 </div>
             </div><!--End .col-md-12 bg-secoundary p-1-->
         </div><!--End .third-child-->
@@ -283,5 +287,13 @@ include('../functions/common_function.php');
         </div><!-- End .footer-bottom -->
     </footer><!-- End .footer -->
 </body>
+<script>
+        function confirmLogout() {
+            if (confirm("Are you sure you want to log out?")) {
+                window.location.href = "?action=logout";
+            }
+            return false; // Prevent default link behavior
+        }
+    </script>
 
 </html>
