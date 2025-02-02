@@ -12,6 +12,7 @@ echo "Welcome, " . $_SESSION['username'];  // Display the username
 <?php
 include('./includes/connect.php');
 include('./functions/common_function.php');
+include('./functions/10_function.php');
 
 // $user_ip = getUserIP();
 // echo "User IP Address: " . $user_ip;
@@ -29,7 +30,7 @@ include('./functions/common_function.php');
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Molla - Bootstrap eCommerce Template</title>
+    <title>EZbuy - Bootstrap eCommerce Template</title>
     <meta name="keywords" content="HTML5 Template">
     <meta name="description" content="Molla - Bootstrap eCommerce Template">
     <meta name="author" content="p-themes">
@@ -210,7 +211,7 @@ include('./functions/common_function.php');
                     <div class="products">
         <div class="row justify-content-center">
             <?php
-            getproducts();
+            get_furniture_products();
             get_unique_categories();
             get_unique_brands()
             ?>
@@ -223,7 +224,7 @@ include('./functions/common_function.php');
                     <div class="products">
         <div class="row justify-content-center">
             <?php
-            getproducts();
+            
             get_unique_categories();
             get_unique_brands()
             ?>

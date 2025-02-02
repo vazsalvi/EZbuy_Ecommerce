@@ -12,6 +12,7 @@ echo "Welcome, " . $_SESSION['username'];  // Display the username
 <?php
 include('./includes/connect.php');
 include('./functions/common_function.php');
+include('./functions/10_function.php');
 
 // $user_ip = getUserIP();
 // echo "User IP Address: " . $user_ip;
@@ -222,7 +223,7 @@ include('./functions/common_function.php');
                             <div class="products">
         <div class="row justify-content-center">
             <?php
-            getproducts();
+            get_book_products();
             get_unique_categories();
             get_unique_brands()
             ?>
@@ -343,7 +344,7 @@ include('./functions/common_function.php');
                             <div class="products">
         <div class="row justify-content-center">
             <?php
-            getproducts();
+            get_book_products();
             get_unique_categories();
             get_unique_brands()
             ?>
@@ -403,7 +404,7 @@ include('./functions/common_function.php');
                         <div class="products">
         <div class="row justify-content-center">
             <?php
-            getproducts();
+            get_book_products();
             get_unique_categories();
             get_unique_brands()
             ?>

@@ -11,7 +11,7 @@ global $con;
     if(!isset($_GET['brand'])){
     
 // SQL query to fetch products
-$select_query = "SELECT * FROM `products` order by rand() limit 0,9";
+$select_query = "SELECT * FROM `products` order by rand() ";
 $result_query = mysqli_query($con, $select_query);
 
 while ($row = mysqli_fetch_assoc($result_query)) {

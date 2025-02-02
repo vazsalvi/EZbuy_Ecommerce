@@ -88,7 +88,7 @@ include 'signuplogin.php';
                                 <a href="#">Links</a>
                                 <ul>
                                     <li><a href="tel:#"><i class="icon-phone"></i>Call: +0123 456 789</a></li>
-                                    <li><a href="wishlist.php"><i class="icon-heart-o"></i>Wishlist </a></li>
+                                    <li><a href="users_area/wishlist.php"><i class="icon-heart-o"></i>Wishlist </a></li>
                                     <li><a href="about.php">About Us</a></li>
                                     <li><a href="contact.php">Contact Us</a></li>
                                     <li><a href="#signin-modal" data-toggle="modal"><i class="icon-user"></i>Login</a></li>
