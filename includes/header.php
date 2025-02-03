@@ -61,7 +61,7 @@ include 'signuplogin.php';
                 <div class="container">
                     <div class="header-left">
                         <div class="header-dropdown">
-                            <a href="#">Usd</a>
+                            <a href="#">INR</a>
                             <div class="header-menu">
                                 <ul>
                                     <li><a href="#">Eur</a></li>
@@ -75,8 +75,8 @@ include 'signuplogin.php';
                             <div class="header-menu">
                                 <ul>
                                     <li><a href="#">English</a></li>
-                                    <li><a href="#">French</a></li>
-                                    <li><a href="#">Spanish</a></li>
+                                    <li><a href="#">Hindi</a></li>
+                                    <li><a href="#">Marathi</a></li>
                                 </ul>
                             </div><!-- End .header-menu -->
                         </div><!-- End .header-dropdown -->
@@ -87,7 +87,7 @@ include 'signuplogin.php';
                             <li>
                                 <a href="#">Links</a>
                                 <ul>
-                                    <li><a href="tel:#"><i class="icon-phone"></i>Call: +0123 456 789</a></li>
+                                    <li><a href="tel:#"><i class="icon-phone"></i>Call: 09833308442</a></li>
                                     <li><a href="users_area/wishlist.php"><i class="icon-heart-o"></i>Wishlist </a></li>
                                     <li><a href="about.php">About Us</a></li>
                                     <li><a href="contact.php">Contact Us</a></li>
@@ -110,7 +110,11 @@ include 'signuplogin.php';
                         </button>
 
                         <a href="index.php" class="logo">
+<<<<<<< Updated upstream
                             <img src="\Ai_driven_ecommerce\assets\images\logo.png" alt="Molla Logo" width="105" height="25">
+=======
+                            <img src="\EZbuy_Ecommerce\assets/images/demos/demo-20/EZbuy (1).png" alt="Molla Logo" width="105" height="25">
+>>>>>>> Stashed changes
                         </a>
 
                         <nav class="main-nav">
@@ -126,7 +130,7 @@ include 'signuplogin.php';
                                                 <div class="demo-item">
                                                     <a href="index-4.php">
                                                         <span class="demo-bg" style="background-image: url(assets/images/menu/demos/4.jpg);"></span>
-                                                        <span class="demo-title">04 - electronic store</span>
+                                                        <span class="demo-title">Electronic Store</span>
                                                     </a>
                                                 </div><!-- End .demo-item -->
 
@@ -134,21 +138,21 @@ include 'signuplogin.php';
                                                 <div class="demo-item">
                                                     <a href="index-10.php">
                                                         <span class="demo-bg" style="background-image: url(assets/images/menu/demos/10.jpg);"></span>
-                                                        <span class="demo-title">10 - shoes store</span>
+                                                        <span class="demo-title">Shoes Store</span>
                                                     </a>
                                                 </div><!-- End .demo-item -->
 
                                                 <div class="demo-item hidden">
                                                     <a href="index-11.php">
                                                         <span class="demo-bg" style="background-image: url(assets/images/menu/demos/11.jpg);"></span>
-                                                        <span class="demo-title">11 - furniture simple store</span>
+                                                        <span class="demo-title">Furniture Simple Store</span>
                                                     </a>
                                                 </div><!-- End .demo-item -->
 
                                                 <div class="demo-item hidden">
                                                     <a href="index-12.php">
                                                         <span class="demo-bg" style="background-image: url(assets/images/menu/demos/12.jpg);"></span>
-                                                        <span class="demo-title">12 - fashion simple store</span>
+                                                        <span class="demo-title">Fashion Simple Store</span>
                                                     </a>
                                                 </div><!-- End .demo-item -->
 
@@ -156,21 +160,21 @@ include 'signuplogin.php';
                                                 <div class="demo-item hidden">
                                                     <a href="index-19.php">
                                                         <span class="demo-bg" style="background-image: url(assets/images/menu/demos/19.jpg);"></span>
-                                                        <span class="demo-title">19 - games store</span>
+                                                        <span class="demo-title">Games Store</span>
                                                     </a>
                                                 </div><!-- End .demo-item -->
 
                                                 <div class="demo-item hidden">
                                                     <a href="index-20.php">
                                                         <span class="demo-bg" style="background-image: url(assets/images/menu/demos/20.jpg);"></span>
-                                                        <span class="demo-title">20 - book store</span>
+                                                        <span class="demo-title">Book Store</span>
                                                     </a>
                                                 </div><!-- End .demo-item -->
 
                                                 <div class="demo-item hidden">
                                                     <a href="index-21.php">
                                                         <span class="demo-bg" style="background-image: url(assets/images/menu/demos/21.jpg);"></span>
-                                                        <span class="demo-title">21 - sport store</span>
+                                                        <span class="demo-title">Sport Store</span>
                                                     </a>
                                                 </div><!-- End .demo-item -->
 
@@ -178,7 +182,7 @@ include 'signuplogin.php';
                                                 <div class="demo-item hidden">
                                                     <a href="index-24.php">
                                                         <span class="demo-bg" style="background-image: url(assets/images/menu/demos/24.jpg);"></span>
-                                                        <span class="demo-title">24 - extreme sport store</span>
+                                                        <span class="demo-title">Extreme Sport Store</span>
                                                     </a>
                                                 </div><!-- End .demo-item -->
 

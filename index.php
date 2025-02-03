@@ -110,13 +110,13 @@ if (isset($_SESSION['username'])) {
 			<div class="container-lg">
 				<div class="header-left">
 					<div class="logo">
-						<a href="#"><img src="assets/images/demos/demo-20/logo.png" alt="Molla Logo" width="100" height="25"></a>
+						<a href="#"><img src="assets/images/demos/demo-20/EZbuy (1).png" alt="Molla Logo" width="100" height="25"></a>
 					</div>
 				</div>
 				<div class="header-main">
 					<ul class="menu">
 						<li>
-							<a href="#" class="goto-demos">Demos</a>
+							<a href="#" class="goto-demos">Hubs</a>
 						</li>
 						<li>
 							<a href="#" class="goto-features">Features</a>
@@ -128,7 +128,7 @@ if (isset($_SESSION['username'])) {
 				</div>
 				<div class="header-right">
 					<a class="mobile-menu-toggler mr-0 mr-sm-5"><i class="icon-bars"></i></a>
-					<a class="btn btn-primary btn-outline"><i class="icon-shopping-cart"></i>Buy EZbuy</a>
+					<a href="admin_area/admins_login.php" class="btn btn-primary btn-outline"><i class="icon-shopping-car"></i>Admin</a>
 				</div>
 			</div>
 		</header>
@@ -139,13 +139,13 @@ if (isset($_SESSION['username'])) {
 					<h1>EZbuy- AI Driven ECommerce Website</h1>
 					<h5 class="mb-5">EZbuy is simply the best choice for your new website. Your search for the best
 						solution is over, get your own copy and join thousands of happy customers.</h5>
-					<p class="mb-0"><a href="#" class="btn btn-primary btn-outline goto-demos">Explore Demos<i
+					<p class="mb-0"><a href="#" class="btn btn-primary btn-outline goto-demos">Explore Hubs<i
 								class="icon-long-arrow-alt-down"></i></a></p>
 				</div>
 			</section>
 			<section class="section section-demos text-center container-lg">
-				<h2>20 Pre-Build Demos</h2>
-				<p>Comes with 20 homepages available with multi style that better for your choice.<br>EZbuy store is one
+				<h2>Shop by Category</h2>
+				<p> EZbuy features eight niches— allowing users to explore products tailored to their preferences effortlessly. <br>EZbuy store is one
 					of the best Multi-Purpose Website for your store.</p>
 				<div class="demo-filter menu">
 					<a href="#homepages" class="active">Home Pages</a>
@@ -290,7 +290,7 @@ if (isset($_SESSION['username'])) {
 					</div>
 					
 				</div>
-				<h5 class="text-load-more">More New Demos Coming Soon ...</h5>
+				<h5 class="text-load-more">More New Hubs Coming Soon ...</h5>
 			</section>
 
 			<section class="section section-features">
@@ -396,7 +396,7 @@ if (isset($_SESSION['username'])) {
 		<footer id="footer" class="container-lg">
 			<div class="row">
 				<div class="col-md-6 text-center text-md-left mb-4 mb-md-0">
-					<p class="copyright mb-0"><a href="templateshub.net">Templateshub</a></p>
+					
 				</div>
 				<div class="col-md-6 text-center text-md-right social-icons">
 					<label class="mr-3">Social Media</label>
@@ -420,7 +420,7 @@ if (isset($_SESSION['username'])) {
 			<nav class="mobile-nav">
 				<ul class="mobile-menu">
 					<li>
-						<a href="#" class="goto-demos">Demos</a>
+						<a href="#" class="goto-demos">Hubs</a>
 					</li>
 					<li>
 						<a href="#">Features</a>
