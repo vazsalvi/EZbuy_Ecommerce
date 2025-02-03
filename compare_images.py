@@ -19,7 +19,7 @@ def image_similarity(image1_path, image2_path):
     return score
 
 uploaded_image = sys.argv[1]
-image_directory = "C:/xampp/htdocs/EZbuy_Ecommerce/admin_area/product_images/"
+image_directory = "C:/xampp/htdocs/Ai_driven_ecommerce/admin_area/product_images/"
 
 # Connect to the MySQL database
 db = mysql.connector.connect(

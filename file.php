@@ -31,7 +31,7 @@
 
     // IMAGE UPLOAD FUNCTIONALITY
     if (isset($_POST['submit']) && isset($_FILES['image']) && $_FILES['image']['error'] == UPLOAD_ERR_OK) {
-        $target_dir = "C:/xampp/htdocs/EZbuy_Ecommerce/admin_area/product_images/";
+        $target_dir = "C:/xampp/htdocs/Ai_driven_ecommerce/admin_area/product_images/";
         $target_file = $target_dir . basename($_FILES["image"]["name"]);
         $uploadOk = 1;
         $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
@@ -78,10 +78,12 @@
 
     // IMAGE SEARCH FUNCTIONALITY
     if (isset($_POST['check']) && isset($_FILES['image']) && $_FILES['image']['error'] == UPLOAD_ERR_OK) {
-        $temp_image = "temp_image.png"; // Save temporarily for comparison
+        $temp_image = "C:/xampp/htdocs/Ai_driven_ecommerce/temp_image.png"; // Save temporarily for comparison
         if (move_uploaded_file($_FILES["image"]["tmp_name"], $temp_image)) {
             // Call Python script for similarity check
-            $output = shell_exec("python compare_images.py $temp_image 2>&1");
+            $python_script = "C:/xampp/htdocs/Ai_driven_ecommerce/compare_images.py";
+            $command = escapeshellcmd("python \"$python_script\" \"$temp_image\"");
+            $output = shell_exec($command . " 2>&1");
 
             echo "<h3>Similarity Results:</h3>";
             echo "<table border='1'>";
