@@ -43,7 +43,7 @@ if (isset($_SESSION['username'])) {
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-	<title>Molla - Best Premium HTML Template</title>
+	<title>EZbuy - Best Premium HTML Template</title>
 
 	<meta name="author" content="p-Themes">
 
@@ -110,7 +110,7 @@ if (isset($_SESSION['username'])) {
 			<div class="container-lg">
 				<div class="header-left">
 					<div class="logo">
-						<a href="#"><img src="assets/images/demos-img/logo.png" alt="Molla Logo"></a>
+						<a href="#"><img src="assets/images/demos/demo-20/logo.png" alt="Molla Logo" width="100" height="25"></a>
 					</div>
 				</div>
 				<div class="header-main">
@@ -128,7 +128,7 @@ if (isset($_SESSION['username'])) {
 				</div>
 				<div class="header-right">
 					<a class="mobile-menu-toggler mr-0 mr-sm-5"><i class="icon-bars"></i></a>
-					<a class="btn btn-primary btn-outline"><i class="icon-shopping-cart"></i>Buy Molla</a>
+					<a class="btn btn-primary btn-outline"><i class="icon-shopping-cart"></i>Buy EZbuy</a>
 				</div>
 			</div>
 		</header>
@@ -136,8 +136,8 @@ if (isset($_SESSION['username'])) {
 			<section class="banner section-dark" style="background: #222;">
 				<img src="assets/images/demos-img/header_splash.jpg" alt="" width="1920" height="1120">
 				<div class="banner-text text-center">
-					<h1>Multi-Purpose eCommerce HTML5 Template</h1>
-					<h5 class="mb-5">Molla is simply the best choice for your new website. Your search for the best
+					<h1>EZbuy- AI Driven ECommerce Website</h1>
+					<h5 class="mb-5">EZbuy is simply the best choice for your new website. Your search for the best
 						solution is over, get your own copy and join thousands of happy customers.</h5>
 					<p class="mb-0"><a href="#" class="btn btn-primary btn-outline goto-demos">Explore Demos<i
 								class="icon-long-arrow-alt-down"></i></a></p>
@@ -145,8 +145,8 @@ if (isset($_SESSION['username'])) {
 			</section>
 			<section class="section section-demos text-center container-lg">
 				<h2>20 Pre-Build Demos</h2>
-				<p>Comes with 20 homepages available with multi style that better for your choice.<br>Molla store is one
-					of the best Multi-Purpose eCommerce HTML Template for your store.</p>
+				<p>Comes with 20 homepages available with multi style that better for your choice.<br>EZbuy store is one
+					of the best Multi-Purpose Website for your store.</p>
 				<div class="demo-filter menu">
 					<a href="#homepages" class="active">Home Pages</a>
 					<a href="#shoppages">Shop Pages</a>
@@ -157,16 +157,16 @@ if (isset($_SESSION['username'])) {
 					<div class="iso-item homepages">
 						<a href="index-4.php" target="_blank">
 							<img src="assets/images/demos-img/lazy.png"
-								data-oi="assets/images/demos-img/molla_electronic2.jpg" width="500" height="385"
-								class="molla-lz" style="padding-top: 77%" alt="Electronic 2">
-							<h5>Electronic 2</h5>
+								data-oi="assets/images/demos-img/electronics (2).jpg" width="500" height="385"
+								class="molla-lz" style="padding-top: 77%" alt="Electronic ">
+							<h5>Electronic </h5>
 						</a>
 					</div>
 
 					<div class="iso-item homepages">
 						<a href="index-10.php" target="_blank">
 							<img src="assets/images/demos-img/lazy.png"
-								data-oi="assets/images/demos-img/molla_shoesstore.jpg" width="500" height="385"
+								data-oi="assets/images/demos-img/shoe.jpg" width="500" height="385"
 								class="molla-lz" style="padding-top: 77%" alt="Shoes Store">
 							<h5>Shoes Store</h5>
 						</a>
@@ -174,24 +174,24 @@ if (isset($_SESSION['username'])) {
 					<div class="iso-item homepages">
 						<a href="index-11.php" target="_blank">
 							<img src="assets/images/demos-img/lazy.png"
-								data-oi="assets/images/demos-img/molla_furniture_simple.jpg" width="500" height="385"
+								data-oi="assets/images/demos-img/bedroom.jpg" width="500" height="385"
 								class="molla-lz" style="padding-top: 77%" alt="Furniture 3">
-							<h5>Furniture 3 <span>(Simple)</span></h5>
+							<h5>Furniture <span>(Simple)</span></h5>
 						</a>
 					</div>
 					<div class="iso-item homepages">
 						<a href="index-12.php" target="_blank">
 							<img src="assets/images/demos-img/lazy.png"
-								data-oi="assets/images/demos-img/molla_fashion_simple.jpg" width="500" height="385"
+								data-oi="assets/images/demos-img/traditional.jpg" width="500" height="385"
 								class="molla-lz" style="padding-top: 77%" alt="Fashion 6 (Simple)">
-							<h5>Fashion 6 <span>(Simple)</span></h5>
+							<h5>Fashion <span>(Simple)</span></h5>
 						</a>
 					</div>
 
 					<div class="iso-item homepages">
 						<a href="index-19.php" target="_blank">
 							<img src="assets/images/demos-img/lazy.png"
-								data-oi="assets/images/demos-img/molla_gamestore.jpg" width="500" height="385"
+								data-oi="assets/images/demos-img/game.jpg" width="500" height="385"
 								class="molla-lz" style="padding-top: 77%" alt="Game Store">
 							<h5>Game Store</h5>
 						</a>
@@ -199,7 +199,7 @@ if (isset($_SESSION['username'])) {
 					<div class="iso-item homepages">
 						<a href="index-20.php" target="_blank">
 							<img src="assets/images/demos-img/lazy.png"
-								data-oi="assets/images/demos-img/molla_bookstore.jpg" width="500" height="385"
+								data-oi="assets/images/demos-img/books (1).jpg" width="500" height="385"
 								class="molla-lz" style="padding-top: 77%" alt="Book Store">
 							<h5>Book Store</h5>
 						</a>
@@ -207,7 +207,7 @@ if (isset($_SESSION['username'])) {
 					<div class="iso-item homepages">
 						<a href="index-21.php" target="_blank">
 							<img src="assets/images/demos-img/lazy.png"
-								data-oi="assets/images/demos-img/molla_sport.jpg" width="500" height="385"
+								data-oi="assets/images/demos-img/sport.jpg" width="500" height="385"
 								class="molla-lz" style="padding-top: 77%" alt="Furniture 2">
 							<h5>Sport Store</h5>
 						</a>
@@ -215,7 +215,7 @@ if (isset($_SESSION['username'])) {
 					<div class="iso-item homepages">
 						<a href="index-24.php" target="_blank">
 							<img src="assets/images/demos-img/lazy.png"
-								data-oi="assets/images/demos-img/molla_extreme_sport.jpg" width="500" height="385"
+								data-oi="assets/images/demos-img/extreme.jpg" width="500" height="385"
 								class="molla-lz" style="padding-top: 77%" alt="Furniture 2">
 							<h5>Extreme Sport Store</h5>
 						</a>
@@ -295,7 +295,7 @@ if (isset($_SESSION['username'])) {
 
 			<section class="section section-features">
 				<h2 class="text-center">Our Core Features</h2>
-				<p class="text-center">Powerful features and inclusions, which makes Molla standout,<br>easily
+				<p class="text-center">Powerful features and inclusions, which makes EZbuy standout,<br>easily
 					customizable and scalable.</p>
 				<div class="divider-line">
 					<div class="container-lg">
@@ -384,13 +384,13 @@ if (isset($_SESSION['username'])) {
 				</div>
 			</section>
 			<section class="section section-light section-ready container text-center">
-				<h2 class="mb-3">Molla Is Ready To Use. Get It Now!</h2>
+				<h2 class="mb-3">EZbuy Is Ready To Use. Get It Now!</h2>
 				<p>DON'T FORGET TO APPRECIATE OUR WORK. RATE US NOW!</p>
 				<div class="star-rating mb-4 pb-3">
 					<i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i
 						class="icon-star"></i><i class="icon-star"></i>
 				</div>
-				<p><a class="btn btn-primary btn-outline" href="#"><i class="icon-shopping-cart"></i>Buy Molla</a></p>
+				<p><a class="btn btn-primary btn-outline" href="#"><i class="icon-shopping-cart"></i>Buy EZbuy</a></p>
 			</section>
 		</div>
 		<footer id="footer" class="container-lg">
