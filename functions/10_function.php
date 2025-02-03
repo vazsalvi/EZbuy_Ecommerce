@@ -1026,4 +1026,40 @@ while ($row = mysqli_fetch_assoc($result_query)) {
 }
 }
 
+function get_electronic_brands(){
+    global $con;
+
+    $select_brands="select* from `brands` WHERE website_id = 1 ";
+    $result_brands=mysqli_query($con,$select_brands);  
+    // $raw_data=mysqli_fetch_assoc($result_brands);
+    // echo $raw_data['brand_title'];
+    // echo $raw_data['brand_title'];
+    while($raw_data=mysqli_fetch_assoc($result_brands)){
+        $brand_title=$raw_data['brand_title'];
+        $brand_id=$raw_data['brand_id'];
+        echo "<li class='nav-item'>
+        <a href='index-4.php?brand=$brand_id' class='nav-link text-light'>$brand_title</a>
+        </li>";
+        }
+}
+
+function get_electronic_category(){
+    global $con;
+   
+
+
+    $select_categories="select* from `categories` WHERE website_id = 1";
+    $result_categories=mysqli_query($con,$select_categories);  
+    // $raw_data=mysqli_fetch_assoc($result_brands);
+    // echo $raw_data['brand_title'];
+    // echo $raw_data['brand_title'];
+    while($raw_data=mysqli_fetch_assoc($result_categories)){
+        $category_title=$raw_data['category_title'];
+        $category_id=$raw_data['category_id'];
+        echo "<li class='nav-item'>
+        <a href='index-4.php?category=$category_id' class='nav-link text-light'>$category_title</a>
+        </li>";
+    }
+}
+
 ?>

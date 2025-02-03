@@ -54,23 +54,28 @@ include('./functions/10_function.php');
                             <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false" data-display="static"
                                 title="Browse Categories">
-                                Browse Categories <i class="icon-angle-down"></i>
+                                Browse  <i class="icon-angle-down"></i>
                             </a>
                             <div class="dropdown-menu">
                                 <nav class="side-nav">
                                     <ul class="menu-vertical sf-arrows">
-                                        <li class="item-lead"><a href="#" class="sf-with-ul">Daily offers</a>
+                                        <li class="item-lead"><a href="#" class="sf-with-ul">Brands</a>
                                             <ul>
                                                 <?php
-                                                getbrands();
+                                                get_electronic_brands();
                                         ?>
                                             </ul>
                                         </li>
 
+<<<<<<< Updated upstream
                                         <li class="item-lead"><a href="#" class="sf-with-ul">Gift Ideas</a>
+=======
+                                        <!-- second category -->
+                                        <li class="item-lead"><a href="#" class="sf-with-ul">Categories</a>
+>>>>>>> Stashed changes
                                             <ul>
                                                 <?php
-                                                getcategory();
+                                                get_electronic_category();
                                         ?>
                                             </ul>
                                         </li>
@@ -375,14 +380,14 @@ include('./functions/10_function.php');
                                 <a href="index.php">Home</a>
 
                                 <ul>
-                                    <li><a href="index-4.html">04 - electronic store</a></li>
-                                    <li><a href="index-10.html">10 - shoes store</a></li>
-                                    <li><a href="index-11.html">11 - furniture simple store</a></li>
-                                    <li><a href="index-12.html">12 - fashion simple store</a></li>
-                                    <li><a href="index-19.html">19 - games store</a></li>
-                                    <li><a href="index-20.html">20 - book store</a></li>
-                                    <li><a href="index-21.html">21 - sport store</a></li>
-                                    <li><a href="index-24.html">24 - extreme sport store</a></li>
+                                    <li><a href="index-4.html">04 - Electronic Store</a></li>
+                                    <li><a href="index-10.html">10 - Shoes Store</a></li>
+                                    <li><a href="index-11.html">11 - Furniture Simple Store</a></li>
+                                    <li><a href="index-12.html">12 - Fashion Simple Store</a></li>
+                                    <li><a href="index-19.html">19 - Games Store</a></li>
+                                    <li><a href="index-20.html">20 - Book Store</a></li>
+                                    <li><a href="index-21.html">21 - Sport Store</a></li>
+                                    <li><a href="index-24.html">24 - Extreme Sport Store</a></li>
                                 </ul>
                             </li>
                             <li>
