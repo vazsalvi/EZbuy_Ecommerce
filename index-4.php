@@ -1,32 +1,15 @@
 <?php
-// Start the session
 session_start();
-
-
-
-// Now, you can use $_SESSION['username'] for the logged-in user's username
 echo "Welcome, " . $_SESSION['username'];  // Display the username
 ?>
-
-<!-- connection -->
 <?php
 include('./includes/connect.php');
 include('./functions/common_function.php');
 include('./functions/10_function.php');
-
-// $user_ip = getUserIP();
-// echo "User IP Address: " . $user_ip;
 ?>
-<!-- cart function call -->
-<?php
-         cart();
-         ?>
+<?php cart(); ?>
 <!DOCTYPE html>
 <html lang="en">
-
-
-<!-- molla/index-4.html  22 Nov 2019 09:53:08 GMT -->
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -60,16 +43,12 @@ include('./functions/10_function.php');
 
     
 </head>
-
 <body>
     <div class="page-wrapper">
-        <!-- //include header// -->
     <?php include("./includes/header.php")?>
         <header class="header header-intro-clearance header-4">
-        
             <div class="header-bottom sticky-header">
                 <div class="container">
-
                     <div class="header-left">
                         <div class="dropdown category-dropdown">
                             <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown"
@@ -77,21 +56,17 @@ include('./functions/10_function.php');
                                 title="Browse Categories">
                                 Browse Categories <i class="icon-angle-down"></i>
                             </a>
-
                             <div class="dropdown-menu">
                                 <nav class="side-nav">
                                     <ul class="menu-vertical sf-arrows">
                                         <li class="item-lead"><a href="#" class="sf-with-ul">Daily offers</a>
                                             <ul>
-                                                <!-- database call -->
-                                                <!-- first brand -->
                                                 <?php
                                                 getbrands();
                                         ?>
                                             </ul>
                                         </li>
 
-                                        <!-- second category -->
                                         <li class="item-lead"><a href="#" class="sf-with-ul">Gift Ideas</a>
                                             <ul>
                                                 <?php
@@ -196,7 +171,7 @@ include('./functions/10_function.php');
     <div class="products">
         <div class="row justify-content-center">
             <?php
-            get_electronic_products();
+            get_recommended_products();
             get_unique_categories();
             get_unique_brands()
             ?>

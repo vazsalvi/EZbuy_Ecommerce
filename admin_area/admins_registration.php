@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <input type="text" class="form-control" id="adminNumber" name="admin_number" required>
             </div>
             <button type="submit" class="btn btn-primary">Register</button>
-            <p>Don't have an account? <a href="/EZbuy_Ecommerce/admin_area/admins_login.php">Register here</a></p>
+            <p>Don't have an account? <a href="/Ai_driven_ecommerce/admin_area/admins_login.php">Register here</a></p>
         </form>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

@@ -40,7 +40,7 @@ include('../includes/connect.php');
                                             </div><!-- End .header-menu -->
                                         </div>
                                     </li>
-                                    <li><a href="/EZbuy_Ecommerce/admin_area/admins_registration.php" >Sign in / Sign up</a></li>
+                                    <li><a href="/Ai_driven_ecommerce/admin_area/admins_registration.php" >Sign in / Sign up</a></li>
                                 </ul>
                             </li>
                         </ul><!-- End .top-menu -->

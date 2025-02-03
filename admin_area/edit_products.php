@@ -95,17 +95,17 @@ if (isset($_GET['edit_products'])) {
                     <div class="form-group">
                         <label for="productImage1">Product Image 1</label>
                         <input type="file" class="form-control-file" id="productImage1" name="product_image1">
-                        <img src="/EZbuy_Ecommerce/admin_area/product_images/<?php echo $product['product_image1']; ?>" alt="Product Image 1">
+                        <img src="/Ai_driven_ecommerce/admin_area/product_images/<?php echo $product['product_image1']; ?>" alt="Product Image 1">
                     </div>
                     <div class="form-group">
                         <label for="productImage2">Product Image 2</label>
                         <input type="file" class="form-control-file" id="productImage2" name="product_image2">
-                        <img src="/EZbuy_Ecommerce/admin_area/product_images/<?php echo $product['product_image2']; ?>" alt="Product Image 2">
+                        <img src="/Ai_driven_ecommerce/admin_area/product_images/<?php echo $product['product_image2']; ?>" alt="Product Image 2">
                     </div>
                     <div class="form-group">
                         <label for="productImage3">Product Image 3</label>
                         <input type="file" class="form-control-file" id="productImage3" name="product_image3">
-                        <img src="/EZbuy_Ecommerce/admin_area/product_images/<?php echo $product['product_image3']; ?>" alt="Product Image 3">
+                        <img src="/Ai_driven_ecommerce/admin_area/product_images/<?php echo $product['product_image3']; ?>" alt="Product Image 3">
                     </div>
                     <button type="submit" class="btn btn-primary">Save changes</button>
                 </form>

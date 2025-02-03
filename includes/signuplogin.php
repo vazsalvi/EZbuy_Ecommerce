@@ -1,5 +1,5 @@
 <?php
-include 'C:\xampp\htdocs\EZbuy_Ecommerce\includes\connect.php';
+include 'C:\xampp\htdocs\Ai_driven_ecommerce\includes\connect.php';
 // Rest of your code
 ?>
 
