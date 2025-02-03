@@ -58,7 +58,7 @@
                 echo '<td>' . $row['product_title'] . '</td>';
                 echo '<td>' . $row['category_title'] . '</td>';
                 echo '<td>' . $row['brand_title'] . '</td>';
-                echo '<td><img src="/EZbuy_Ecommerce/admin_area/product_images/' . $row['product_image1'] . '" alt="' . $row['product_title'] . '" width="50" height="50"></td>';
+                echo '<td><img src="/Ai_driven_ecommerce/admin_area/product_images/' . $row['product_image1'] . '" alt="' . $row['product_title'] . '" width="50" height="50"></td>';
                 echo '<td>' . $row['product_price'] . '</td>';
                 echo '<td>' . $row['status'] . '</td>';
                 echo '<td>' . $row['total_sold'] . '</td>';
