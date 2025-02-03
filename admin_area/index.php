@@ -96,7 +96,7 @@ include('../functions/common_function.php');
                                             </div><!-- End .header-menu -->
                                         </div>
                                     </li>
-                                    <li><a href="/EZbuy_Ecommerce/admin_area/admins_registration.php" >New Admin Registration?</a></li>
+                                    <li><a href="/Ai_driven_ecommerce/admin_area/admins_registration.php" >New Admin Registration?</a></li>
                                 </ul>
                             </li>
                         </ul><!-- End .top-menu -->
