@@ -10,7 +10,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 
 <head>
-    <base href="/EZbuy_Ecommerce/">
+    <base href="/Ai_driven_ecommerce/">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -19,27 +19,27 @@
     <meta name="description" content="Molla - Bootstrap eCommerce Template">
     <meta name="author" content="p-themes">
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="\EZbuy_Ecommerce\assets/images/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="\EZbuy_Ecommerce\assets/images/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="\EZbuy_Ecommerce\assets/images/icons/favicon-16x16.png">
-    <link rel="manifest" href="\EZbuy_Ecommerce\assets/images/icons/site.html">
-    <link rel="mask-icon" href="\EZbuy_Ecommerce\assets/images/icons/safari-pinned-tab.svg" color="#666666">
-    <link rel="shortcut icon" href="\EZbuy_Ecommerce\assets/images/icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="\Ai_driven_ecommerce\assets/images/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="\Ai_driven_ecommerce\assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="\Ai_driven_ecommerce\assets/images/icons/favicon-16x16.png">
+    <link rel="manifest" href="\Ai_driven_ecommerce\assets/images/icons/site.html">
+    <link rel="mask-icon" href="\Ai_driven_ecommerce\assets/images/icons/safari-pinned-tab.svg" color="#666666">
+    <link rel="shortcut icon" href="\Ai_driven_ecommerce\assets/images/icons/favicon.ico">
     <meta name="apple-mobile-web-app-title" content="Molla">
     <meta name="application-name" content="Molla">
     <meta name="msapplication-TileColor" content="#cc9966">
-    <meta name="msapplication-config" content="\EZbuy_Ecommerce\assets/images/icons/browserconfig.xml">
+    <meta name="msapplication-config" content="\Ai_driven_ecommerce\assets/images/icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="\EZbuy_Ecommerce\assets/vendor/line-awesome/line-awesome/line-awesome/css/line-awesome.min.css">
+    <link rel="stylesheet" href="\Ai_driven_ecommerce\assets/vendor/line-awesome/line-awesome/line-awesome/css/line-awesome.min.css">
     <!-- Plugins CSS File -->
-    <link rel="stylesheet" href="\EZbuy_Ecommerce\assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="\EZbuy_Ecommerce\assets/css/plugins/owl-carousel/owl.carousel.css">
-    <link rel="stylesheet" href="\EZbuy_Ecommerce\assets/css/plugins/magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="\Ai_driven_ecommerce\assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="\Ai_driven_ecommerce\assets/css/plugins/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="\Ai_driven_ecommerce\assets/css/plugins/magnific-popup/magnific-popup.css">
     <link rel="stylesheet" href="assets/css/plugins/jquery.countdown.css">
     <!-- Main CSS File -->
-    <link rel="stylesheet" href="\EZbuy_Ecommerce\assets/css/style.css">
-    <link rel="stylesheet" href="\EZbuy_Ecommerce\assets/css/skins/skin-demo-4.css">
-    <link rel="stylesheet" href="\EZbuy_Ecommerce\assets/css/demos/demo-4.css">
+    <link rel="stylesheet" href="\Ai_driven_ecommerce\assets/css/style.css">
+    <link rel="stylesheet" href="\Ai_driven_ecommerce\assets/css/skins/skin-demo-4.css">
+    <link rel="stylesheet" href="\Ai_driven_ecommerce\assets/css/demos/demo-4.css">
 
     
 </head>
@@ -49,7 +49,7 @@
     <!-- In header.php -->
     <?php
 // Setting the include path to make sure it includes the correct directories
-set_include_path(get_include_path() . PATH_SEPARATOR . 'C:\xampp\htdocs\EZbuy_Ecommerce\includes');
+set_include_path(get_include_path() . PATH_SEPARATOR . 'C:\xampp\htdocs\Ai_driven_ecommerce\includes');
 
 // Including signuplogin.php file
 include 'signuplogin.php'; 
@@ -110,7 +110,7 @@ include 'signuplogin.php';
                         </button>
 
                         <a href="index.php" class="logo">
-                            <img src="\EZbuy_Ecommerce\assets\images\logo.png" alt="Molla Logo" width="105" height="25">
+                            <img src="\Ai_driven_ecommerce\assets\images\logo.png" alt="Molla Logo" width="105" height="25">
                         </a>
 
                         <nav class="main-nav">
@@ -272,7 +272,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 
         <figure class="product-image-container">
             <a href="product.php?product_id=' . $product_id . '" class="product-image">
-                <img src="/EZbuy_Ecommerce/admin_area/product_images/' . $product_image . '" alt="' . $product_title . '">
+                <img src="/Ai_driven_ecommerce/admin_area/product_images/' . $product_image . '" alt="' . $product_title . '">
             </a>
         </figure>
         

@@ -51,6 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </style>
 </head>
 <body>
+
     <div class="login-container">
         <div class="card">
             <h2 class="text-center mb-4">Admin Login</h2>
@@ -72,6 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <p class="mt-3 text-center">Don't have an account? <a href="/EZbuy_Ecommerce/admin_area/admins_registration.php">Register here</a></p>
             </form>
         </div>
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>

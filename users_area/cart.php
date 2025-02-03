@@ -18,7 +18,7 @@ include('../functions/common_function.php');
 
 <!-- molla/cart.html  22 Nov 2019 09:55:06 GMT -->
 <head>
-<base href="/EZbuy_Ecommerce/">
+<base href="/Ai_driven_ecommerce/">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -163,7 +163,7 @@ if (isset($_POST['update_cart'])) {
                                     <div class='product'>
                                         <figure class='product-media'>
                                             <a href='product.php?product_id=$product_id'>
-                                                <img src='/EZbuy_Ecommerce/admin_area/product_images/$product_image' alt='$product_title'>
+                                                <img src='/Ai_driven_ecommerce/admin_area/product_images/$product_image' alt='$product_title'>
                                             </a>
                                         </figure>
                                         <h3 class='product-title'>
