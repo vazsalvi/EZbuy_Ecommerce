@@ -429,13 +429,13 @@ include('./functions/10_function.php');
                             <a class="nav-link active" id="arrivals-all-link" data-toggle="tab" href="#arrivals-all-tab" role="tab" aria-controls="arrivals-all-tab" aria-selected="true">All</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="arrivals-women-link" data-toggle="tab" href="#arrivals-women-tab" role="tab" aria-controls="arrivals-women-tab" aria-selected="false">Women</a>
+                            <a class="nav-link" id="arrivals-women-link" data-toggle="tab" href="#arrivals-women-tab" role="tab" aria-controls="arrivals-women-tab" aria-selected="false">Cricket</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="arrivals-men-link" data-toggle="tab" href="#arrivals-men-tab" role="tab" aria-controls="arrivals-men-tab" aria-selected="false">Men</a>
+                            <a class="nav-link" id="arrivals-men-link" data-toggle="tab" href="#arrivals-men-tab" role="tab" aria-controls="arrivals-men-tab" aria-selected="false">Football</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="arrivals-shoes-link" data-toggle="tab" href="#arrivals-shoes-tab" role="tab" aria-controls="arrivals-shoes-tab" aria-selected="false">Shoes</a>
+                            <a class="nav-link" id="arrivals-shoes-link" data-toggle="tab" href="#arrivals-shoes-tab" role="tab" aria-controls="arrivals-shoes-tab" aria-selected="false">Bags</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" id="arrivals-acc-link" data-toggle="tab" href="#arrivals-acc-tab" role="tab" aria-controls="arrivals-acc-tab" aria-selected="false">Accessories</a>
@@ -463,7 +463,7 @@ include('./functions/10_function.php');
                         <div class="products">
         <div class="row justify-content-center">
             <?php
-            get_sport_products();
+            get_cricket_sport_products();
             get_unique_categories();
             get_unique_brands()
             ?>
@@ -478,7 +478,7 @@ include('./functions/10_function.php');
                         <div class="products">
         <div class="row justify-content-center">
             <?php
-            get_sport_products();
+            get_football_sport_products();
             get_unique_categories();
             get_unique_brands()
             ?>
@@ -716,7 +716,7 @@ include('./functions/10_function.php');
                         <div class="banner-content text-center">
                             <img src="assets/images/popup/newsletter/logo.png" class="logo" alt="logo" width="60" height="15">
                             <h2 class="banner-title">get <span>25<light>%</light></span> off</h2>
-                            <p>Subscribe to the Molla eCommerce newsletter to receive timely updates from your favorite products.</p>
+                            <p>Subscribe to the EZbuy eCommerce newsletter to receive timely updates from your favorite products.</p>
                             <form action="#">
                                 <div class="input-group input-group-round">
                                     <input type="email" class="form-control form-control-white" placeholder="Your Email Address" aria-label="Email Adress" required>

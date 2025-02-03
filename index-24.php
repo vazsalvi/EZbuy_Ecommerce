@@ -445,7 +445,7 @@ include('./functions/10_function.php');
                         </ul>
                     </li>
                     <li>
-                        <a href="#">BUY Molla</a>
+                        <a href="#">BUY EZbuy</a>
                         <ul>
                             <li><a href="elements-products.html">Products</a></li>
                             <li><a href="elements-typography.html">Typography</a></li>
@@ -483,7 +483,7 @@ include('./functions/10_function.php');
                         <div class="banner-content text-center">
                             <img src="assets/images/popup/newsletter/logo.png" class="logo" alt="logo" width="60" height="15">
                             <h2 class="banner-title">get <span>25<light>%</light></span> off</h2>
-                            <p>Subscribe to the Molla eCommerce newsletter to receive timely updates from your favorite products.</p>
+                            <p>Subscribe to the EZbuy eCommerce newsletter to receive timely updates from your favorite products.</p>
                             <form action="#">
                                 <div class="input-group input-group-round">
                                     <input type="email" class="form-control form-control-white" placeholder="Your Email Address" aria-label="Email Adress" required>
