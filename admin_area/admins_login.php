@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <input type="password" class="form-control" id="adminPassword" name="admin_password" required>
                 </div>
                 <button type="submit" class="btn btn-primary btn-block">Login</button>
-                <p class="mt-3 text-center">Don't have an account? <a href="/EZbuy_Ecommerce/admin_area/admins_registration.php">Register here</a></p>
+                <p class="mt-3 text-center">Don't have an account? <a href="/Ai_driven_ecommerce/admin_area/admins_registration.php">Register here</a></p>
             </form>
         </div>
 

@@ -41,7 +41,7 @@ function get_recommended_products() {
                     </div>
                     <h3 class="product-title"><a href="product.php?id=' . $product_id . '">' . $product_title . '</a></h3>
                     <div class="product-price">
-                        <span class="new-price">$' . $product_price . '</span>
+                        <span class="new-price">Rs ' . $product_price . '</span>
                     </div>
                     <div class="ratings-container">
                         <div class="ratings">
@@ -112,7 +112,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
                 </div><!-- End .product-cat -->
                 <h3 class="product-title"><a href="product.php?id=' . $product_id . '">' . $product_title . '</a></h3><!-- End .product-title -->
                 <div class="product-price">
-                    <span class="new-price">$' . $product_price . '</span>';
+                    <span class="new-price">Rs ' . $product_price . '</span>';
                     if (!empty($product_old_price)) {
                         echo '<span class="old-price">Was $' . $product_old_price . '</span>';
                     }
@@ -194,7 +194,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
                 </div><!-- End .product-cat -->
                 <h3 class="product-title"><a href="product.php?id=' . $product_id . '">' . $product_title . '</a></h3><!-- End .product-title -->
                 <div class="product-price">
-                    <span class="new-price">$' . $product_price . '</span>';
+                    <span class="new-price">Rs ' . $product_price . '</span>';
                     if (!empty($product_old_price)) {
                         echo '<span class="old-price">Was $' . $product_old_price . '</span>';
                     }
@@ -273,7 +273,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
                 </div><!-- End .product-cat -->
                 <h3 class="product-title"><a href="product.php?id=' . $product_id . '">' . $product_title . '</a></h3><!-- End .product-title -->
                 <div class="product-price">
-                    <span class="new-price">$' . $product_price . '</span>';
+                    <span class="new-price">Rs ' . $product_price . '</span>';
                     if (!empty($product_old_price)) {
                         echo '<span class="old-price">Was $' . $product_old_price . '</span>';
                     }
@@ -352,7 +352,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
                 </div><!-- End .product-cat -->
                 <h3 class="product-title"><a href="product.php?id=' . $product_id . '">' . $product_title . '</a></h3><!-- End .product-title -->
                 <div class="product-price">
-                    <span class="new-price">$' . $product_price . '</span>';
+                    <span class="new-price">Rs ' . $product_price . '</span>';
                     if (!empty($product_old_price)) {
                         echo '<span class="old-price">Was $' . $product_old_price . '</span>';
                     }
@@ -431,7 +431,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
                 </div><!-- End .product-cat -->
                 <h3 class="product-title"><a href="product.php?id=' . $product_id . '">' . $product_title . '</a></h3><!-- End .product-title -->
                 <div class="product-price">
-                    <span class="new-price">$' . $product_price . '</span>';
+                    <span class="new-price">Rs ' . $product_price . '</span>';
                     if (!empty($product_old_price)) {
                         echo '<span class="old-price">Was $' . $product_old_price . '</span>';
                     }
@@ -510,7 +510,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
                 </div><!-- End .product-cat -->
                 <h3 class="product-title"><a href="product.php?id=' . $product_id . '">' . $product_title . '</a></h3><!-- End .product-title -->
                 <div class="product-price">
-                    <span class="new-price">$' . $product_price . '</span>';
+                    <span class="new-price">Rs ' . $product_price . '</span>';
                     if (!empty($product_old_price)) {
                         echo '<span class="old-price">Was $' . $product_old_price . '</span>';
                     }
@@ -589,7 +589,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
                 </div><!-- End .product-cat -->
                 <h3 class="product-title"><a href="product.php?id=' . $product_id . '">' . $product_title . '</a></h3><!-- End .product-title -->
                 <div class="product-price">
-                    <span class="new-price">$' . $product_price . '</span>';
+                    <span class="new-price">Rs ' . $product_price . '</span>';
                     if (!empty($product_old_price)) {
                         echo '<span class="old-price">Was $' . $product_old_price . '</span>';
                     }
@@ -668,7 +668,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
                 </div><!-- End .product-cat -->
                 <h3 class="product-title"><a href="product.php?id=' . $product_id . '">' . $product_title . '</a></h3><!-- End .product-title -->
                 <div class="product-price">
-                    <span class="new-price">$' . $product_price . '</span>';
+                    <span class="new-price">Rs ' . $product_price . '</span>';
                     if (!empty($product_old_price)) {
                         echo '<span class="old-price">Was $' . $product_old_price . '</span>';
                     }
@@ -748,7 +748,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
                 </div><!-- End .product-cat -->
                 <h3 class="product-title"><a href="product.php?id=' . $product_id . '">' . $product_title . '</a></h3><!-- End .product-title -->
                 <div class="product-price">
-                    <span class="new-price">$' . $product_price . '</span>';
+                    <span class="new-price">Rs ' . $product_price . '</span>';
                     if (!empty($product_old_price)) {
                         echo '<span class="old-price">Was $' . $product_old_price . '</span>';
                     }
@@ -829,7 +829,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
                 </div><!-- End .product-cat -->
                 <h3 class="product-title"><a href="product.php?id=' . $product_id . '">' . $product_title . '</a></h3><!-- End .product-title -->
                 <div class="product-price">
-                    <span class="new-price">$' . $product_price . '</span>';
+                    <span class="new-price">Rs ' . $product_price . '</span>';
                     if (!empty($product_old_price)) {
                         echo '<span class="old-price">Was $' . $product_old_price . '</span>';
                     }
@@ -913,7 +913,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
                 </div><!-- End .product-cat -->
                 <h3 class="product-title"><a href="product.php?id=' . $product_id . '">' . $product_title . '</a></h3><!-- End .product-title -->
                 <div class="product-price">
-                    <span class="new-price">$' . $product_price . '</span>';
+                    <span class="new-price">Rs ' . $product_price . '</span>';
                     if (!empty($product_old_price)) {
                         echo '<span class="old-price">Was $' . $product_old_price . '</span>';
                     }
@@ -997,7 +997,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
                 </div><!-- End .product-cat -->
                 <h3 class="product-title"><a href="product.php?id=' . $product_id . '">' . $product_title . '</a></h3><!-- End .product-title -->
                 <div class="product-price">
-                    <span class="new-price">$' . $product_price . '</span>';
+                    <span class="new-price">Rs ' . $product_price . '</span>';
                     if (!empty($product_old_price)) {
                         echo '<span class="old-price">Was $' . $product_old_price . '</span>';
                     }

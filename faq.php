@@ -293,7 +293,15 @@
 					        </div><!-- End .card-header -->
 					        <div id="collapse-1" class="collapse show" aria-labelledby="heading-1" data-parent="#accordion-1">
 					            <div class="card-body">
-					                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi. 
+					                Your parcel will be delivered through reliable courier services to ensure safe and timely delivery. You will receive a tracking number once the order has been dispatched. For real-time updates, simply track your parcel using the number on the courier's website.
+
+
+
+
+
+
+
+ 
 					            </div><!-- End .card-body -->
 					        </div><!-- End .collapse -->
 					    </div><!-- End .card -->
@@ -308,7 +316,7 @@
 					        </div><!-- End .card-header -->
 					        <div id="collapse-2" class="collapse" aria-labelledby="heading-2" data-parent="#accordion-1">
 					            <div class="card-body">
-					                Ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. 
+					                Delivery charges may apply depending on the order value, location, and delivery method. For orders above a certain amount, free delivery might be available. You can view the exact delivery cost during checkout before confirming your order.
 					            </div><!-- End .card-body -->
 					        </div><!-- End .collapse -->
 					    </div><!-- End .card -->
@@ -323,7 +331,7 @@
 					        </div><!-- End .card-header -->
 					        <div id="collapse-3" class="collapse" aria-labelledby="heading-3" data-parent="#accordion-1">
 					            <div class="card-body">
-					                Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. 
+					                Customs fees may apply for international shipments, depending on the destination country’s regulations. These fees are typically charged by the local customs office and are the responsibility of the customer. You will be notified of any additional charges before your package is shipped.
 					            </div><!-- End .card-body -->
 					        </div><!-- End .collapse -->
 					    </div><!-- End .card -->
@@ -338,7 +346,7 @@
 					        </div><!-- End .card-header -->
 					        <div id="collapse-4" class="collapse" aria-labelledby="heading-4" data-parent="#accordion-1">
 					            <div class="card-body">
-					                Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. 
+					                If your item is faulty, please contact our customer support team with your order details and the issue. We will guide you through the return or exchange process as per our return policy. Your satisfaction is our priority, and we aim to resolve any issues swiftly.
 					            </div><!-- End .card-body -->
 					        </div><!-- End .collapse -->
 					    </div><!-- End .card -->
@@ -356,7 +364,7 @@
 					        </div><!-- End .card-header -->
 					        <div id="collapse2-1" class="collapse" aria-labelledby="heading2-1" data-parent="#accordion-2">
 					            <div class="card-body">
-					                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum.
+					                To track your order, simply visit the "Order Tracking" section on our website and enter your order number. You’ll receive real-time updates about the status and location of your parcel until it reaches you. If you need further assistance, feel free to contact our customer support team.
 					            </div><!-- End .card-body -->
 					        </div><!-- End .collapse -->
 					    </div><!-- End .card -->
@@ -371,7 +379,7 @@
 					        </div><!-- End .card-header -->
 					        <div id="collapse2-2" class="collapse" aria-labelledby="heading2-2" data-parent="#accordion-2">
 					            <div class="card-body">
-					                Ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. 
+					                We apologize for the inconvenience. Please check the tracking information provided for your order to see if there are any updates. If the order is still not delivered or there are issues, please contact our customer support team with your order number, and we'll assist you in resolving the matter promptly.
 					            </div><!-- End .card-body -->
 					        </div><!-- End .collapse -->
 					    </div><!-- End .card -->
@@ -386,7 +394,7 @@
 					        </div><!-- End .card-header -->
 					        <div id="collapse2-3" class="collapse" aria-labelledby="heading2-3" data-parent="#accordion-2">
 					            <div class="card-body">
-					                Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. 
+					                To return an item, please visit our returns page and follow the instructions for initiating a return. You will need your order number and the reason for the return. Once your return is approved, we will provide a return shipping label and further details on how to send the item back.
 					            </div><!-- End .card-body -->
 					        </div><!-- End .collapse -->
 					    </div><!-- End .card -->
@@ -404,7 +412,7 @@
 					        </div><!-- End .card-header -->
 					        <div id="collapse3-1" class="collapse" aria-labelledby="heading3-1" data-parent="#accordion-3">
 					            <div class="card-body">
-					                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum.
+					                We accept a variety of payment methods, including credit and debit cards (Visa, MasterCard, etc.), digital wallets (PayPal, Apple Pay, etc.), and UPI payments. All transactions are secured and processed through trusted payment gateways for your safety.
 					            </div><!-- End .card-body -->
 					        </div><!-- End .collapse -->
 					    </div><!-- End .card -->
@@ -419,7 +427,7 @@
 					        </div><!-- End .card-header -->
 					        <div id="collapse3-2" class="collapse" aria-labelledby="heading3-2" data-parent="#accordion-3">
 					            <div class="card-body">
-					                Ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. 
+					                Yes, we accept gift cards as a payment method. Simply enter your gift card details at checkout, and the balance will be applied to your order. If the gift card amount doesn't cover the full cost, you can pay the remaining balance using another payment method.
 					            </div><!-- End .card-body -->
 					        </div><!-- End .collapse -->
 					    </div><!-- End .card -->
@@ -434,7 +442,11 @@
 					        </div><!-- End .card-header -->
 					        <div id="collapse3-3" class="collapse" aria-labelledby="heading3-3" data-parent="#accordion-3">
 					            <div class="card-body">
-					                Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. 
+					                If you're unable to make a payment, try the following steps:
+
+Double-check your payment details (card number, expiry date, and CVV).
+Ensure your card has sufficient balance or is linked to your account.
+Try using a different payment method or contact your bank for assistance. If the issue persists, reach out to our customer support for help.
 					            </div><!-- End .card-body -->
 					        </div><!-- End .collapse -->
 					    </div><!-- End .card -->
@@ -449,7 +461,11 @@
 					        </div><!-- End .card-header -->
 					        <div id="collapse3-4" class="collapse" aria-labelledby="heading3-4" data-parent="#accordion-3">
 					            <div class="card-body">
-					                Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. 
+					                To confirm if your payment has gone through, check for the following:
+
+You should receive a confirmation email or SMS after a successful transaction.
+Your bank or payment service may show the transaction in your recent activity.
+If you're unsure, feel free to contact customer support with your order details to verify the payment status.
 					            </div><!-- End .card-body -->
 					        </div><!-- End .collapse -->
 					    </div><!-- End .card -->

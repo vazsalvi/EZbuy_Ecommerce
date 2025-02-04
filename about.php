@@ -280,12 +280,12 @@
                     <div class="row">
                         <div class="col-lg-6 mb-3 mb-lg-0">
                             <h2 class="title">Our Vision</h2><!-- End .title -->
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. </p>
+                            <p>Our vision is to create a seamless online shopping experience, offering a wide range of high-quality products across various categories. We aim to provide personalized recommendations through advanced technology, making shopping easier and more enjoyable. Our goal is to empower customers with a user-friendly, secure platform that delivers convenience, trust, and satisfaction. </p>
                         </div><!-- End .col-lg-6 -->
                         
                         <div class="col-lg-6">
                             <h2 class="title">Our Mission</h2><!-- End .title -->
-                            <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. <br>Praesent elementum hendrerit tortor. Sed semper lorem at felis. </p>
+                            <p>Our mission is to offer an innovative, customer-centric platform that provides a diverse selection of products tailored to meet the unique needs of each shopper. We strive to enhance the shopping experience by integrating advanced features like personalized recommendations and AI-driven search. Our commitment is to deliver fast, secure, and reliable service, ensuring complete customer satisfaction every step of the way. </p>
                         </div><!-- End .col-lg-6 -->
                     </div><!-- End .row -->
 
@@ -297,8 +297,8 @@
                         <div class="row">
                             <div class="col-lg-5 mb-3 mb-lg-0">
                                 <h2 class="title">Who We Are</h2><!-- End .title -->
-                                <p class="lead text-primary mb-3">Pellentesque odio nisi, euismod pharetra a ultricies <br>in diam. Sed arcu. Cras consequat</p><!-- End .lead text-primary -->
-                                <p class="mb-2">Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Suspendisse potenti. Sed egestas, ante et vulputate volutpat, uctus metus libero eu augue. </p>
+                                <p class="lead text-primary mb-3">We are a dynamic team of tech enthusiasts, designers, and entrepreneurs dedicated to revolutionizing the online shopping experience.</p><!-- End .lead text-primary -->
+                                <p class="mb-2">Our goal is to create a seamless, intuitive platform where customers can easily discover and purchase quality products. With a focus on innovation, customer satisfaction, and convenience, we aim to empower shoppers through advanced technology and personalized services, making every shopping journey a delightful one. </p>
 
                                 <a href="blog.html" class="btn btn-sm btn-minwidth btn-outline-primary-2">
                                     <span>VIEW OUR NEWS</span>
@@ -318,83 +318,7 @@
 
                 <div class="container">
 
-                    <hr class="mt-4 mb-6">
-
-                    <h2 class="title text-center mb-4">Meet Our Team</h2><!-- End .title text-center mb-2 -->
-
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="member member-anim text-center">
-                                <figure class="member-media">
-                                    <img src="assets/images/team/member-1.jpg" alt="member photo">
-
-                                    <figcaption class="member-overlay">
-                                        <div class="member-overlay-content">
-                                            <h3 class="member-title">Samanta Grey<span>Founder & CEO</span></h3><!-- End .member-title -->
-                                            <p>Sed pretium, ligula sollicitudin viverra, tortor libero sodales leo, eget blandit nunc.</p> 
-                                            <div class="social-icons social-icons-simple">
-                                                <a href="#" class="social-icon" title="Facebook" target="_blank"><i class="icon-facebook-f"></i></a>
-                                                <a href="#" class="social-icon" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>
-                                                <a href="#" class="social-icon" title="Instagram" target="_blank"><i class="icon-instagram"></i></a>
-                                            </div><!-- End .soial-icons -->
-                                        </div><!-- End .member-overlay-content -->
-                                    </figcaption><!-- End .member-overlay -->
-                                </figure><!-- End .member-media -->
-                                <div class="member-content">
-                                    <h3 class="member-title">Samanta Grey<span>Founder & CEO</span></h3><!-- End .member-title -->
-                                </div><!-- End .member-content -->
-                            </div><!-- End .member -->
-                        </div><!-- End .col-md-4 -->
-
-                        <div class="col-md-4">
-                            <div class="member member-anim text-center">
-                                <figure class="member-media">
-                                    <img src="assets/images/team/member-2.jpg" alt="member photo">
-
-                                    <figcaption class="member-overlay">
-                                        <div class="member-overlay-content">
-                                            <h3 class="member-title">Bruce Sutton<span>Sales & Marketing Manager</span></h3><!-- End .member-title -->
-                                            <p>Sed pretium, ligula sollicitudin viverra, tortor libero sodales leo, eget blandit nunc.</p> 
-                                            <div class="social-icons social-icons-simple">
-                                                <a href="#" class="social-icon" title="Facebook" target="_blank"><i class="icon-facebook-f"></i></a>
-                                                <a href="#" class="social-icon" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>
-                                                <a href="#" class="social-icon" title="Instagram" target="_blank"><i class="icon-instagram"></i></a>
-                                            </div><!-- End .soial-icons -->
-                                        </div><!-- End .member-overlay-content -->
-                                    </figcaption><!-- End .member-overlay -->
-                                </figure><!-- End .member-media -->
-                                <div class="member-content">
-                                    <h3 class="member-title">Bruce Sutton<span>Sales & Marketing Manager</span></h3><!-- End .member-title -->
-                                </div><!-- End .member-content -->
-                            </div><!-- End .member -->
-                        </div><!-- End .col-md-4 -->
-
-                        <div class="col-md-4">
-                            <div class="member member-anim text-center">
-                                <figure class="member-media">
-                                    <img src="assets/images/team/member-3.jpg" alt="member photo">
-
-                                    <figcaption class="member-overlay">
-                                        <div class="member-overlay-content">
-                                            <h3 class="member-title">Janet Joy<span>Product Manager</span></h3><!-- End .member-title -->
-                                            <p>Sed pretium, ligula sollicitudin viverra, tortor libero sodales leo, eget blandit nunc.</p> 
-                                            <div class="social-icons social-icons-simple">
-                                                <a href="#" class="social-icon" title="Facebook" target="_blank"><i class="icon-facebook-f"></i></a>
-                                                <a href="#" class="social-icon" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>
-                                                <a href="#" class="social-icon" title="Instagram" target="_blank"><i class="icon-instagram"></i></a>
-                                            </div><!-- End .soial-icons -->
-                                        </div><!-- End .member-overlay-content -->
-                                    </figcaption><!-- End .member-overlay -->
-                                </figure><!-- End .member-media -->
-                                <div class="member-content">
-                                    <h3 class="member-title">Janet Joy<span>Product Manager</span></h3><!-- End .member-title -->
-                                </div><!-- End .member-content -->
-                            </div><!-- End .member -->
-                        </div><!-- End .col-md-4 -->
-                    </div><!-- End .row -->
-                </div><!-- End .container -->
-
-                <div class="mb-2"></div><!-- End .mb-2 -->
+                    
 
                 <div class="about-testimonials bg-light-2 pt-6 pb-6">
                     <div class="container">
@@ -414,7 +338,7 @@
                             }'>
                             <blockquote class="testimonial text-center">
                                 <img src="assets/images/testimonials/user-1.jpg" alt="user">
-                                <p>“ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque aliquet nibh nec urna. <br>In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. ”</p>
+                                <p>“ I’ve been using this website for all my shopping needs, and I couldn’t be more impressed! The interface is clean, easy to navigate, and the recommendations are spot-on. I also love the visual search feature, which helped me find the perfect product instantly. Definitely my go-to shopping platform! <br> ”</p>
                                 <cite>
                                     Jenson Gregory
                                     <span>Customer</span>
@@ -423,7 +347,7 @@
 
                             <blockquote class="testimonial text-center">
                                 <img src="assets/images/testimonials/user-2.jpg" alt="user">
-                                <p>“ Impedit, ratione sequi, sunt incidunt magnam et. Delectus obcaecati optio eius error libero perferendis nesciunt atque dolores magni recusandae! Doloremque quidem error eum quis similique doloribus natus qui ut ipsum.Velit quos ipsa exercitationem, vel unde obcaecati impedit eveniet non. ”</p>
+                                <p>“ The shopping experience here is smooth and hassle-free. I was able to easily find what I needed, and the checkout process was super fast. I also appreciate the detailed product descriptions and customer reviews, which made my decision-making process so much easier. Highly recommend it! ”</p>
 
                                 <cite>
                                     Victoria Ventura
@@ -440,7 +364,7 @@
 
 	        <div class="footer-bottom">
 	        	<div class="container">
-	        		<p class="footer-copyright">Copyright © 2019 Molla Store. All Rights Reserved.</p><!-- End .footer-copyright -->
+	        		<p class="footer-copyright">Copyright © 2024 EZbuy. All Rights Reserved.</p><!-- End .footer-copyright -->
 	        		<figure class="footer-payments">
 	        			<img src="assets/images/payments.png" alt="Payment methods" width="272" height="20">
 	        		</figure><!-- End .footer-payments -->

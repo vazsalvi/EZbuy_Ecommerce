@@ -41,7 +41,19 @@
     <link rel="stylesheet" href="\Ai_driven_ecommerce\assets/css/skins/skin-demo-4.css">
     <link rel="stylesheet" href="\Ai_driven_ecommerce\assets/css/demos/demo-4.css">
 
-    
+    <style>
+        .icon-user {
+    transform: scale(2.2); /* Increase size */
+    display: inline-block; /* Ensures it scales properly */
+    margin: 0 10px; /* Adds spacing on both left and right */
+}
+.icon-eye {
+    transform: scale(2.2); /* Increase size */
+    display: inline-block; /* Ensures it scales properly */
+    margin: 0 10px; /* Adds spacing on both left and right */
+}
+
+    </style>
 </head>
 
 
@@ -91,7 +103,7 @@ include 'signuplogin.php';
                                     <li><a href="users_area/wishlist.php"><i class="icon-heart-o"></i>Wishlist </a></li>
                                     <li><a href="about.php">About Us</a></li>
                                     <li><a href="contact.php">Contact Us</a></li>
-                                    <li><a href="#signin-modal" data-toggle="modal"><i class="icon-user"></i>Login</a></li>
+                                    <li><a href="#signin-modal" data-toggle="modal">Login</a></li>
                                     
                                     
                                 </ul>
@@ -110,11 +122,9 @@ include 'signuplogin.php';
                         </button>
 
                         <a href="index.php" class="logo">
-<<<<<<< Updated upstream
-                            <img src="\Ai_driven_ecommerce\assets\images\logo.png" alt="Molla Logo" width="105" height="25">
-=======
-                            <img src="\EZbuy_Ecommerce\assets/images/demos/demo-20/EZbuy (1).png" alt="Molla Logo" width="105" height="25">
->>>>>>> Stashed changes
+
+                            <img src="\Ai_driven_ecommerce\assets/images/demos/demo-20/EZbuy.png" alt="Molla Logo" width="105" height="25">
+
                         </a>
 
                         <nav class="main-nav">
@@ -220,7 +230,7 @@ include 'signuplogin.php';
                     <div class="header-right">
                         <div class="header-search">
                             <a href="#" class="search-toggle" role="button" title="Search"><i class="icon-search"></i></a>
-                            <form action="#" method="get">
+                            <form action="users_area\category.php" method="get">
                                 <div class="header-search-wrapper">
                                     <label for="q" class="sr-only">Search</label>
                                     <input type="search" class="form-control" name="q" id="q" placeholder="Search in..." required>
@@ -303,6 +313,20 @@ while ($row = mysqli_fetch_assoc($result)) {
                                 </div><!-- End .dropdown-cart-total -->
                             </div><!-- End .dropdown-menu -->
                         </div><!-- End .cart-dropdown -->
+                        <div class="account">
+    <a href="users_area/dashboard.php" title="My account">
+        <div class="icon">
+            <i class="icon-user"></i>
+        </div>
+    </a>
+</div>
+<div class="visual search">
+    <a href="file.php" title="visual search">
+        <div class="icon">
+            <i class="icon-eye"></i>
+        </div>
+    </a>
+</div>
                     </div><!-- End .header-right -->
                 </div><!-- End .container -->
             </div><!-- End .header-middle -->

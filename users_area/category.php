@@ -100,8 +100,9 @@ include('../functions/common_function.php');
                         <div class="row">
 
                         <?php
-                        getallcategoryproducts();
                         search_products();
+                        getallcategoryproducts();
+                        
                         cart()
                         
                         ?>
