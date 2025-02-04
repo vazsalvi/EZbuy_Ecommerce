@@ -117,12 +117,10 @@ include 'signuplogin.php';
                         </button>
 
                         <a href="index.php" class="logo">
-<<<<<<< Updated upstream
-                            <img src="\Ai_driven_ecommerce\assets\images\logo.png" alt="Molla Logo" width="105" height="25">
-=======
+
                             <img src="\Ai_driven_ecommerce\assets\images\EZbuy.png" alt="Molla Logo" width="105" height="25">
 
->>>>>>> Stashed changes
+
                         </a>
 
                         <nav class="main-nav">

@@ -119,11 +119,9 @@ include('../functions/common_function.php');
                             <i class="icon-bars"></i>
                         </button>
                         <a href="index.php" class="logo">
-<<<<<<< Updated upstream
-                            <img src="../assets/images/demos/demo-4/logo.png" alt="Molla Logo" width="105" height="25">
-=======
+
                             <img src="../assets/images/demos/demo-20/EZbuy.png" alt="Molla Logo" width="105" height="25">
->>>>>>> Stashed changes
+
                         </a>
                     </div><!-- End .header-left -->
                 </div><!-- End .container -->
