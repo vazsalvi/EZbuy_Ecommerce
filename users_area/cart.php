@@ -93,7 +93,7 @@ if (isset($_POST['remove_product'])) {
     $result = mysqli_query($con, $delete_query);
 
     if ($result) {
-        echo "<script>window.location.href='cart.php';</script>"; // Refresh the page after removal
+        echo "<script>window.location.href='users_area/cart.php';</script>"; // Refresh the page after removal
         exit();
     } else {
         echo "<script>alert('Error removing item!');</script>";
@@ -124,7 +124,7 @@ if (isset($_POST['update_cart'])) {
         $update_query = "UPDATE cart_details SET quantity = '$new_quantity' WHERE product_id = '$product_id' AND ip_address = '$get_ip_add'";
         mysqli_query($con, $update_query);
     }
-    echo "<script>window.location.href='cart.php';</script>";
+    echo "<script>window.location.href='users_area/cart.php';</script>";
     exit();
 }
 
@@ -171,13 +171,13 @@ if (isset($_POST['update_cart'])) {
                                         </h3>
                                     </div>
                                 </td>
-                                <td class='price-col'>$$product_price</td>
+                                <td class='price-col'>Rs $product_price</td>
                                 <td class='quantity-col'>
                                     <div class='cart-product-quantity'>
                                         <input type='number' class='form-control update-quantity' name='quantity[$product_id]' data-product-id='$product_id' value='$product_quantity' min='1' max='10' step='1' required>
                                     </div>
                                 </td>
-                                <td class='total-col' id='total_$product_id'>$$total_price</td>
+                                <td class='total-col' id='total_$product_id'>Rs $total_price</td>
                                 <td class='remove-col'>
                                     '<td class='remove-col'>
     <form method='post'>
@@ -235,7 +235,7 @@ if (isset($_POST['update_cart'])) {
                                     <label class="custom-control-label" for="free-shipping">Free Shipping</label>
                                 </div><!-- End .custom-control -->
                             </td>
-                            <td>$0.00</td>
+                            <td>Rs 0.00</td>
                         </tr><!-- End .summary-shipping-row -->
 
                         <tr class="summary-shipping-row">
@@ -245,7 +245,7 @@ if (isset($_POST['update_cart'])) {
                                     <label class="custom-control-label" for="standart-shipping">Standard:</label>
                                 </div><!-- End .custom-control -->
                             </td>
-                            <td>$10.00</td>
+                            <td>Rs 10.00</td>
                         </tr><!-- End .summary-shipping-row -->
 
                         <tr class="summary-shipping-row">
@@ -255,7 +255,7 @@ if (isset($_POST['update_cart'])) {
                                     <label class="custom-control-label" for="express-shipping">Express:</label>
                                 </div><!-- End .custom-control -->
                             </td>
-                            <td>$20.00</td>
+                            <td>Rs 20.00</td>
                         </tr><!-- End .summary-shipping-row -->
 
                         <tr class="summary-shipping-estimate">
@@ -265,12 +265,12 @@ if (isset($_POST['update_cart'])) {
 
                         <tr class="summary-total">
                             <td>Total:</td>
-                            <td>$160.00</td>
+                            <td>Rs 160.00</td>
                         </tr><!-- End .summary-total -->
                     </tbody>
                 </table><!-- End .table table-summary -->
     
-                <a href="#" id="checkout-btn" class="btn btn-outline-primary-2 btn-order btn-block">
+                <a href="users_area/checkout.php" id="checkout-btn" class="btn btn-outline-primary-2 btn-order btn-block">
     PROCEED TO CHECKOUT
 </a>
 

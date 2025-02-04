@@ -43,15 +43,17 @@
 
     <style>
         .icon-user {
+            color : black;
     transform: scale(2.2); /* Increase size */
     display: inline-block; /* Ensures it scales properly */
     margin: 0 10px; /* Adds spacing on both left and right */
 }
-.icon-eye {
-    transform: scale(2.2); /* Increase size */
-    display: inline-block; /* Ensures it scales properly */
-    margin: 0 10px; /* Adds spacing on both left and right */
+.visual.search .icon .icon-eye {
+    font-size: 3rem; /* Adjust size as needed */
 }
+
+
+
 
     </style>
 </head>

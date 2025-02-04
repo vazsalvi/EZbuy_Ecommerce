@@ -24,7 +24,7 @@ function get_recommended_products() {
             <div class="product product-2">
                 <figure class="product-media">
                     <span class="product-label label-circle label-sale">Sale</span>
-                    <a href="product.php?id=' . $product_id . '">
+                    <a href="users_area/product.php?product_id=' . $product_id . '">
                         <img src="./admin_area/product_images/' . $product_image1 . '" alt="' . $product_title . '" class="product-image">
                     </a>
                     <div class="product-action-vertical">
@@ -32,14 +32,14 @@ function get_recommended_products() {
                     </div>
                     <div class="product-action">
                         <a href="index-4.php?add_to_cart=' . $product_id . '" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                        <a href="product.php?product_id=' . $product_id . '" class="btn-product icon-eye" title="view more"><span>view more</span></a>
+                        <a href="users_area\product.php?product_id=' . $product_id . '" class="btn-product icon-eye" title="view more"><span>view more</span></a>
                     </div>
                 </figure>
                 <div class="product-body">
                     <div class="product-cat">
                         <a href="category.php?id=' . $category_id . '">Category</a>
                     </div>
-                    <h3 class="product-title"><a href="product.php?id=' . $product_id . '">' . $product_title . '</a></h3>
+                    <h3 class="product-title"><a href="users_area/product.php?product_id=' . $product_id . '">' . $product_title . '</a></h3>
                     <div class="product-price">
                         <span class="new-price">Rs ' . $product_price . '</span>
                     </div>
@@ -92,7 +92,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
         <div class="product product-2">
             <figure class="product-media">
                 <span class="product-label label-circle label-sale">Sale</span>
-                <a href="product.php?id=' . $product_id . '">
+                <a href="users_area/product.php?product_id=' . $product_id . '">
             <img src="./admin_area/product_images/' . $product_image1 . '" alt="' . $product_title . '" class="product-image">
         </a>
 
@@ -102,7 +102,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
 
                 <div class="product-action">
                     <a href="index-4.php?add_to_cart=' . $product_id . '" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                    <a href="product.php?product_id=' . $product_id . '" class="btn-product icon-eye" title="view more"><span>view more</span></a>
+                    <a href="users_area/product.php?product_id=' . $product_id . '" class="btn-product icon-eye" title="view more"><span>view more</span></a>
                 </div><!-- End .product-action -->
             </figure><!-- End .product-media -->
 
@@ -110,7 +110,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
                 <div class="product-cat">
                     <a href="category.php?id=' . $category_id . '">Category</a>
                 </div><!-- End .product-cat -->
-                <h3 class="product-title"><a href="product.php?id=' . $product_id . '">' . $product_title . '</a></h3><!-- End .product-title -->
+                <h3 class="product-title"><a href="users_area/product.php?product_id=' . $product_id . '">' . $product_title . '</a></h3><!-- End .product-title -->
                 <div class="product-price">
                     <span class="new-price">Rs ' . $product_price . '</span>';
                     if (!empty($product_old_price)) {
@@ -174,7 +174,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
         <div class="product product-2">
             <figure class="product-media">
                 <span class="product-label label-circle label-sale">Sale</span>
-                <a href="product.php?id=' . $product_id . '">
+                <a href="users_area/product.php?product_id=' . $product_id . '">
             <img src="./admin_area/product_images/' . $product_image1 . '" alt="' . $product_title . '" class="product-image">
         </a>
 
@@ -184,7 +184,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
 
                 <div class="product-action">
                     <a href="index-4.php?add_to_cart=' . $product_id . '" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                    <a href="product.php?product_id=' . $product_id . '" class="btn-product icon-eye" title="view more"><span>view more</span></a>
+                    <a href="users_area/product.php?product_id=' . $product_id . '" class="btn-product icon-eye" title="view more"><span>view more</span></a>
                 </div><!-- End .product-action -->
             </figure><!-- End .product-media -->
 
@@ -192,7 +192,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
                 <div class="product-cat">
                     <a href="category.php?id=' . $category_id . '">Category</a>
                 </div><!-- End .product-cat -->
-                <h3 class="product-title"><a href="product.php?id=' . $product_id . '">' . $product_title . '</a></h3><!-- End .product-title -->
+                <h3 class="product-title"><a href="users_area/product.php?product_id=' . $product_id . '">' . $product_title . '</a></h3><!-- End .product-title -->
                 <div class="product-price">
                     <span class="new-price">Rs ' . $product_price . '</span>';
                     if (!empty($product_old_price)) {
@@ -253,7 +253,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
         <div class="product product-2">
             <figure class="product-media">
                 <span class="product-label label-circle label-sale">Sale</span>
-                <a href="product.php?id=' . $product_id . '">
+                <a href="users_area/product.php?product_id=' . $product_id . '">
             <img src="./admin_area/product_images/' . $product_image1 . '" alt="' . $product_title . '" class="product-image">
         </a>
 
@@ -263,7 +263,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
 
                 <div class="product-action">
                     <a href="index-4.php?add_to_cart=' . $product_id . '" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                    <a href="product.php?product_id=' . $product_id . '" class="btn-product icon-eye" title="view more"><span>view more</span></a>
+                    <a href="users_area/product.php?product_id=' . $product_id . '" class="btn-product icon-eye" title="view more"><span>view more</span></a>
                 </div><!-- End .product-action -->
             </figure><!-- End .product-media -->
 
@@ -271,7 +271,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
                 <div class="product-cat">
                     <a href="category.php?id=' . $category_id . '">Category</a>
                 </div><!-- End .product-cat -->
-                <h3 class="product-title"><a href="product.php?id=' . $product_id . '">' . $product_title . '</a></h3><!-- End .product-title -->
+                <h3 class="product-title"><a href="users_area/product.php?product_id=' . $product_id . '">' . $product_title . '</a></h3><!-- End .product-title -->
                 <div class="product-price">
                     <span class="new-price">Rs ' . $product_price . '</span>';
                     if (!empty($product_old_price)) {
@@ -332,7 +332,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
         <div class="product product-2">
             <figure class="product-media">
                 <span class="product-label label-circle label-sale">Sale</span>
-                <a href="product.php?id=' . $product_id . '">
+                <a href="users_area/product.php?product_id=' . $product_id . '">
             <img src="./admin_area/product_images/' . $product_image1 . '" alt="' . $product_title . '" class="product-image">
         </a>
 
@@ -342,7 +342,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
 
                 <div class="product-action">
                     <a href="index-4.php?add_to_cart=' . $product_id . '" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                    <a href="product.php?product_id=' . $product_id . '" class="btn-product icon-eye" title="view more"><span>view more</span></a>
+                    <a href="users_area/product.php?product_id=' . $product_id . '" class="btn-product icon-eye" title="view more"><span>view more</span></a>
                 </div><!-- End .product-action -->
             </figure><!-- End .product-media -->
 
@@ -350,7 +350,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
                 <div class="product-cat">
                     <a href="category.php?id=' . $category_id . '">Category</a>
                 </div><!-- End .product-cat -->
-                <h3 class="product-title"><a href="product.php?id=' . $product_id . '">' . $product_title . '</a></h3><!-- End .product-title -->
+                <h3 class="product-title"><a href="users_area/product.php?product_id=' . $product_id . '">' . $product_title . '</a></h3><!-- End .product-title -->
                 <div class="product-price">
                     <span class="new-price">Rs ' . $product_price . '</span>';
                     if (!empty($product_old_price)) {
@@ -411,7 +411,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
         <div class="product product-2">
             <figure class="product-media">
                 <span class="product-label label-circle label-sale">Sale</span>
-                <a href="product.php?id=' . $product_id . '">
+                <a href="users_area/product.php?product_id=' . $product_id . '">
             <img src="./admin_area/product_images/' . $product_image1 . '" alt="' . $product_title . '" class="product-image">
         </a>
 
@@ -421,7 +421,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
 
                 <div class="product-action">
                     <a href="index-4.php?add_to_cart=' . $product_id . '" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                    <a href="product.php?product_id=' . $product_id . '" class="btn-product icon-eye" title="view more"><span>view more</span></a>
+                    <a href="users_area/product.php?product_id=' . $product_id . '" class="btn-product icon-eye" title="view more"><span>view more</span></a>
                 </div><!-- End .product-action -->
             </figure><!-- End .product-media -->
 
@@ -429,7 +429,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
                 <div class="product-cat">
                     <a href="category.php?id=' . $category_id . '">Category</a>
                 </div><!-- End .product-cat -->
-                <h3 class="product-title"><a href="product.php?id=' . $product_id . '">' . $product_title . '</a></h3><!-- End .product-title -->
+                <h3 class="product-title"><a href="users_area/product.php?product_id=' . $product_id . '">' . $product_title . '</a></h3><!-- End .product-title -->
                 <div class="product-price">
                     <span class="new-price">Rs ' . $product_price . '</span>';
                     if (!empty($product_old_price)) {
@@ -490,7 +490,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
         <div class="product product-2">
             <figure class="product-media">
                 <span class="product-label label-circle label-sale">Sale</span>
-                <a href="product.php?id=' . $product_id . '">
+                <a href="users_area/product.php?product_id=' . $product_id . '">
             <img src="./admin_area/product_images/' . $product_image1 . '" alt="' . $product_title . '" class="product-image">
         </a>
 
@@ -500,7 +500,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
 
                 <div class="product-action">
                     <a href="index-4.php?add_to_cart=' . $product_id . '" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                    <a href="product.php?product_id=' . $product_id . '" class="btn-product icon-eye" title="view more"><span>view more</span></a>
+                    <a href="users_area/product.php?product_id=' . $product_id . '" class="btn-product icon-eye" title="view more"><span>view more</span></a>
                 </div><!-- End .product-action -->
             </figure><!-- End .product-media -->
 
@@ -508,7 +508,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
                 <div class="product-cat">
                     <a href="category.php?id=' . $category_id . '">Category</a>
                 </div><!-- End .product-cat -->
-                <h3 class="product-title"><a href="product.php?id=' . $product_id . '">' . $product_title . '</a></h3><!-- End .product-title -->
+                <h3 class="product-title"><a href="users_area/product.php?product_id=' . $product_id . '">' . $product_title . '</a></h3><!-- End .product-title -->
                 <div class="product-price">
                     <span class="new-price">Rs ' . $product_price . '</span>';
                     if (!empty($product_old_price)) {
@@ -569,7 +569,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
         <div class="product product-2">
             <figure class="product-media">
                 <span class="product-label label-circle label-sale">Sale</span>
-                <a href="product.php?id=' . $product_id . '">
+                <a href="users_area/product.php?product_id=' . $product_id . '">
             <img src="./admin_area/product_images/' . $product_image1 . '" alt="' . $product_title . '" class="product-image">
         </a>
 
@@ -579,7 +579,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
 
                 <div class="product-action">
                     <a href="index-4.php?add_to_cart=' . $product_id . '" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                    <a href="product.php?product_id=' . $product_id . '" class="btn-product icon-eye" title="view more"><span>view more</span></a>
+                    <a href="users_area/product.php?product_id=' . $product_id . '" class="btn-product icon-eye" title="view more"><span>view more</span></a>
                 </div><!-- End .product-action -->
             </figure><!-- End .product-media -->
 
@@ -587,7 +587,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
                 <div class="product-cat">
                     <a href="category.php?id=' . $category_id . '">Category</a>
                 </div><!-- End .product-cat -->
-                <h3 class="product-title"><a href="product.php?id=' . $product_id . '">' . $product_title . '</a></h3><!-- End .product-title -->
+                <h3 class="product-title"><a href="users_area/product.php?product_id=' . $product_id . '">' . $product_title . '</a></h3><!-- End .product-title -->
                 <div class="product-price">
                     <span class="new-price">Rs ' . $product_price . '</span>';
                     if (!empty($product_old_price)) {
@@ -648,7 +648,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
         <div class="product product-2">
             <figure class="product-media">
                 <span class="product-label label-circle label-sale">Sale</span>
-                <a href="product.php?id=' . $product_id . '">
+                <a href="users_area/product.php?product_id=' . $product_id . '">
             <img src="./admin_area/product_images/' . $product_image1 . '" alt="' . $product_title . '" class="product-image">
         </a>
 
@@ -658,7 +658,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
 
                 <div class="product-action">
                     <a href="index-4.php?add_to_cart=' . $product_id . '" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                    <a href="product.php?product_id=' . $product_id . '" class="btn-product icon-eye" title="view more"><span>view more</span></a>
+                    <a href="users_area/product.php?product_id=' . $product_id . '" class="btn-product icon-eye" title="view more"><span>view more</span></a>
                 </div><!-- End .product-action -->
             </figure><!-- End .product-media -->
 
@@ -666,7 +666,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
                 <div class="product-cat">
                     <a href="category.php?id=' . $category_id . '">Category</a>
                 </div><!-- End .product-cat -->
-                <h3 class="product-title"><a href="product.php?id=' . $product_id . '">' . $product_title . '</a></h3><!-- End .product-title -->
+                <h3 class="product-title"><a href="users_area/product.php?product_id=' . $product_id . '">' . $product_title . '</a></h3><!-- End .product-title -->
                 <div class="product-price">
                     <span class="new-price">Rs ' . $product_price . '</span>';
                     if (!empty($product_old_price)) {
@@ -728,7 +728,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
         <div class="product product-2">
             <figure class="product-media">
                 <span class="product-label label-circle label-sale">Sale</span>
-                <a href="product.php?id=' . $product_id . '">
+                <a href="users_area/product.php?product_id=' . $product_id . '">
             <img src="./admin_area/product_images/' . $product_image1 . '" alt="' . $product_title . '" class="product-image">
         </a>
 
@@ -738,7 +738,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
 
                 <div class="product-action">
                     <a href="index-4.php?add_to_cart=' . $product_id . '" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                    <a href="product.php?product_id=' . $product_id . '" class="btn-product icon-eye" title="view more"><span>view more</span></a>
+                    <a href="users_area/product.php?product_id=' . $product_id . '" class="btn-product icon-eye" title="view more"><span>view more</span></a>
                 </div><!-- End .product-action -->
             </figure><!-- End .product-media -->
 
@@ -746,7 +746,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
                 <div class="product-cat">
                     <a href="category.php?id=' . $category_id . '">Category</a>
                 </div><!-- End .product-cat -->
-                <h3 class="product-title"><a href="product.php?id=' . $product_id . '">' . $product_title . '</a></h3><!-- End .product-title -->
+                <h3 class="product-title"><a href="users_area/product.php?product_id=' . $product_id . '">' . $product_title . '</a></h3><!-- End .product-title -->
                 <div class="product-price">
                     <span class="new-price">Rs ' . $product_price . '</span>';
                     if (!empty($product_old_price)) {
@@ -809,7 +809,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
         <div class="product product-2">
             <figure class="product-media">
                 <span class="product-label label-circle label-sale">Sale</span>
-                <a href="product.php?id=' . $product_id . '">
+                <a href="users_area/product.php?product_id=' . $product_id . '">
             <img src="./admin_area/product_images/' . $product_image1 . '" alt="' . $product_title . '" class="product-image">
         </a>
 
@@ -819,7 +819,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
 
                 <div class="product-action">
                     <a href="index-4.php?add_to_cart=' . $product_id . '" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                    <a href="product.php?product_id=' . $product_id . '" class="btn-product icon-eye" title="view more"><span>view more</span></a>
+                    <a href="users_area/product.php?product_id=' . $product_id . '" class="btn-product icon-eye" title="view more"><span>view more</span></a>
                 </div><!-- End .product-action -->
             </figure><!-- End .product-media -->
 
@@ -827,7 +827,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
                 <div class="product-cat">
                     <a href="category.php?id=' . $category_id . '">Category</a>
                 </div><!-- End .product-cat -->
-                <h3 class="product-title"><a href="product.php?id=' . $product_id . '">' . $product_title . '</a></h3><!-- End .product-title -->
+                <h3 class="product-title"><a href="users_area/product.php?product_id=' . $product_id . '">' . $product_title . '</a></h3><!-- End .product-title -->
                 <div class="product-price">
                     <span class="new-price">Rs ' . $product_price . '</span>';
                     if (!empty($product_old_price)) {
@@ -893,7 +893,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
         <div class="product product-2">
             <figure class="product-media">
                 <span class="product-label label-circle label-sale">Sale</span>
-                <a href="product.php?id=' . $product_id . '">
+                <a href="users_area/product.php?product_id=' . $product_id . '">
             <img src="./admin_area/product_images/' . $product_image1 . '" alt="' . $product_title . '" class="product-image">
         </a>
 
@@ -903,7 +903,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
 
                 <div class="product-action">
                     <a href="index-4.php?add_to_cart=' . $product_id . '" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                    <a href="product.php?product_id=' . $product_id . '" class="btn-product icon-eye" title="view more"><span>view more</span></a>
+                    <a href="users_area/product.php?product_id=' . $product_id . '" class="btn-product icon-eye" title="view more"><span>view more</span></a>
                 </div><!-- End .product-action -->
             </figure><!-- End .product-media -->
 
@@ -911,7 +911,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
                 <div class="product-cat">
                     <a href="category.php?id=' . $category_id . '">Category</a>
                 </div><!-- End .product-cat -->
-                <h3 class="product-title"><a href="product.php?id=' . $product_id . '">' . $product_title . '</a></h3><!-- End .product-title -->
+                <h3 class="product-title"><a href="users_area/product.php?product_id=' . $product_id . '">' . $product_title . '</a></h3><!-- End .product-title -->
                 <div class="product-price">
                     <span class="new-price">Rs ' . $product_price . '</span>';
                     if (!empty($product_old_price)) {
@@ -977,7 +977,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
         <div class="product product-2">
             <figure class="product-media">
                 <span class="product-label label-circle label-sale">Sale</span>
-                <a href="product.php?id=' . $product_id . '">
+                <a href="users_area/product.php?product_id=' . $product_id . '">
             <img src="./admin_area/product_images/' . $product_image1 . '" alt="' . $product_title . '" class="product-image">
         </a>
 
@@ -987,7 +987,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
 
                 <div class="product-action">
                     <a href="index-4.php?add_to_cart=' . $product_id . '" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                    <a href="product.php?product_id=' . $product_id . '" class="btn-product icon-eye" title="view more"><span>view more</span></a>
+                    <a href="users_area/product.php?product_id=' . $product_id . '" class="btn-product icon-eye" title="view more"><span>view more</span></a>
                 </div><!-- End .product-action -->
             </figure><!-- End .product-media -->
 
@@ -995,7 +995,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
                 <div class="product-cat">
                     <a href="category.php?id=' . $category_id . '">Category</a>
                 </div><!-- End .product-cat -->
-                <h3 class="product-title"><a href="product.php?id=' . $product_id . '">' . $product_title . '</a></h3><!-- End .product-title -->
+                <h3 class="product-title"><a href="users_area/product.php?product_id=' . $product_id . '">' . $product_title . '</a></h3><!-- End .product-title -->
                 <div class="product-price">
                     <span class="new-price">Rs ' . $product_price . '</span>';
                     if (!empty($product_old_price)) {
