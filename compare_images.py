@@ -41,7 +41,8 @@ for product in products:
     for image_name in [product_image1, product_image2, product_image3]:
         image_path = os.path.join(image_directory, image_name)
         score = image_similarity(uploaded_image, image_path)
-        results.append((product_id, product_title, image_name, score))
+        if score > 0.5: 
+            results.append((product_id, product_title, image_name, score))
 
 # Sort results by similarity score in descending order
 results.sort(key=lambda x: x[3], reverse=True)

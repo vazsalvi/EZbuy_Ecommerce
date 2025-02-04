@@ -169,7 +169,7 @@
                 $data = explode(",", $line);
                 if (count($data) == 4) {
                     list($product_id, $product_title, $image_name, $score) = $data;
-                    echo "<tr><td>{$product_id}</td><td>{$product_title}</td><td><img src='admin_area/product_images/{$image_name}'></td><td>{$score}</td></tr>";
+                    echo "<tr><td>{$product_id}</td><td><a href='http://localhost/Ai_driven_ecommerce/users_area/product.php?product_id={$product_id}' style='color: inherit; text-decoration: none;'>{$product_title}</a></td><td><img src='admin_area/product_images/{$image_name}'></td><td>{$score}</td></tr>";
                 }
             }
             echo "</table>";
