@@ -7,7 +7,9 @@ include('./includes/connect.php');
 include('./functions/common_function.php');
 include('./functions/10_function.php');
 ?>
-<?php cart(); ?>
+<?php 
+search_products();
+cart(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,7 +43,14 @@ include('./functions/10_function.php');
     <link rel="stylesheet" href="assets/css/skins/skin-demo-4.css">
     <link rel="stylesheet" href="assets/css/demos/demo-4.css">
 
-    
+    <style>
+        .sticky-wrapper .container {
+    display: flex;
+    align-items: center; /* Vertically center the content */
+    height: 70px; /* Adjust this value as needed */
+    padding: 10px 0; /* Adjust the padding as needed */
+}
+    </style>
 </head>
 <body>
     <div class="page-wrapper">
@@ -67,7 +76,14 @@ include('./functions/10_function.php');
                                             </ul>
                                         </li>
 
+<<<<<<< Updated upstream
                                         <li class="item-lead"><a href="#" class="sf-with-ul">Gift Ideas</a>
+=======
+
+                                        <!-- second category -->
+                                        <li class="item-lead"><a href="#" class="sf-with-ul">Categories</a>
+
+>>>>>>> Stashed changes
                                             <ul>
                                                 <?php
                                                 getcategory();
@@ -116,7 +132,7 @@ include('./functions/10_function.php');
                                         </span>
                                     </div><!-- End .intro-price -->
 
-                                    <a href="category.html" class="btn btn-primary btn-round">
+                                    <a href="users_area/category.php" class="btn btn-primary btn-round">
                                         <span>Shop More</span>
                                         <i class="icon-long-arrow-right"></i>
                                     </a>
@@ -142,7 +158,7 @@ include('./functions/10_function.php');
                                         </span>
                                     </div><!-- End .intro-price -->
 
-                                    <a href="category.html" class="btn btn-primary btn-round">
+                                    <a href="users_area/category.php" class="btn btn-primary btn-round">
                                         <span>Shop More</span>
                                         <i class="icon-long-arrow-right"></i>
                                     </a>
@@ -155,6 +171,29 @@ include('./functions/10_function.php');
                 <span class="slider-loader"></span><!-- End .slider-loader -->
             </div><!-- End .intro-slider-container -->
 
+            <div class="container for-you">
+    <div class="heading heading-flex mb-3">
+        <div class="heading-left">
+            <h2 class="title"> For You</h2><!-- End .title -->
+        </div><!-- End .heading-left -->
+
+        <div class="heading-right">
+            <a href="users_area/category.php" class="title-link">View All  <i class="icon-long-arrow-right"></i></a>
+        </div><!-- End .heading-right -->
+    </div><!-- End .heading -->
+
+    <div class="products">
+        <div class="row justify-content-center">
+            <?php
+            get_electronic_products();
+            get_unique_categories();
+            get_unique_brands()
+            ?>
+
+        </div><!-- End .row -->
+    </div><!-- End .products -->
+</div><!-- End .container --> 
+
             <div class="mb-5"></div><!-- End .mb-5 -->
 
 <div class="container for-you">
@@ -162,18 +201,12 @@ include('./functions/10_function.php');
         <div class="heading-left">
             <h2 class="title">Recommendation For You</h2><!-- End .title -->
         </div><!-- End .heading-left -->
-
-        <div class="heading-right">
-            <a href="users_area/category.php" class="title-link">View All Recommendadion <i class="icon-long-arrow-right"></i></a>
-        </div><!-- End .heading-right -->
     </div><!-- End .heading -->
 
     <div class="products">
         <div class="row justify-content-center">
             <?php
             get_recommended_products();
-            get_unique_categories();
-            get_unique_brands()
             ?>
 
         </div><!-- End .row -->
@@ -186,7 +219,7 @@ include('./functions/10_function.php');
                 <div class="cat-blocks-container">
                     <div class="row">
                         <div class="col-6 col-sm-4 col-lg-2">
-                            <a href="category.html" class="cat-block">
+                            <a href="users_area/category.php" class="cat-block">
                                 <figure>
                                     <span>
                                         <img src="assets/images/demos/demo-4/cats/1.png" alt="Category image">
@@ -198,7 +231,7 @@ include('./functions/10_function.php');
                         </div><!-- End .col-sm-4 col-lg-2 -->
 
                         <div class="col-6 col-sm-4 col-lg-2">
-                            <a href="category.html" class="cat-block">
+                            <a href="users_area/category.php" class="cat-block">
                                 <figure>
                                     <span>
                                         <img src="assets/images/demos/demo-4/cats/2.png" alt="Category image">
@@ -210,7 +243,7 @@ include('./functions/10_function.php');
                         </div><!-- End .col-sm-4 col-lg-2 -->
 
                         <div class="col-6 col-sm-4 col-lg-2">
-                            <a href="category.html" class="cat-block">
+                            <a href="users_area/category.php" class="cat-block">
                                 <figure>
                                     <span>
                                         <img src="assets/images/demos/demo-4/cats/3.png" alt="Category image">
@@ -222,7 +255,7 @@ include('./functions/10_function.php');
                         </div><!-- End .col-sm-4 col-lg-2 -->
 
                         <div class="col-6 col-sm-4 col-lg-2">
-                            <a href="category.html" class="cat-block">
+                            <a href="users_area/category.php" class="cat-block">
                                 <figure>
                                     <span>
                                         <img src="assets/images/demos/demo-4/cats/4.png" alt="Category image">
@@ -234,7 +267,7 @@ include('./functions/10_function.php');
                         </div><!-- End .col-sm-4 col-lg-2 -->
 
                         <div class="col-6 col-sm-4 col-lg-2">
-                            <a href="category.html" class="cat-block">
+                            <a href="users_area/category.php" class="cat-block">
                                 <figure>
                                     <span>
                                         <img src="assets/images/demos/demo-4/cats/5.png" alt="Category image">
@@ -246,7 +279,7 @@ include('./functions/10_function.php');
                         </div><!-- End .col-sm-4 col-lg-2 -->
 
                         <div class="col-6 col-sm-4 col-lg-2">
-                            <a href="category.html" class="cat-block">
+                            <a href="users_area/category.php" class="cat-block">
                                 <figure>
                                     <span>
                                         <img src="assets/images/demos/demo-4/cats/6.png" alt="Category image">
@@ -375,6 +408,7 @@ include('./functions/10_function.php');
                                 <a href="index.php">Home</a>
 
                                 <ul>
+<<<<<<< Updated upstream
                                     <li><a href="index-4.html">04 - electronic store</a></li>
                                     <li><a href="index-10.html">10 - shoes store</a></li>
                                     <li><a href="index-11.html">11 - furniture simple store</a></li>
@@ -383,25 +417,35 @@ include('./functions/10_function.php');
                                     <li><a href="index-20.html">20 - book store</a></li>
                                     <li><a href="index-21.html">21 - sport store</a></li>
                                     <li><a href="index-24.html">24 - extreme sport store</a></li>
+=======
+                                    <li><a href="index-4.php">04 - Electronic Store</a></li>
+                                    <li><a href="index-10.php">10 - Shoes Store</a></li>
+                                    <li><a href="index-11.php">11 - Furniture Simple Store</a></li>
+                                    <li><a href="index-12.php">12 - Fashion Simple Store</a></li>
+                                    <li><a href="index-19.php">19 - Games Store</a></li>
+                                    <li><a href="index-20.php">20 - Book Store</a></li>
+                                    <li><a href="index-21.php">21 - Sport Store</a></li>
+                                    <li><a href="index-24.php">24 - Extreme Sport Store</a></li>
+>>>>>>> Stashed changes
                                 </ul>
                             </li>
                             <li>
                                 <a href="#">Pages</a>
                                 <ul>
                                     <li>
-                                        <a href="about.html">About</a>
+                                        <a href="about.php">About</a>
                                     </li>
                                     <li>
-                                        <a href="contact.html">Contact</a>
+                                        <a href="contact.php">Contact</a>
                                     </li>
-                                    <li><a href="login.html">Login</a></li>
-                                    <li><a href="faq.html">FAQs</a></li>
-                                    <li><a href="404.html">Error 404</a></li>
-                                    <li><a href="coming-soon.html">Coming Soon</a></li>
+                                    <li><a href="login.php">Login</a></li>
+                                    <li><a href="faq.php">FAQs</a></li>
+                                    <li><a href="404.php">Error 404</a></li>
+                                    <li><a href="coming-soon.php">Coming Soon</a></li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="blog.html">Blog</a>
+                                <a href="blog.php">Blog</a>
                             </li>
                         </ul>
                     </nav><!-- End .mobile-nav -->
@@ -453,7 +497,7 @@ include('./functions/10_function.php');
                 <div class="row no-gutters bg-white newsletter-popup-content">
                     <div class="col-xl-3-5col col-lg-7 banner-content-wrap">
                         <div class="banner-content text-center">
-                            <img src="assets/images/popup/newsletter/logo.png" class="logo" alt="logo" width="60"
+                            <img src="assets/images/popup/newsletter/EZbuy.png" class="logo" alt="logo" width="60"
                                 height="15">
                             <h2 class="banner-title">get <span>25<light>%</light></span> off</h2>
                             <p>Subscribe to the Molla eCommerce newsletter to receive timely updates from your favorite

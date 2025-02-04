@@ -14,6 +14,13 @@ if (isset($_GET['action']) && $_GET['action'] == 'logout') {
     <meta charset="UTF-8">
     <title>Admin Dashboard</title>
 </head>
+<<<<<<< Updated upstream
+=======
+<body>
+    <h4>Welcome, <?php echo $_SESSION['admin_name']; ?>!</h4>
+    <!-- Rest of your admin dashboard content -->
+</body>
+>>>>>>> Stashed changes
 
 </html>
 
@@ -63,6 +70,12 @@ include('../functions/common_function.php');
         width: 100px;
         object-fit: contain;
     }
+    .header-bottom.sticky-header .container {
+    display: flex;
+    align-items: center; /* Vertically center the content */
+    height: 50px; /* Adjust this value as needed */
+    padding: 10px 0; /* Adjust the padding as needed */
+}
     </style>
 </head>
 
@@ -107,93 +120,14 @@ include('../functions/common_function.php');
                             <span class="sr-only">Toggle mobile menu</span>
                             <i class="icon-bars"></i>
                         </button>
-
                         <a href="index.php" class="logo">
+<<<<<<< Updated upstream
                             <img src="../assets/images/demos/demo-4/logo.png" alt="Molla Logo" width="105" height="25">
+=======
+                            <img src="../assets/images/demos/demo-20/EZbuy.png" alt="Molla Logo" width="105" height="25">
+>>>>>>> Stashed changes
                         </a>
                     </div><!-- End .header-left -->
-
-
-                    <div class="header-right">
-
-
-                        <div class="wishlist">
-                            <a href="wishlist.html" title="Wishlist">
-                                <div class="icon">
-                                    <i class="icon-heart-o"></i><sup class="wishlist-count badge">3</sup>
-                                </div>
-                                <p>Wishlist</p>
-                            </a>
-                        </div><!-- End .compare-dropdown -->
-
-                        <div class="dropdown cart-dropdown">
-                            <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false" data-display="static">
-                                <div class="icon">
-                                    <i class="icon-shopping-cart"></i><sup class="cart-count">3</sup>
-                                </div>
-                                <p>Cart</p>
-                            </a>
-
-                            <div class="dropdown-menu dropdown-menu-right">
-                                <div class="dropdown-cart-products">
-                                    <div class="product">
-                                        <div class="product-cart-details">
-                                            <h4 class="product-title">
-                                                <a href="product.html">Beige knitted elastic runner shoes</a>
-                                            </h4>
-
-                                            <span class="cart-product-info">
-                                                <span class="cart-product-qty">1</span>
-                                                x $84.00
-                                            </span>
-                                        </div><!-- End .product-cart-details -->
-
-                                        <figure class="product-image-container">
-                                            <a href="product.html" class="product-image">
-                                                <img src="assets/images/products/cart/product-1.jpg" alt="product">
-                                            </a>
-                                        </figure>
-                                        <a href="#" class="btn-remove" title="Remove Product"><i
-                                                class="icon-close"></i></a>
-                                    </div><!-- End .product -->
-
-                                    <div class="product">
-                                        <div class="product-cart-details">
-                                            <h4 class="product-title">
-                                                <a href="product.html">Blue utility pinafore denim dress</a>
-                                            </h4>
-
-                                            <span class="cart-product-info">
-                                                <span class="cart-product-qty">1</span>
-                                                x $76.00
-                                            </span>
-                                        </div><!-- End .product-cart-details -->
-
-                                        <figure class="product-image-container">
-                                            <a href="product.html" class="product-image">
-                                                <img src="assets/images/products/cart/product-2.jpg" alt="product">
-                                            </a>
-                                        </figure>
-                                        <a href="#" class="btn-remove" title="Remove Product"><i
-                                                class="icon-close"></i></a>
-                                    </div><!-- End .product -->
-                                </div><!-- End .cart-product -->
-
-                                <div class="dropdown-cart-total">
-                                    <span>Total</span>
-
-                                    <span class="cart-total-price">$160.00</span>
-                                </div><!-- End .dropdown-cart-total -->
-
-                                <div class="dropdown-cart-action">
-                                    <a href="cart.html" class="btn btn-primary">View Cart</a>
-                                    <a href="checkout.html" class="btn btn-outline-primary-2"><span>Checkout</span><i
-                                            class="icon-long-arrow-right"></i></a>
-                                </div><!-- End .dropdown-cart-total -->
-                            </div><!-- End .dropdown-menu -->
-                        </div><!-- End .cart-dropdown -->
-                    </div><!-- End .header-right -->
                 </div><!-- End .container -->
             </div><!-- End .header-bottom sticky-header -->
 
