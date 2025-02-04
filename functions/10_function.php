@@ -697,8 +697,7 @@ while ($row = mysqli_fetch_assoc($result_query)) {
 }
 }
 
-<<<<<<< Updated upstream
-=======
+
 function get_women_shoe_products(){
     //geting the shoe product
 global $con;
@@ -1063,6 +1062,6 @@ function get_electronic_category(){
         </li>";
     }
 }
->>>>>>> Stashed changes
+
 
 ?>

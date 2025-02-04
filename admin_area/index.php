@@ -14,14 +14,12 @@ if (isset($_GET['action']) && $_GET['action'] == 'logout') {
     <meta charset="UTF-8">
     <title>Admin Dashboard</title>
 </head>
-<<<<<<< Updated upstream
-=======
+
 <body>
     <h4>Welcome, <?php echo $_SESSION['admin_name']; ?>!</h4>
     <!-- Rest of your admin dashboard content -->
 </body>
->>>>>>> Stashed changes
-
+>
 </html>
 
 <?php

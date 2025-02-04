@@ -110,11 +110,9 @@ if (isset($_SESSION['username'])) {
 			<div class="container-lg">
 				<div class="header-left">
 					<div class="logo">
-<<<<<<< Updated upstream
-						<a href="#"><img src="assets/images/demos-img/logo.png" alt="Molla Logo"></a>
-=======
+
 						<a href="#"><img src="assets/images/demos/demo-20/EZbuy.png" alt="Molla Logo" width="100" height="25"></a>
->>>>>>> Stashed changes
+
 					</div>
 				</div>
 				<div class="header-main">

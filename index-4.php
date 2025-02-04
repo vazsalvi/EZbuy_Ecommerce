@@ -76,14 +76,12 @@ cart(); ?>
                                             </ul>
                                         </li>
 
-<<<<<<< Updated upstream
-                                        <li class="item-lead"><a href="#" class="sf-with-ul">Gift Ideas</a>
-=======
+
 
                                         <!-- second category -->
                                         <li class="item-lead"><a href="#" class="sf-with-ul">Categories</a>
 
->>>>>>> Stashed changes
+
                                             <ul>
                                                 <?php
                                                 getcategory();
@@ -408,16 +406,6 @@ cart(); ?>
                                 <a href="index.php">Home</a>
 
                                 <ul>
-<<<<<<< Updated upstream
-                                    <li><a href="index-4.html">04 - electronic store</a></li>
-                                    <li><a href="index-10.html">10 - shoes store</a></li>
-                                    <li><a href="index-11.html">11 - furniture simple store</a></li>
-                                    <li><a href="index-12.html">12 - fashion simple store</a></li>
-                                    <li><a href="index-19.html">19 - games store</a></li>
-                                    <li><a href="index-20.html">20 - book store</a></li>
-                                    <li><a href="index-21.html">21 - sport store</a></li>
-                                    <li><a href="index-24.html">24 - extreme sport store</a></li>
-=======
                                     <li><a href="index-4.php">04 - Electronic Store</a></li>
                                     <li><a href="index-10.php">10 - Shoes Store</a></li>
                                     <li><a href="index-11.php">11 - Furniture Simple Store</a></li>
@@ -426,7 +414,7 @@ cart(); ?>
                                     <li><a href="index-20.php">20 - Book Store</a></li>
                                     <li><a href="index-21.php">21 - Sport Store</a></li>
                                     <li><a href="index-24.php">24 - Extreme Sport Store</a></li>
->>>>>>> Stashed changes
+
                                 </ul>
                             </li>
                             <li>
