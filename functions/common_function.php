@@ -274,21 +274,27 @@ function search_products() {
                 <div class="product product-2">
                     <figure class="product-media">
                         <span class="product-label label-circle label-sale">Sale</span>
+
                         <a href="users_area/product.php?product_id=' . $product_id . '">
+
                             <img src="./admin_area/product_images/' . $product_image1 . '" alt="' . $product_title . '" class="product-image">
                         </a>
                         <div class="product-action">
                             <a href="category.php?add_to_cart=' . $product_id . '" class="btn-product btn-cart"><span>add to cart</span></a>
+
                             <a href="users_area/product.php?product_id=' . $product_id . '" class="btn-product icon-eye"><span>view more</span></a>
+
                         </div>
                     </figure>
                     <div class="product-body">
                         <div class="product-cat">
                             <a href="category.php?id=' . $category_id . '">Category</a>
                         </div>
+
                         <h3 class="product-title"><a href="users_area/product.php?product_id=' . $product_id . '">' . $product_title . '</a></h3>
                         <div class="product-price">
                             <span class="new-price">$' . $product_price . '</span>';
+
                             if (!empty($product_old_price)) {
                                 echo '<span class="old-price">Was $' . $product_old_price . '</span>';
                             }

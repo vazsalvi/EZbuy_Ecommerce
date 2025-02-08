@@ -11,6 +11,7 @@ echo "Welcome, " . $_SESSION['username'];  // Display the username
 <?php
 include('../includes/connect.php');
 include('../functions/common_function.php');
+
 ?>
 
 <!DOCTYPE html>

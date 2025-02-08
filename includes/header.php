@@ -43,14 +43,18 @@
 
     <style>
         .icon-user {
+
             color : black;
+
     transform: scale(2.2); /* Increase size */
     display: inline-block; /* Ensures it scales properly */
     margin: 0 10px; /* Adds spacing on both left and right */
 }
+
 .visual.search .icon .icon-eye {
     font-size: 3rem; /* Adjust size as needed */
 }
+
 
 
 
@@ -125,7 +129,9 @@ include 'signuplogin.php';
 
                         <a href="index.php" class="logo">
 
+
                             <img src="\Ai_driven_ecommerce\assets/images/demos/demo-20/EZbuy.png" alt="Molla Logo" width="105" height="25">
+
 
                         </a>
 
@@ -316,6 +322,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                             </div><!-- End .dropdown-menu -->
                         </div><!-- End .cart-dropdown -->
                         <div class="account">
+
     <a href="users_area/dashboard.php" title="My account">
         <div class="icon">
             <i class="icon-user"></i>
@@ -329,6 +336,7 @@ while ($row = mysqli_fetch_assoc($result)) {
         </div>
     </a>
 </div>
+
                     </div><!-- End .header-right -->
                 </div><!-- End .container -->
             </div><!-- End .header-middle -->

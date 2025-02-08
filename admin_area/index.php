@@ -19,6 +19,11 @@ if (isset($_GET['action']) && $_GET['action'] == 'logout') {
     <!-- Rest of your admin dashboard content -->
 </body>
 
+<body>
+    <h4>Welcome, <?php echo $_SESSION['admin_name']; ?>!</h4>
+    <!-- Rest of your admin dashboard content -->
+</body>
+>
 </html>
 
 <?php
@@ -67,6 +72,7 @@ include('../functions/common_function.php');
         width: 100px;
         object-fit: contain;
     }
+
     .header-bottom.sticky-header {
     height: 50px; /* Adjust this value as needed */
     padding: 10px 0; /* Adjust the padding as needed */
@@ -83,6 +89,7 @@ include('../functions/common_function.php');
     max-height: 100%; /* Ensure the image fits within the header */
     height: auto;
 }
+
 
     </style>
 </head>
@@ -128,8 +135,8 @@ include('../functions/common_function.php');
                             <span class="sr-only">Toggle mobile menu</span>
                             <i class="icon-bars"></i>
                         </button>
-
                         <a href="index.php" class="logo">
+
                             <img src="../assets/images/demos/demo-20/EZbuy.png" alt="Molla Logo" width="105" height="25">
                         </a>
                     </div><!-- End .header-left -->
@@ -139,6 +146,7 @@ include('../functions/common_function.php');
 
 
                     </div><!-- End .header-right -->
+
                 </div><!-- End .container -->
             </div><!-- End .header-bottom sticky-header -->
 
