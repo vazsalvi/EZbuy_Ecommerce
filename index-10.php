@@ -237,7 +237,7 @@ include('./functions/10_function.php');
                             <div class="products">
         <div class="row justify-content-center">
             <?php
-            getproducts();
+            get_women_shoe_products();
             get_unique_categories();
             get_unique_brands()
             ?>
@@ -253,7 +253,7 @@ include('./functions/10_function.php');
                             <div class="products">
         <div class="row justify-content-center">
             <?php
-            getproducts();
+            get_men_shoe_products();
             get_unique_categories();
             get_unique_brands()
             ?>
@@ -291,7 +291,7 @@ include('./functions/10_function.php');
                         <div class="banner-content text-center">
                             <img src="assets/images/popup/newsletter/EZbuy.png" class="logo" alt="logo" width="60" height="15">
                             <h2 class="banner-title">get <span>25<light>%</light></span> off</h2>
-                            <p>Subscribe to the Molla eCommerce newsletter to receive timely updates from your favorite products.</p>
+                            <p>Subscribe to the EZbuy eCommerce newsletter to receive timely updates from your favorite products.</p>
                             <form action="#">
                                 <div class="input-group input-group-round">
                                     <input type="email" class="form-control form-control-white" placeholder="Your Email Address" aria-label="Email Adress" required>

@@ -63,12 +63,12 @@ cart(); ?>
                             <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false" data-display="static"
                                 title="Browse Categories">
-                                Browse Categories <i class="icon-angle-down"></i>
+                                Browse<i class="icon-angle-down"></i>
                             </a>
                             <div class="dropdown-menu">
                                 <nav class="side-nav">
                                     <ul class="menu-vertical sf-arrows">
-                                        <li class="item-lead"><a href="#" class="sf-with-ul">Daily offers</a>
+                                        <li class="item-lead"><a href="#" class="sf-with-ul">Brands</a>
                                             <ul>
                                                 <?php
                                                 getbrands();
@@ -441,7 +441,7 @@ cart(); ?>
                 <div class="tab-pane fade" id="mobile-cats-tab" role="tabpanel" aria-labelledby="mobile-cats-link">
                     <nav class="mobile-cats-nav">
                         <ul class="mobile-cats-menu">
-                            <li><a class="mobile-cats-lead" href="#">Daily offers</a></li>
+                            <li><a class="mobile-cats-lead" href="#">Brands</a></li>
                             <li><a href="#">Beds</a></li>
                             <li><a href="#">Lighting</a></li>
                             <li><a href="#">Sofas & Sleeper sofas</a></li>
@@ -451,7 +451,7 @@ cart(); ?>
                             <li><a href="#">Kitchen Cabinets</a></li>
                             <li><a href="#">Coffee & Tables</a></li>
                             <li><a href="#">Outdoor Furniture </a></li>
-                            <li><a class="mobile-cats-lead" href="#">Gift Ideas</a></li>
+                            <li><a class="mobile-cats-lead" href="#">categories</a></li>
                             <li><a href="#">Beds</a></li>
                             <li><a href="#">Lighting</a></li>
                             <li><a href="#">Sofas & Sleeper sofas</a></li>

@@ -8,7 +8,7 @@ if (isset($_GET['logout']) && $_GET['logout'] == 'true') {
     session_destroy();
 
     // Redirect the user to the login page after logging out
-    header("Location: index.php"); // Replace 'login.php' with your actual login page
+    header("Location: index-4.php"); // Replace 'login.php' with your actual login page
     exit();
 }
 

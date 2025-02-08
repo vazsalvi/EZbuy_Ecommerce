@@ -14,6 +14,10 @@ if (isset($_GET['action']) && $_GET['action'] == 'logout') {
     <meta charset="UTF-8">
     <title>Admin Dashboard</title>
 </head>
+<body>
+    <h4>Welcome, <?php echo $_SESSION['admin_name']; ?>!</h4>
+    <!-- Rest of your admin dashboard content -->
+</body>
 
 <body>
     <h4>Welcome, <?php echo $_SESSION['admin_name']; ?>!</h4>
@@ -38,7 +42,7 @@ include('../functions/common_function.php');
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Admin Dashboard</title>
     <meta name="keywords" content="HTML5 Template">
-    <meta name="description" content="Molla - Bootstrap eCommerce Template">
+    <meta name="description" content="EZbuy - Bootstrap eCommerce Template">
     <meta name="author" content="p-themes">
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/icons/apple-touch-icon.png">
@@ -68,12 +72,25 @@ include('../functions/common_function.php');
         width: 100px;
         object-fit: contain;
     }
-    .header-bottom.sticky-header .container {
-    display: flex;
-    align-items: center; /* Vertically center the content */
+
+    .header-bottom.sticky-header {
     height: 50px; /* Adjust this value as needed */
     padding: 10px 0; /* Adjust the padding as needed */
+    display: flex;
+    align-items: center; /* Vertically center the content */
 }
+
+.header-bottom.sticky-header .container {
+    display: flex;
+    align-items: center; /* Vertically center the content */
+}
+
+.header-bottom.sticky-header .logo img {
+    max-height: 100%; /* Ensure the image fits within the header */
+    height: auto;
+}
+
+
     </style>
 </head>
 
@@ -121,9 +138,15 @@ include('../functions/common_function.php');
                         <a href="index.php" class="logo">
 
                             <img src="../assets/images/demos/demo-20/EZbuy.png" alt="Molla Logo" width="105" height="25">
-
                         </a>
                     </div><!-- End .header-left -->
+
+
+                    <div class="header-right">
+
+
+                    </div><!-- End .header-right -->
+
                 </div><!-- End .container -->
             </div><!-- End .header-bottom sticky-header -->
 
@@ -208,7 +231,7 @@ include('../functions/common_function.php');
     <footer class="footer">
         <div class="footer-bottom">
             <div class="container">
-                <p class="footer-copyright">Copyright © 2019 Molla Store. All Rights Reserved.</p>
+                <p class="footer-copyright">Copyright © 2019 EZbuy Store. All Rights Reserved.</p>
                 <!-- End .footer-copyright -->
                 <figure class="footer-payments">
                     <img src="../assets/images/payments.png" alt="Payment methods" width="272" height="20">

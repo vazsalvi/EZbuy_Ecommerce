@@ -163,7 +163,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['place_order'])) {
                                 <label for="checkout-discount-input" class="text-truncate">Have a coupon? <span>Click here to enter your code</span></label>
                             </form>
                         </div>
-                        <form action="checkout.php" method="POST">
+                        <form action="users_area/checkout.php" method="POST">
                             <div class="row">
                                 <div class="col-lg-9">
                                     <h2 class="checkout-title mb-4">Billing Details</h2>
