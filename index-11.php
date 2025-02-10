@@ -2,11 +2,11 @@
 // Start the session
 session_start();
 
-
-
-// Now, you can use $_SESSION['username'] for the logged-in user's username
-echo "Welcome, " . $_SESSION['username'];  // Display the username
+// Check if 'username' is set in session
+$username = isset($_SESSION['username']) ? $_SESSION['username'] : 'Guest';
+echo "Welcome, " . $username;  // Display the username or "Guest" if not set
 ?>
+
 
 <!-- connection -->
 <?php
@@ -21,9 +21,12 @@ include('./functions/10_function.php');
 <?php
          cart();
          ?>
+<?php include 'chat2.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
-
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
 
 <!-- molla/index-11.html  22 Nov 2019 09:58:23 GMT -->
 <head>
@@ -299,4 +302,7 @@ include('./functions/10_function.php');
 
 
 <!-- molla/index-11.html  22 Nov 2019 09:58:42 GMT -->
+
+
+
 </html>

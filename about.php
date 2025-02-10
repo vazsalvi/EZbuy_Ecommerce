@@ -1,5 +1,8 @@
+<?php include 'chat2.php'; ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
 
 
 <!-- molla/about.html  22 Nov 2019 10:03:51 GMT -->

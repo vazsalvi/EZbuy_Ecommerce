@@ -1,6 +1,9 @@
+<?php include 'chat2.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
 
 <!-- molla/blog-grid-2cols.html  22 Nov 2019 10:04:12 GMT -->
 <head>

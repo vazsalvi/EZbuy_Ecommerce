@@ -21,9 +21,11 @@ include('./functions/10_function.php');
 <?php
          cart();
          ?>
+<?php include 'chat2.php'; ?>
 <!DOCTYPE html>
 <html>
-
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
 <!-- molla/index-21.html  22 Nov 2019 10:01:31 GMT -->
 <head>
     <title>Molla - Bootstrap eCommerce Template</title>
@@ -752,4 +754,6 @@ include('./functions/10_function.php');
 </body>
 
 <!-- molla/index-21.html  22 Nov 2019 10:01:54 GMT -->
+
+
 </html>

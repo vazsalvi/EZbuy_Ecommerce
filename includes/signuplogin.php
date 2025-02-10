@@ -1,5 +1,5 @@
 <?php
-include 'C:\xampp\htdocs\Ai_driven_ecommerce\includes\connect.php';
+include 'C:Users\Peter07\Xampp\htdocs\Ai_driven_ecommerce\includes\connect.php';
 // Rest of your code
 ?>
 
