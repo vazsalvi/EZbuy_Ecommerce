@@ -9,7 +9,7 @@
         /* Background Styling */
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #A3D9A5, #6A9C57); /* Soft Green and Muted Green Blend */
+            background: linear-gradient(135deg,rgb(45, 83, 144),rgb(48, 93, 178)); /* Soft Green and Muted Green Blend */
             color: white;
             text-align: center;
             margin: 0;

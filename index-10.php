@@ -21,10 +21,12 @@ include('./functions/10_function.php');
 <?php
          cart();
          ?>
+ <?php include 'chat2.php'; ?>        
 <!DOCTYPE html>
 <html lang="en">
 
-
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
 <!-- molla/index-10.html  22 Nov 2019 09:58:04 GMT -->
 <head>
     <meta charset="UTF-8">
@@ -331,4 +333,6 @@ include('./functions/10_function.php');
 
 
 <!-- molla/index-10.html  22 Nov 2019 09:58:22 GMT -->
+
+
 </html>

@@ -10,7 +10,13 @@ include('./functions/10_function.php');
 <?php 
 search_products();
 cart(); ?>
+<?php include 'chat2.php'; ?>
+
 <!DOCTYPE html>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">

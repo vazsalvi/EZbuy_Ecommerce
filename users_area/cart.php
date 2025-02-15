@@ -12,10 +12,13 @@ echo "Welcome, " . $_SESSION['username'];  // Display the username
 include('../includes/connect.php');
 include('../functions/common_function.php');
 ?>
+<?php include 'chat2.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
-
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
 <!-- molla/cart.html  22 Nov 2019 09:55:06 GMT -->
 <head>
 <base href="/Ai_driven_ecommerce/">

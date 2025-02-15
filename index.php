@@ -29,6 +29,7 @@ if (isset($_SESSION['username'])) {
 
 <!-- molla/index.html  22 Nov 2019 09:54:33 GMT -->
 
+
 <head>
 	<script type="text/javascript">
 		if (top !== window) {
@@ -454,5 +455,12 @@ if (isset($_SESSION['username'])) {
 </body>
 
 <!-- molla/index.html  22 Nov 2019 09:54:50 GMT -->
+<!-- Chat Icon with New Logo -->
+<div id="chat-icon" onclick="toggleChat()">
+    💠
+</div>
+
+<!-- Chat Window -->
+
 
 </html>

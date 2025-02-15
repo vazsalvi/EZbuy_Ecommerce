@@ -1,6 +1,8 @@
+<?php include 'chat2.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
-
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
 
 <!-- molla/faq.html  22 Nov 2019 10:04:03 GMT -->
 <head>
@@ -631,7 +633,6 @@ If you're unsure, feel free to contact customer support with your order details 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
 </body>
-
 
 <!-- molla/faq.html  22 Nov 2019 10:04:04 GMT -->
 </html>
